@@ -1,11 +1,15 @@
-'use client'
+import '@/styles/globals.css';
 
-export default function Page() {
+import type { AppProps } from 'next/app';
+
+import Header from '@/components/organisms/header/Header';
+
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="min-h-screen p-4">
-      <h1 className="text-2xl font-bold mb-4">Welcome to My Page</h1>
-
-      <p className="text-gray-600 mb-6">This is a simple Next.js page</p>
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-start p-6">
+      <Header />
     </div>
   )
 }
+
+export default MyApp;
