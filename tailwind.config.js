@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         seravek: ['Seravek', 'sans-serif'],
+        sans: ['Helvetica', 'Arial', 'sans-serif'], 
       },
     },
   },
