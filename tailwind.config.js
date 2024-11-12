@@ -32,6 +32,8 @@ module.exports = {
         helvetica: ['Helvetica', 'sans-serif'],
         seravek: ['Seravek', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
+        'plus-jakarta': ['Plus Jakarta Sans', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       boxShadow: {
         'primary': '0 0 0 4px rgba(85, 89, 221, 0.4)',
@@ -118,4 +120,3 @@ module.exports = {
   },
   plugins: [],
 }
-
