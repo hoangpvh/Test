@@ -32,6 +32,7 @@ module.exports = {
         helvetica: ['Helvetica', 'sans-serif'],
         seravek: ['Seravek', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
+        sans: ['Helvetica', 'Arial', 'sans-serif'], 
         'plus-jakarta': ['Plus Jakarta Sans', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       },
