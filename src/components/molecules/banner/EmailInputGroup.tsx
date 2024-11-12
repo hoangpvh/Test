@@ -1,3 +1,5 @@
+import { FaEnvelope } from 'react-icons/fa';
+
 import Button from '@/components/atoms/Button';
 import Icon from '@/components/atoms/Icon';
 import TextInput from '@/components/atoms/TextInput';
@@ -12,8 +14,8 @@ const EmailInputGroup = () => {
       <Button
         text="Send to us"
         onClick={() => console.log('Email Sent!')}
-        icon={<Icon size={20} color="#f0f1ff" />}
-        className="flex items-center gap-3"
+        icon={<Icon icon={FaEnvelope} size={20} color="#f0f1ff" />}
+        className="px-6 py-3 bg-[#565add] flex items-center gap-3"
       />
     </div>
   );

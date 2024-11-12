@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface ButtonProps {
   text: string;
   onClick: () => void;
@@ -15,8 +13,8 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`h-[60px] px-6 py-3 bg-[#565add] rounded-full shadow ${className} 
-        hover:bg-[#6469ff] active:bg-[#292db8] transition-colors duration-200`}
+      className={`h-[52px] rounded-full shadow hover:bg-[#6469ff] active:bg-[#292db8] transition-colors duration-200 ${className}`}
+      style={{ boxShadow: '0 0 0 4px rgba(85, 89, 221, 0.4)' }}
       onClick={onClick}
     >
       {icon && (
