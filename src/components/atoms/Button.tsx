@@ -1,14 +1,16 @@
-interface ButtonProps {
+interface ButtonProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   text: string;
-  onClick: () => void;
-  className?: string;
   icon?: React.ReactNode;
 }
 
 const Button: React.FC<ButtonProps> = ({
-  text,
   onClick,
   className = '',
+  text,
   icon,
 }) => {
   return (
@@ -20,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
       {icon && (
         <div className="w-6 h-6 flex justify-center items-center">{icon}</div>
       )}
-      <span className="text-center text-[#f0f1ff] text-2xl font-normal font-['Helvetica'] leading-7">
+      <span className="text-center text-[#f0f1ff] text-base lg:text-2xl font-normal font-['Helvetica'] leading-7">
         {text}
       </span>
     </button>

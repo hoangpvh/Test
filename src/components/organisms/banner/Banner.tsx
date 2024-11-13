@@ -7,10 +7,8 @@ import PlatformCard from '@/components/molecules/banner/PlatformCard';
 
 const Banner: React.FC = () => {
   return (
-    <div className="w-full max-w-[1740px] h-auto flex flex-col items-center mt-[239px]">
+    <div className="w-full h-auto flex flex-col items-center lg:mt-[239px] mt-[180px] -z-100">
       <ContentSection />
-      <EmailInputGroup />
-
       {platformsList.map((platform, index) => (
         <PlatformCard
           key={index}
@@ -18,6 +16,7 @@ const Banner: React.FC = () => {
           platforms={platform.platforms}
         />
       ))}
+      <EmailInputGroup />
     </div>
   );
 };
