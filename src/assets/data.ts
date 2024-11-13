@@ -1,7 +1,7 @@
 export const platformsList = [
   {
     className:
-      'lg:w-[1448px] h-10 lg:h-[120px] mt-[20px] lg:mt-[-34px] flex justify-between items-center',
+      'lg:w-[1448px] w-[343px] h-10 lg:h-[120px] mt-[20px] lg:mt-[-34px] flex justify-between items-center',
     platforms: [
       { iconName: 'Notion Logomark', altText: 'Notion Logo' },
       { iconName: 'Webflow Logomark', altText: 'Webflow Logo' },

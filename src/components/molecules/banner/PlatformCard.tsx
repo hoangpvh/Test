@@ -13,7 +13,7 @@ const PlatformCard: React.FC<PlatformCardProps> = ({
 }) => {
   return (
     <div
-      className={`w-[343px] h-[40px] flex justify-between items-center z-[-10] lg:mt-0 ${className}`}
+      className={`h-[40px] flex justify-between items-center z-[-10] lg:mt-0 ${className}`}
     >
       {platforms.map((platform, index) => (
         <Platform
