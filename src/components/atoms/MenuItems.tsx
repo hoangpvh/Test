@@ -14,9 +14,9 @@ const MenuItem: React.FC<MenuItemProps> = ({ href, label }) => {
   return (
     <Link
       href={href}
-      className={`px-5 py-3 flex items-center gap-2 rounded-[999px] ${
+      className={`px-3 sm:px-5 py-2 sm:py-3 flex items-center gap-2 rounded-full ${
         isActive ? 'bg-[#f0f1ff]/20 font-semibold' : 'font-medium'
-      } text-xl text-white leading-normal font-poppins transition`}
+      } text-lg sm:text-xl text-white font-poppins transition`}
     >
       {label}
     </Link>
