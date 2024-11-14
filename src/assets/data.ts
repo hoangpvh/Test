@@ -205,7 +205,7 @@ export const services1 = [
     gradientTo: '#f0f1ff',
     borderColor: '#565add',
   },
-];
+]
 
 export const services2 = [
   {
@@ -231,5 +231,24 @@ export const services2 = [
     gradientFrom: '#ccf7ff',
     gradientTo: '#f0f1ff',
     borderColor: '#34c2dd',
+  },
+]
+
+export const userProfiles = [
+  {
+    profileImage: '/Avatar 1.svg',
+    name: 'Jerome Bell',
+  },
+  {
+    profileImage: '/Avatar 2.svg',
+    name: 'Floyd Miles',
+  },
+  {
+    profileImage: '/Avatar 3.svg',
+    name: 'Darrell Steward',
+  },
+  {
+    profileImage: '/Avatar 4.svg',
+    name: 'Annette Black',
   },
 ]
