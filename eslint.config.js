@@ -1,8 +1,8 @@
-const typescriptParser = require('@typescript-eslint/parser');
-const simpleImportSort = require('eslint-plugin-simple-import-sort');
-const react = require('eslint-plugin-react');
-const reactNative = require('eslint-plugin-react-native');
-const prettier = require('eslint-plugin-prettier');
+const typescriptParser = require('@typescript-eslint/parser')
+const simpleImportSort = require('eslint-plugin-simple-import-sort')
+const react = require('eslint-plugin-react')
+const reactNative = require('eslint-plugin-react-native')
+const prettier = require('eslint-plugin-prettier')
 
 module.exports = [
   {
@@ -31,7 +31,7 @@ module.exports = [
       'prettier/prettier': [
         'error',
         {
-          semi: true,
+          semi: false,
           singleQuote: true,
           trailingComma: 'es5',
           printWidth: 80,

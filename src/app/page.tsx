@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 export default function Page() {
   return (
@@ -7,5 +7,5 @@ export default function Page() {
 
       <p className="text-gray-600 mb-6">This is a simple Next.js page</p>
     </div>
-  );
+  )
 }
