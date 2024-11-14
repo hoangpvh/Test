@@ -12,7 +12,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   borderColor,
 }) => (
   <div
-    className={`px-10 py-5 justify-center items-center gap-2.5 flex`}
+    className={`lg:px-10 lg:py-5 px-4 py-2 justify-center items-center gap-2.5 flex`}
     style={{
       background: `linear-gradient(to right, ${gradientFrom}, ${gradientTo})`,
       borderLeft: `4px solid ${borderColor}`,
