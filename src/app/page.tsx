@@ -11,8 +11,8 @@ function HomePage() {
       <Header />
       <Banner />
       <Solutions />
-      <ServicesSection />
-      <Products />
+      {/* <ServicesSection /> */}
+      {/* <Products /> */}
       {/* Render the page-specific component here
       <Component {...pageProps} /> */}
     </div>
