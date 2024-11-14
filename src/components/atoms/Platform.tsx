@@ -1,8 +1,8 @@
-import Image from 'next/image';
+import Image from 'next/image'
 
 interface PlatformProps {
-  iconName: string;
-  altText?: string;
+  iconName: string
+  altText?: string
 }
 
 const Platform: React.FC<PlatformProps> = ({
@@ -21,7 +21,7 @@ const Platform: React.FC<PlatformProps> = ({
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Platform;
+export default Platform

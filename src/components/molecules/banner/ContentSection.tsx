@@ -12,7 +12,7 @@ const ContentSection: React.FC = () => {
         powerful, scalable solutions designed to propel your business forward.
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContentSection;
+export default ContentSection

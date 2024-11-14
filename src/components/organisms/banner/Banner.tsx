@@ -1,9 +1,9 @@
-'use client';
+'use client'
 
-import { platformsList } from '@/assets/data';
-import ContentSection from '@/components/molecules/banner/ContentSection';
-import EmailInputGroup from '@/components/molecules/banner/EmailInputGroup';
-import PlatformCard from '@/components/molecules/banner/PlatformCard';
+import { platformsList } from '@/assets/data'
+import ContentSection from '@/components/molecules/banner/ContentSection'
+import EmailInputGroup from '@/components/molecules/banner/EmailInputGroup'
+import PlatformCard from '@/components/molecules/banner/PlatformCard'
 
 const Banner: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const Banner: React.FC = () => {
       ))}
       <EmailInputGroup />
     </div>
-  );
-};
+  )
+}
 
-export default Banner;
+export default Banner

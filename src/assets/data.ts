@@ -23,4 +23,4 @@ export const platformsList = [
       { iconName: 'Figma Logomark', altText: 'Figma Logo' },
     ],
   },
-];
+]

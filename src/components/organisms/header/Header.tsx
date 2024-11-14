@@ -1,5 +1,6 @@
-import HeaderLeft from '@/components/molecules/headers/HeaderLeft';
-import TopMenu from '@/components/molecules/menu/TopMenu';
+'use client'
+import HeaderLeft from '@/components/molecules/headers/HeaderLeft'
+import TopMenu from '@/components/molecules/menu/TopMenu'
 
 const Header: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const Header: React.FC = () => {
         <TopMenu />
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

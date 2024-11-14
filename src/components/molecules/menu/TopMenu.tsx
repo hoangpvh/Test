@@ -1,15 +1,15 @@
-'use client';
+'use client'
 
-import React, { useState } from 'react';
-import { AiOutlineMenu } from 'react-icons/ai';
+import React, { useState } from 'react'
+import { AiOutlineMenu } from 'react-icons/ai'
 
-import Icon from '@/components/atoms/Icon';
-import MenuItem from '@/components/atoms/MenuItems';
+import Icon from '@/components/atoms/Icon'
+import MenuItem from '@/components/atoms/MenuItems'
 
 const TopMenu: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   return (
     <div className="flex items-center">
@@ -40,7 +40,7 @@ const TopMenu: React.FC = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default TopMenu;
+export default TopMenu

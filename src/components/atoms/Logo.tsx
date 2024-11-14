@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/image'
 
 const Logo: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const Logo: React.FC = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo

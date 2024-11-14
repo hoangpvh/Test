@@ -3,8 +3,8 @@ interface ButtonProps
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  text: string;
-  icon?: React.ReactNode;
+  text: string
+  icon?: React.ReactNode
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
         {text}
       </span>
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

@@ -1,15 +1,15 @@
-'use client';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+'use client'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 interface MenuItemProps {
-  href: string;
-  label: string;
+  href: string
+  label: string
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ href, label }) => {
-  const pathname = usePathname();
-  const isActive = pathname === href || (href === '/' && pathname === '/');
+  const pathname = usePathname()
+  const isActive = pathname === href || (href === '/' && pathname === '/')
 
   return (
     <Link
@@ -20,7 +20,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ href, label }) => {
     >
       {label}
     </Link>
-  );
-};
+  )
+}
 
-export default MenuItem;
+export default MenuItem

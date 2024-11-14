@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef } from 'react'
 
 interface TextInputProps {
-  placeholder: string;
-  className?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder: string
+  className?: string
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 const TextInput: React.FC<TextInputProps> = ({
@@ -11,7 +11,7 @@ const TextInput: React.FC<TextInputProps> = ({
   className = '',
   onChange,
 }) => {
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null)
 
   return (
     <div
@@ -26,7 +26,7 @@ const TextInput: React.FC<TextInputProps> = ({
         onChange={onChange}
       />
     </div>
-  );
-};
+  )
+}
 
-export default TextInput;
+export default TextInput

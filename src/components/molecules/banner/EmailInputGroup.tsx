@@ -1,8 +1,8 @@
-import { FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa'
 
-import Button from '@/components/atoms/Button';
-import Icon from '@/components/atoms/Icon';
-import TextInput from '@/components/atoms/TextInput';
+import Button from '@/components/atoms/Button'
+import Icon from '@/components/atoms/Icon'
+import TextInput from '@/components/atoms/TextInput'
 
 const EmailInputGroup = () => {
   return (
@@ -18,7 +18,7 @@ const EmailInputGroup = () => {
         className="w-full lg:w-[200px] lg:px-6 lg:py-3 px-4 py-3 bg-[#565add] flex justify-center items-center gap-3 "
       />
     </div>
-  );
-};
+  )
+}
 
-export default EmailInputGroup;
+export default EmailInputGroup

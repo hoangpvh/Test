@@ -1,7 +1,7 @@
-import type { AppProps } from 'next/app';
+import type { AppProps } from 'next/app'
 
-import Banner from '@/components/organisms/banner/Banner';
-import Header from '@/components/organisms/header/Header';
+import Banner from '@/components/organisms/banner/Banner'
+import Header from '@/components/organisms/header/Header'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -12,4 +12,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
 }
 
-export default MyApp;
+export default MyApp
