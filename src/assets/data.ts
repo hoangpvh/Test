@@ -119,3 +119,22 @@ export const services2 = [
     borderColor: '#34c2dd',
   },
 ]
+
+export const userProfiles = [
+  {
+    profileImage: '/Avatar 1.svg',
+    name: 'Jerome Bell',
+  },
+  {
+    profileImage: '/Avatar 2.svg',
+    name: 'Floyd Miles',
+  },
+  {
+    profileImage: '/Avatar 3.svg',
+    name: 'Darrell Steward',
+  },
+  {
+    profileImage: '/Avatar 4.svg',
+    name: 'Annette Black',
+  },
+]

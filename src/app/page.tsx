@@ -12,7 +12,7 @@ function HomePage() {
       <Banner />
       <Solutions />
       <ServicesSection />
-      {/* <Products /> */}
+      <Products />
       {/* Render the page-specific component here
       <Component {...pageProps} /> */}
     </div>
