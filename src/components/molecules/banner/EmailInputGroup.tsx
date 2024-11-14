@@ -12,7 +12,7 @@ const EmailInputGroup = () => {
         onChange={(e) => console.log(e.target.value)}
       />
       <Button
-        text="Send to us"
+        label="Send to us"
         onClick={() => console.log('Email Sent!')}
         icon={<Icon icon={FaEnvelope} size={20} color="#f0f1ff" />}
         className="w-full lg:w-[200px] lg:px-6 lg:py-3 px-4 py-3 bg-[#565add] flex justify-center items-center gap-3 "
