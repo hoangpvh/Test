@@ -19,7 +19,7 @@ jobs:
           name: Deploy to VPS
           command: |
             if [ "${CIRCLE_BRANCH}" == "develop" ]; then
-              sshpass -p "${VPS_PASSWORD}" ssh -o StrictHostKeyChecking=no "${VPS_USER}"@"${VPS_IP}" 'export PATH="$HOME/.volta/bin:$PATH" && cd ${VPS_PROJECT_PATH} && make release-develop-with-pm2'
+              sshpass -p "${VPS_PASSWORD}" ssh -o StrictHostKeyChecking=no "${VPS_USER}"@"${VPS_IP}" 'export PATH="$HOME/.volta/bin:$PATH" && cd /home/funcoding.jp/web/staging.funcoding.jp/public_html/ && make release-develop-with-pm2'
               # Additional deployment steps as needed
             fi
 
