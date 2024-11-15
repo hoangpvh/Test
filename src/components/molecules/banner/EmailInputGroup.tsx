@@ -1,3 +1,4 @@
+'use client'
 import { FaEnvelope } from 'react-icons/fa'
 
 import Button from '@/components/atoms/Button'

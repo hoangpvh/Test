@@ -1,4 +1,3 @@
-'use client'
 import HeaderLeft from '@/components/molecules/headers/HeaderLeft'
 import TopMenu from '@/components/molecules/menu/TopMenu'
 

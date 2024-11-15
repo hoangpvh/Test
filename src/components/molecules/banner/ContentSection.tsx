@@ -1,4 +1,3 @@
-'use client'
 const ContentSection: React.FC = () => {
   return (
     <div className="w-full h-[209px] 2xl:h-[206px] flex flex-col justify-start items-center lg:gap-10 gap-5">

@@ -1,5 +1,3 @@
-'use client'
-
 import { platformsList } from '@/assets/data'
 import ContentSection from '@/components/molecules/banner/ContentSection'
 import EmailInputGroup from '@/components/molecules/banner/EmailInputGroup'

@@ -1,5 +1,5 @@
+'use client'
 import Image from 'next/image'
-
 interface PlatformProps {
   iconName: string
   altText?: string

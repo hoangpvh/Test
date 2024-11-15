@@ -1,7 +1,4 @@
-import React from 'react'
-
 import Platform from '@/components/atoms/Platform'
-
 interface PlatformCardProps {
   platforms: { iconName: string; altText?: string }[]
   className?: string
