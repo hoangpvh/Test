@@ -1,3 +1,4 @@
+'use client'
 const ContentSection: React.FC = () => {
   return (
     <div
