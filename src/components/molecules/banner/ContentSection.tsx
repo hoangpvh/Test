@@ -3,7 +3,7 @@ const ContentSection: React.FC = () => {
     <div className="w-full h-[209px] 2xl:h-[206px] flex flex-col justify-start items-center lg:gap-10 gap-5">
       <div className="w-full mx-[20px] h-28 flex justify-center items-center">
         <div
-          className="absolute w-[216px] lg:w-[435px] h-14 lg:h-28 border-l-4 border-[#565add] 2xl:ml-[228px] self-end ml-[-120px] lg:mb-[-4px] mb-1 -z-100 md:ml-[-320px] md:-mb-1 lg:ml-[300px]"
+          className="absolute w-[216px] lg:w-[340px] 2xl:w-[435px] h-14 lg:h-28 border-l-4 border-[#565add] 2xl:ml-[228px] self-end ml-[-120px] lg:mb-[-8px] mb-0 -z-100 md:ml-[-320px] md:-mb-2 lg:ml-[200px]"
           style={{
             background:
               'linear-gradient(to right, rgba(210, 213, 255, 1), rgba(240, 241, 255, 0))',
