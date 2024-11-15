@@ -21,7 +21,7 @@ const TopMenu: React.FC = () => {
         <Icon icon={AiOutlineMenu} size={24} color="#fff" />
       </div>
 
-      <nav className="hidden lg:flex justify-end items-center h-7 gap-3 lg:h-12 lg:gap-4">
+      <nav className="hidden lg:flex justify-end items-center h-7 gap-3 lg:h-12 lg:gap-0 2xl:gap-4">
         <MenuItem href="/" label="Home" />
         <MenuItem href="/products" label="Our Products" />
         <MenuItem href="/blogs" label="Blogs" />
