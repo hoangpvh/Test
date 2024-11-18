@@ -13,6 +13,7 @@ const Logo: React.FC = () => {
             className="object-contain"
           />
         </div>
+
         <div className="block sm:hidden w-7 h-7 relative">
           <Image
             src="/Mobile Logo.svg"
@@ -23,7 +24,15 @@ const Logo: React.FC = () => {
           />
         </div>
       </div>
-      <div className="text-purple-darkest sm:text-white text-2 sm:text-26 lg:text-32 font-bold font-seravek uppercase">
+
+      <div
+        className="
+        text-purple-darkest sm:text-white 
+        text-22 sm:text-26 lg:text-32 
+        font-bold font-seravek 
+        uppercase
+      "
+      >
         Funcoding
       </div>
     </div>
