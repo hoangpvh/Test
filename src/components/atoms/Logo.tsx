@@ -1,11 +1,24 @@
-import Image from 'next/image';
-
+import Image from 'next/image'
 const Logo: React.FC = () => {
   return (
     <div className="w-10 h-10 relative">
       <Image src="/Logo.png" alt="Logo" width={40} height={40} />
-    </div>
-  );
-};
+      <div className="relative">
+        <div className="hidden lg:block w-10 h-10 relative">
+          <Image src="/Logo.svg" alt="Desktop Logo" width={40} height={40} />
+        </div>
 
-export default Logo;
+        <div className="block lg:hidden w-7 h-7 relative">
+          <Image
+            src="/Mobile Logo.svg"
+            alt="Mobile Logo"
+            width={24}
+            height={24}
+          />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Logo

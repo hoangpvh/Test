@@ -1,5 +1,5 @@
-import WebProductCard from '@/components/atoms/WebProductCard';
-import WebProductContent from '@/components/atoms/WebProductContent';
+import WebProductCard from '@/components/atoms/WebProductCard'
+import WebProductContent from '@/components/atoms/WebProductContent'
 
 const WebProducts: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const WebProducts: React.FC = () => {
         <WebProductCard />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default WebProducts;
+export default WebProducts

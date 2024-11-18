@@ -1,4 +1,4 @@
-import Logo from '@/components/atoms/Logo';
+import Logo from '@/components/atoms/Logo'
 
 const HeaderLeft: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const HeaderLeft: React.FC = () => {
         Funcoding
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HeaderLeft;
+export default HeaderLeft

@@ -1,5 +1,5 @@
-import OtherProductCard from '@/components/atoms/OtherProductCard';
-import OtherProductContent from '@/components/atoms/OtherProductContent';
+import OtherProductCard from '@/components/atoms/OtherProductCard'
+import OtherProductContent from '@/components/atoms/OtherProductContent'
 
 const AppProducts: React.FC = () => {
   return (
@@ -20,7 +20,7 @@ const AppProducts: React.FC = () => {
         <OtherProductCard />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AppProducts;
+export default AppProducts

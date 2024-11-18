@@ -1,10 +1,7 @@
-import React from 'react';
-
-import Platform from '@/components/atoms/Platform';
-
+import Platform from '@/components/atoms/Platform'
 interface PlatformCardProps {
-  platforms: { iconName: string; altText?: string }[];
-  className?: string;
+  platforms: { iconName: string; altText?: string }[]
+  className?: string
 }
 
 const PlatformCard: React.FC<PlatformCardProps> = ({
@@ -21,7 +18,7 @@ const PlatformCard: React.FC<PlatformCardProps> = ({
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default PlatformCard;
+export default PlatformCard

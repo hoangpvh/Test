@@ -1,6 +1,6 @@
-import AppProducts from '@/components/molecules/products/AppProducts';
-import OtherProducts from '@/components/molecules/products/OtherProducts';
-import WebProducts from '@/components/molecules/products/WebProducts';
+import AppProducts from '@/components/molecules/products/AppProducts'
+import OtherProducts from '@/components/molecules/products/OtherProducts'
+import WebProducts from '@/components/molecules/products/WebProducts'
 
 const Products: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Products: React.FC = () => {
       <WebProducts />
       <OtherProducts />
     </div>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products

@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import { solutions } from '@/assets/data';
-import Button from '@/components/atoms/Button';
-import SolutionCard from '@/components/molecules/solutions/SolutionCard';
+import { solutions } from '@/assets/data'
+import Button from '@/components/atoms/Button'
+import SolutionCard from '@/components/molecules/solutions/SolutionCard'
 
 const Solution = () => {
   return (
@@ -23,7 +23,7 @@ const Solution = () => {
               </div>
               <div className="justify-center items-center inline-flex lg:w-[162px] w-full">
                 <Button
-                  text="View More"
+                  label="View More"
                   onClick={() => console.log('View!')}
                   className="w-full px-6 py-3 bg-[#565add]"
                 />
@@ -45,7 +45,7 @@ const Solution = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Solution;
+export default Solution

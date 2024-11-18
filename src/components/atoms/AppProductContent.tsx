@@ -1,8 +1,9 @@
-import { IoIosAdd, IoIosClose } from 'react-icons/io';
-import { PiBuildingThin } from 'react-icons/pi';
+'use client'
+import { IoIosAdd, IoIosClose } from 'react-icons/io'
+import { PiBuildingThin } from 'react-icons/pi'
 
-import { userProfiles } from '@/assets/data';
-import Icon from '@/components/atoms/Icon';
+import { userProfiles } from '@/assets/data'
+import Icon from '@/components/atoms/Icon'
 
 const AppProductContent: React.FC = () => {
   return (
@@ -70,7 +71,7 @@ const AppProductContent: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AppProductContent;
+export default AppProductContent

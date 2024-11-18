@@ -42,7 +42,7 @@ const OtherProductCard: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default OtherProductCard;
+export default OtherProductCard

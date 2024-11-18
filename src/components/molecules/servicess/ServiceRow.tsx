@@ -1,10 +1,10 @@
-import ServiceCard from '@/components/atoms/ServiceCard';
+import ServiceCard from '@/components/atoms/ServiceCard'
 
 interface ServiceRowProps {
-  label: string;
-  gradientFrom: string;
-  gradientTo: string;
-  borderColor: string;
+  label: string
+  gradientFrom: string
+  gradientTo: string
+  borderColor: string
 }
 
 const ServiceRow: React.FC<ServiceRowProps> = ({
@@ -22,6 +22,6 @@ const ServiceRow: React.FC<ServiceRowProps> = ({
       {label}
     </div>
   </ServiceCard>
-);
+)
 
-export default ServiceRow;
+export default ServiceRow

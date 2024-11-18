@@ -36,6 +36,6 @@ const WebProductCard: React.FC = () => {
         <div className="w-[140px] h-[140px] left-[44px] top-[47px] absolute bg-[#efb4ff] rounded-full blur-3xl" />
       </div>
     </div>
-  );
-};
-export default WebProductCard;
+  )
+}
+export default WebProductCard

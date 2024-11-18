@@ -1,8 +1,8 @@
 interface ServiceCardProps {
-  children: React.ReactNode;
-  gradientFrom: string;
-  gradientTo: string;
-  borderColor: string;
+  children: React.ReactNode
+  gradientFrom: string
+  gradientTo: string
+  borderColor: string
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -20,6 +20,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   >
     {children}
   </div>
-);
+)
 
-export default ServiceCard;
+export default ServiceCard

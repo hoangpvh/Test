@@ -133,7 +133,7 @@ const WebProductContent: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default WebProductContent;
+export default WebProductContent

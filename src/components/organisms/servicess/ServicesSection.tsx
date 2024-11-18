@@ -1,6 +1,6 @@
-import { services1, services2 } from '@/assets/data';
+import { services1, services2 } from '@/assets/data'
 
-import ServiceRow from '../../molecules/servicess/ServiceRow';
+import ServiceRow from '../../molecules/servicess/ServiceRow'
 
 const ServicesSection: React.FC = () => (
   <div className="h-[516px] w-full px-4 py-10 lg:h-[684px] lg:py-[200px] flex flex-col justify-start items-center gap-5 lg:gap-[60px]">
@@ -47,6 +47,6 @@ const ServicesSection: React.FC = () => (
       ))}
     </div>
   </div>
-);
+)
 
-export default ServicesSection;
+export default ServicesSection

@@ -1,12 +1,12 @@
-import { IconType } from 'react-icons';
+import { IconType } from 'react-icons'
 
-import Icon from '@/components/atoms/Icon';
+import Icon from '@/components/atoms/Icon'
 
 interface SolutionCardProps {
-  title: string;
-  description: string;
-  icon: IconType;
-  iconColor?: string;
+  title: string
+  description: string
+  icon: IconType
+  iconColor?: string
 }
 
 const SolutionCard: React.FC<SolutionCardProps> = ({
@@ -34,7 +34,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SolutionCard;
+export default SolutionCard

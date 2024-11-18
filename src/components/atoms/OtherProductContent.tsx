@@ -20,7 +20,7 @@ const OtherProductContent: React.FC = () => {
       <div className="w-[169px] h-3 left-[47px] top-[201px] absolute bg-[#94d0fe] rounded-[10px]" />
       <div className="w-[169px] h-3 left-[47px] top-[111px] absolute bg-[#ffc762] rounded-[10px]" />
     </div>
-  );
-};
+  )
+}
 
-export default OtherProductContent;
+export default OtherProductContent

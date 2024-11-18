@@ -46,7 +46,7 @@ const AppProductCard: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AppProductCard;
+export default AppProductCard
