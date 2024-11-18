@@ -151,7 +151,7 @@ import {
   LuMonitorSmartphone,
   LuPencilRuler,
   LuShieldCheck,
-} from 'react-icons/lu';
+} from 'react-icons/lu'
 
 export const solutions = [
   {
