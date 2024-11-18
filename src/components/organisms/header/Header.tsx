@@ -1,13 +1,28 @@
-import HeaderLeft from '@/components/molecules/headers/HeaderLeft'
-import TopMenu from '@/components/molecules/menu/TopMenu'
+import Logo from '@/components/molecules/logo/Logo'
+import MenuItems from '@/components/molecules/menu/MenuItems'
 
 const Header: React.FC = () => {
   return (
-    <div className="relative w-full lg:h-[148px] lg:px-40 lg:pt-[60px] bg-[#fcfcfc] flex flex-col items-center">
-      <div className="absolute w-[297px] h-[297px] top-[-120px] lg:bg-[#fcfcfc] bg-[#565add]/20 rounded-full blur-[80px] -z-50"></div>
-      <nav className="fixed w-full top-0 lg:top-[60px] pb-4 pt-10 h-[100px] px-6 lg:h-[88px] lg:w-[900px] 2xl:w-[1200px] lg:px-10 lg:py-5 lg:bg-[#565add] lg:rounded-full rounded-bl-2xl rounded-br-2xl border-b flex justify-between items-center z-50 bg-[#fcfcfc]">
-        <HeaderLeft />
-        <TopMenu />
+    <div className="w-full sm:h-130 bg-neutral-background flex flex-col items-center">
+      <div
+        className="w-75 h-75 sm:hidden
+        -mt-30
+        bg-primary-default/20 
+        rounded-full 
+        blur-banner
+        z-10"
+      ></div>
+      <nav
+        className="fixed w-full sm:min-w-sm sm:max-w-780 
+        lg:max-w-header-lg top-0 sm:top-60 pb-4 pt-10 px-6 
+        sm:px-5 h-[100px]sm:h-[70px] lg:h-[88px] sm:py-5 
+        bg-neutral-background sm:bg-primary-default 
+        rounded-bl-2xl rounded-br-2xl sm:rounded-full 
+        border-b sm:border-none flex justify-between items-center 
+        z-50"
+      >
+        <Logo />
+        <MenuItems />
       </nav>
     </div>
   )

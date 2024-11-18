@@ -17,18 +17,14 @@ const TextInput: React.FC<TextInputProps> = ({
 
   return (
     <div
-      className={`lg:h-[60px] h-[52px] pl-4 pr-[100px] py-3 lg:pl-5 lg:pr-[120px] lg:py-4 rounded-full flex items-center ${className} ${isFocused ? 'border-[#6569ff] text-[#6569ff]' : 'border-[#fff] text-[#4b42ae]/50'}`}
-      style={{
-        backgroundColor: isFocused ? '#e0e7ff' : '#f0f1ff',
-        borderWidth: '2px',
-      }}
+      className={`lg:h-15 h-13 pl-4 pr-25 py-3 lg:pl-5 lg:pr-30 lg:py-4 rounded-full flex items-center border-2 bg-primary-light ${className} ${isFocused ? 'border-primary-focus text-primary-focus' : 'border-white text-purple-light/50'}`}
       onClick={() => inputRef.current?.focus()}
     >
       <input
         ref={inputRef}
         type="text"
         placeholder={placeholder}
-        className={`bg-transparent outline-none ${isFocused ? 'text-[#6569ff]' : 'text-[#4b42ae]/50'}`}
+        className={`bg-transparent outline-none ${isFocused ? 'text-primary-focus' : 'text-purple-light/50'}`}
         onChange={onChange}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}

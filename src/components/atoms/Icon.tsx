@@ -1,4 +1,3 @@
-'use client'
 import { IconType } from 'react-icons'
 
 interface IconProps {
@@ -9,7 +8,7 @@ interface IconProps {
 
 const Icon: React.FC<IconProps> = ({
   size = 24,
-  color = '#fff',
+  color = 'white',
   icon: IconComponent,
 }) => {
   return <IconComponent size={size} color={color} />

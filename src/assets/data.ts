@@ -1,7 +1,7 @@
 export const platformsList = [
   {
     className:
-      '2xl:w-[1448px] sm:w-5/6 w-[343px] h-10 lg:h-[120px] mt-[20px] sm:mt-[-34px] flex justify-between items-center',
+      '2xl:w-[1448px] sm:w-5/6 w-[343px] h-10 lg:h-[120px] mt-5 sm:mt-[-34px] flex justify-between items-center',
     platforms: [
       { iconName: 'Notion Logomark', altText: 'Notion Logo' },
       { iconName: 'Webflow Logomark', altText: 'Webflow Logo' },
@@ -17,10 +17,17 @@ export const platformsList = [
   },
   {
     className:
-      '2xl:w-[636px] w-[118px] sm:w-2/6 h-10 sm:h-[120px] mt-[-20px] sm:mt-[-18px] flex justify-between items-center',
+      '2xl:w-[636px] w-[118px] sm:w-2/6 h-10 sm:h-[120px] mt-5 sm:mt-[-18px] flex justify-between items-center',
     platforms: [
       { iconName: 'Visual Studio Code', altText: 'Visual Code Logo' },
       { iconName: 'Figma Logomark', altText: 'Figma Logo' },
     ],
   },
+]
+
+export const menuItems = [
+  { key: 'home', href: '/', label: 'Home' },
+  { key: 'products', href: '/products', label: 'Our Products' },
+  { key: 'blogs', href: '/blogs', label: 'Blogs' },
+  { key: 'contact', href: '/contact', label: 'Contact Us' },
 ]

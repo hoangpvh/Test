@@ -4,27 +4,32 @@ interface ButtonProps
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  label: string
-  icon?: React.ReactNode
+  leftIcon?: React.ReactNode
+  title: string
+  titleClassName?: string
 }
 
 const Button: React.FC<ButtonProps> = ({
   onClick,
   className = '',
-  label,
-  icon,
+  leftIcon,
+  title,
+  titleClassName = '',
 }) => {
   return (
     <button
-      className={`h-[52px] rounded-full shadow hover:bg-[#6469ff] active:bg-[#292db8] transition-colors duration-200 ${className}`}
-      style={{ boxShadow: '0 0 0 4px rgba(85, 89, 221, 0.4)' }}
+      className={`h-13 rounded-full shadow-primary hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 ${className}`}
       onClick={onClick}
     >
-      {icon && (
-        <div className="w-6 h-6 flex justify-center items-center">{icon}</div>
+      {leftIcon && (
+        <div className="w-6 h-6 flex justify-center items-center">
+          {leftIcon}
+        </div>
       )}
-      <span className="text-center text-[#f0f1ff] text-base lg:text-2xl font-normal font-['Helvetica'] leading-7">
-        {label}
+      <span
+        className={`text-center text-primary-light text-base sm:text-2xl font-normal font-['Helvetica'] leading-7 ${titleClassName}`}
+      >
+        {title}
       </span>
     </button>
   )
