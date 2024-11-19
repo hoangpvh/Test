@@ -1,26 +1,26 @@
-export const platformsList = [
+export const techList = [
   {
     className:
-      '2xl:w-[1448px] sm:w-5/6 w-[343px] h-10 lg:h-[120px] mt-5 sm:mt-[-34px] flex justify-between items-center',
-    platforms: [
-      { iconName: 'Notion Logomark', altText: 'Notion Logo' },
-      { iconName: 'Webflow Logomark', altText: 'Webflow Logo' },
+      'xl:w-1448 sm:w-5/6 w-343 h-10 lg:h-30 mt-5 sm:mt-152 lg:mt-30 xl:-mt-12 flex justify-between items-center',
+    logos: [
+      { name: 'Notion Logomark', alt: 'Notion Logo' },
+      { name: 'Webflow Logomark', alt: 'Webflow Logo' },
     ],
   },
   {
     className:
-      '2xl:w-[1056px] sm:w-3/5 w-[230px] h-10 lg:h-[120px] sm:mt-[36px] mt-[-13px] flex justify-between items-center',
-    platforms: [
-      { iconName: 'Shopify Logomark', altText: 'Shopify Logo' },
-      { iconName: 'Wordpress Logomark', altText: 'Wordpress Logo' },
+      'xl:w-1056 sm:w-3/5 w-230 h-10 lg:h-30 sm:mt-8 mt-13 flex justify-between items-center',
+    logos: [
+      { name: 'Shopify Logomark', alt: 'Shopify Logo' },
+      { name: 'Wordpress Logomark', alt: 'Wordpress Logo' },
     ],
   },
   {
     className:
-      '2xl:w-[636px] w-[118px] sm:w-2/6 h-10 sm:h-[120px] mt-5 sm:mt-[-18px] flex justify-between items-center',
-    platforms: [
-      { iconName: 'Visual Studio Code', altText: 'Visual Code Logo' },
-      { iconName: 'Figma Logomark', altText: 'Figma Logo' },
+      ' xl:w-636 w-118 sm:w-2/6 h-10 sm:h-30 -mt-4 sm:-mt-2 flex justify-between items-center',
+    logos: [
+      { name: 'Visual Studio Code', alt: 'Visual Code Logo' },
+      { name: 'Figma Logomark', alt: 'Figma Logo' },
     ],
   },
 ]

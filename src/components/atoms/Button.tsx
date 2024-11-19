@@ -7,6 +7,7 @@ interface ButtonProps
   leftIcon?: React.ReactNode
   title: string
   titleClassName?: string
+  onClick: () => void
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -18,6 +19,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
+      type="button"
       className={`h-13 rounded-full shadow-primary hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 ${className}`}
       onClick={onClick}
     >

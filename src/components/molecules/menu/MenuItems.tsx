@@ -11,6 +11,8 @@ const MenuItems: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
 
+  const handleMenuToggle = () => setIsMenuOpen((prev) => !prev)
+
   const renderMenuItem = (item: { href: string; label: string }) => {
     const isActive =
       pathname === item.href || (item.href === '/' && pathname === '/')
@@ -37,7 +39,7 @@ const MenuItems: React.FC = () => {
     <div className="flex items-center">
       {/* Mobile Menu Button */}
       <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        onClick={handleMenuToggle}
         className="
           sm:hidden 
           cursor-pointer 

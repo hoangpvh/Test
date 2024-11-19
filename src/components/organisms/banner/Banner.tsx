@@ -1,18 +1,14 @@
-import { platformsList } from '@/assets/data'
+import { techList } from '@/assets/data'
 import ContentSection from '@/components/molecules/banner/ContentSection'
 import EmailInputGroup from '@/components/molecules/banner/EmailInputGroup'
-import PlatformCard from '@/components/molecules/banner/PlatformCard'
+import TechRow from '@/components/molecules/banner/TechRow'
 
 const Banner: React.FC = () => {
   return (
-    <div className="w-full h-auto flex flex-col items-center lg:mt-[239px] mt-[180px] -z-100">
+    <div className="w-full h-auto flex flex-col items-center lg:mt-60 mt-20 sm:mt-31 -z-100">
       <ContentSection />
-      {platformsList.map((platform, index) => (
-        <PlatformCard
-          key={index}
-          className={platform.className}
-          platforms={platform.platforms}
-        />
+      {techList.map((tech, index) => (
+        <TechRow key={index} className={tech.className} logos={tech.logos} />
       ))}
       <EmailInputGroup />
     </div>
