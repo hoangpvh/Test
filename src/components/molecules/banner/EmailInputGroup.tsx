@@ -20,7 +20,7 @@ const EmailInputGroup = () => {
   }
 
   return (
-    <div className="absolute w-343 xl:w-586 sm:w-560 h-32 px-4 lg:h-15 flex-col xl:flex-row justify-center left-1/2 transform -translate-x-1/2 mt-98 sm:mt-55 lg:mt-70 xl:mt-55 items-center lg:gap-5 gap-6 inline-flex">
+    <div className="absolute w-343 xl:w-586 sm:w-560 h-32 lg:h-15 flex-col xl:flex-row justify-center left-1/2 transform -translate-x-1/2 mt-98 sm:mt-55 lg:mt-70 xl:mt-55 items-center lg:gap-5 gap-6 inline-flex">
       <TextInput
         className="w-full"
         placeholder="Enter your email address"

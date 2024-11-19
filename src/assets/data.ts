@@ -9,7 +9,7 @@ export const techList = [
   },
   {
     className:
-      'xl:w-1056 sm:w-3/5 w-230 h-10 lg:h-30 sm:mt-8 mt-13 flex justify-between items-center',
+      'xl:w-1056 sm:w-3/5 w-230 h-10 lg:h-30 sm:mt-8 -mt-13 flex justify-between items-center',
     logos: [
       { name: 'Shopify Logomark', alt: 'Shopify Logo' },
       { name: 'Wordpress Logomark', alt: 'Wordpress Logo' },
