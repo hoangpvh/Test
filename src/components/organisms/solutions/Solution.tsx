@@ -1,12 +1,10 @@
-'use client'
-
 import { solutions } from '@/assets/data'
 import Button from '@/components/atoms/Button'
 import SolutionCard from '@/components/molecules/solutions/SolutionCard'
 
 const Solution = () => {
   return (
-    <div className="w-full h-[1194px] px-4 py-10 lg:h-[800px] lg:px-[360px] lg:py-[148px] bg-[#252a3f] mt-[316px] lg:mt-[152px] justify-start lg:justify-center lg:items-center inline-flex">
+    <div className="w-full h-[1194px] px-4 py-10 lg:h-[800px] lg:px-[360px] sm:px-15 sm:py-25 lg:py-[148px] bg-[#252a3f] mt-[316px] lg:mt-[152px] justify-start lg:justify-center lg:items-center inline-flex">
       <div className="flex-col lg:flex-row lg:justify-between items-start inline-flex lg:gap-0 gap-10">
         <div className="flex-col justify-start items-start lg:gap-5 gap-4 inline-flex">
           <div className="text-[#f59a73] text-lg font-semibold font-['Plus Jakarta Sans'] leading-normal">
@@ -23,7 +21,7 @@ const Solution = () => {
               </div>
               <div className="justify-center items-center inline-flex lg:w-[162px] w-full">
                 <Button
-                  label="View More"
+                  title="View More"
                   onClick={() => console.log('View!')}
                   className="w-full px-6 py-3 bg-[#565add]"
                 />
@@ -32,7 +30,7 @@ const Solution = () => {
           </div>
         </div>
         <div className="flex-col justify-start items-start lg:gap-6 gap-5 inline-flex">
-          <div className="justify-end items-start lg:gap-6 gap-5 inline-flex flex-wrap">
+          <div className="justify-center sm:justify-between items-start lg:gap-6 gap-5 inline-flex flex-wrap">
             {solutions.map((solution, index) => (
               <SolutionCard
                 key={index}
