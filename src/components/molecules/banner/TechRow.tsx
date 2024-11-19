@@ -1,5 +1,4 @@
 import Image from 'next/image'
-
 interface LogoProps {
   name: string
   alt?: string

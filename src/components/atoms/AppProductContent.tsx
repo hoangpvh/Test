@@ -1,4 +1,3 @@
-'use client'
 import { IoIosAdd, IoIosClose } from 'react-icons/io'
 import { PiBuildingThin } from 'react-icons/pi'
 
