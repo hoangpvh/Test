@@ -18,7 +18,11 @@ const TextInput: React.FC<TextInputProps> = ({
 
   const handleFocus = () => setIsFocused(true)
   const handleBlur = () => setIsFocused(false)
-  const handleContainerClick = () => inputRef.current?.focus()
+  const handleContainerClick = () => {
+    if (inputRef.current && typeof inputRef.current.focus === 'function') {
+      inputRef.current.focus()
+    }
+  }
 
   return (
     <div

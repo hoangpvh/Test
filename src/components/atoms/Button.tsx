@@ -6,21 +6,20 @@ interface ButtonProps
   leftIcon?: React.ReactNode
   title: string
   titleClassName?: string
-  onClick: () => void
 }
 
 const Button: React.FC<ButtonProps> = ({
-  onClick,
-  className = '',
   leftIcon,
   title,
   titleClassName = '',
+  className = '',
+  ...restProps
 }) => {
   return (
     <button
       type="button"
       className={`h-13 rounded-full shadow-primary hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 ${className}`}
-      onClick={onClick}
+      {...restProps}
     >
       {leftIcon && (
         <div className="w-6 h-6 flex justify-center items-center">
@@ -28,7 +27,7 @@ const Button: React.FC<ButtonProps> = ({
         </div>
       )}
       <span
-        className={`text-center text-primary-light text-base sm:text-2xl font-normal font-['Helvetica'] leading-7 ${titleClassName}`}
+        className={`text-center text-primary-light text-base sm:text-2xl font-normal font-helvetica leading-7 ${titleClassName}`}
       >
         {title}
       </span>

@@ -3,14 +3,13 @@ import MenuItems from '@/components/molecules/menu/MenuItems'
 
 const Header: React.FC = () => {
   return (
-    <div className="w-full h-25 sm:h-70 lg:h-22 bg-neutral-background sm:bg-white flex flex-col items-center sm:mt-10">
+    <div
+      role="banner"
+      className="w-full h-25 sm:h-70 lg:h-22 bg-neutral-background sm:bg-white flex flex-col items-center sm:mt-10"
+    >
       <div
-        className=" absolute w-75 h-75 sm:hidden
-        -mt-30
-        bg-primary-default/20 
-        rounded-full 
-        blur-banner
-        z-10"
+        data-testid="decorative-circle"
+        className="absolute w-75 h-75 sm:hidden -mt-30 bg-primary-default/20 rounded-full blur-banner z-10"
       ></div>
       <nav
         className="fixed left-1/2 -translate-x-1/2 w-full sm:max-w-[calc(100%-160px)] 

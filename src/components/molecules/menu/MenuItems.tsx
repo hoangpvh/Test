@@ -63,6 +63,7 @@ const MenuItems: React.FC = () => {
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
         <div
+          data-testid="mobile-menu"
           className="
             lg:hidden 
             flex flex-col items-start 
