@@ -1,11 +1,14 @@
 'use client'
+import Banner from '@/components/organisms/banner/Banner'
+import Header from '@/components/organisms/header/Header'
 
-export default function Page() {
+function HomePage() {
   return (
-    <div className="min-h-screen p-4">
-      <h1 className="text-2xl font-bold mb-4">Welcome to My Page</h1>
-
-      <p className="text-gray-600 mb-6">This is a simple Next.js page</p>
+    <div className="w-full flex flex-col items-center justify-start">
+      <Header />
+      <Banner />
     </div>
   )
 }
+
+export default HomePage

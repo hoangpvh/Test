@@ -1,0 +1,44 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="40" height="40" fill="#ECECEC"/>
+<g id="UI Design">
+<path d="M-739 -370C-739 -371.105 -738.105 -372 -737 -372H8598C8599.1 -372 8600 -371.105 8600 -370V5928C8600 5929.1 8599.1 5930 8598 5930H-737C-738.105 5930 -739 5929.1 -739 5928V-370Z" fill="#F5F5F5"/>
+<path d="M-737 -371H8598V-373H-737V-371ZM8599 -370V5928H8601V-370H8599ZM8598 5929H-737V5931H8598V5929ZM-738 5928V-370H-740V5928H-738ZM-737 5929C-737.552 5929 -738 5928.55 -738 5928H-740C-740 5929.66 -738.657 5931 -737 5931V5929ZM8599 5928C8599 5928.55 8598.55 5929 8598 5929V5931C8599.66 5931 8601 5929.66 8601 5928H8599ZM8598 -371C8598.55 -371 8599 -370.552 8599 -370H8601C8601 -371.657 8599.66 -373 8598 -373V-371ZM-737 -373C-738.657 -373 -740 -371.657 -740 -370H-738C-738 -370.552 -737.552 -371 -737 -371V-373Z" fill="black" fill-opacity="0.1"/>
+<g id="Home Desktop" clip-path="url(#clip0_305_34)">
+<rect width="1920" height="4592" transform="translate(-400 -88)" fill="white"/>
+<g id="Frame 2085664391">
+<g id="Hero">
+<g id="Header">
+<g id="Component 1" filter="url(#filter0_d_305_34)">
+<rect x="-40" y="-28" width="1200" height="88" rx="44" fill="#565ADD" shape-rendering="crispEdges"/>
+<g id="Logo">
+<g id="Logo_2" clip-path="url(#clip1_305_34)">
+<path id="Vector" d="M20.0025 40L25.0019 35.0005L10.0075 20.0044L25.0031 5.00699L19.9963 0L0 19.9969" fill="white"/>
+<path id="Vector_2" d="M14.9676 19.96L19.9868 24.9794L32.4761 12.4897L27.4568 7.47031L14.9676 19.96Z" fill="#D936E7"/>
+<path id="Vector_3" d="M39.8957 19.9074L27.4575 7.47009L22.4644 12.4634L29.9814 19.982L22.4706 27.4931L27.496 32.5187L40.0001 20.013L39.8957 19.9074Z" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_305_34" x="-55" y="-39" width="1230" height="118" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="7.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_305_34"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_305_34" result="shape"/>
+</filter>
+<clipPath id="clip0_305_34">
+<rect width="1920" height="4592" fill="white" transform="translate(-400 -88)"/>
+</clipPath>
+<clipPath id="clip1_305_34">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+</defs>
+</svg>
