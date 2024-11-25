@@ -1,21 +1,18 @@
 import OtherProductCard from '@/components/atoms/OtherProductCard'
 import OtherProductContent from '@/components/atoms/OtherProductContent'
 
-const AppProducts: React.FC = () => {
+const OtherProducts: React.FC = () => {
   return (
-    <div className="w-full px-4 lg:px-0 lg:w-[1200px] flex-col justify-between items-start inline-flex gap-10">
-      <div className="h-[206px] flex-col justify-start items-start gap-6 inline-flex">
-        <div className="self-stretch text-[#271454] text-4xl font-bold font-['Helvetica']">
+    <div className="w-[1200px] h-[420px] justify-between items-center inline-flex">
+      <div className="flex-col justify-start items-start gap-6 inline-flex">
+        <h2 className="w-[600px] text-[#271454] text-5xl font-bold font-helvetica">
           Many other products
-        </div>
-        <div className="self-stretch text-[#4f2a82] text-sm font-normal font-['Helvetica'] leading-tight">
-          From mobile apps to web platforms and enterprise software, we deliver
-          high-performance solutions that adapt to your unique needs. With a
-          focus on quality and user experience, our products transform ideas
-          into impactful digital tools.
-        </div>
+        </h2>
+        <p className="w-[554px] text-[#4f2a82] text-lg font-normal font-helvetica leading-[25.20px]">
+          From mobile apps to web platforms and enterprise software, we deliver high-performance solutions that adapt to your unique needs. With a focus on quality and user experience, our products transform ideas into impactful digital tools.
+        </p>
       </div>
-      <div className="relative">
+      <div className="w-[469px] h-[420px] relative">
         <OtherProductContent />
         <OtherProductCard />
       </div>
@@ -23,4 +20,4 @@ const AppProducts: React.FC = () => {
   )
 }
 
-export default AppProducts
+export default OtherProducts

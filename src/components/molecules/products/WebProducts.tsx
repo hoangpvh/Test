@@ -3,20 +3,20 @@ import WebProductContent from '@/components/atoms/WebProductContent'
 
 const WebProducts: React.FC = () => {
   return (
-    <div className="w-full px-4 lg:px-0 lg:w-[1200px] flex-col justify-between items-start gap-10 inline-flex">
-      <div className="h-[186px] flex-col justify-start items-start gap-6 inline-flex">
-        <div className="self-stretch text-[#271454] text-4xl font-bold font-['Helvetica']">
+    <div className="h-auto sm:h-[388px] justify-star items-center gap-10 flex flex-col-reverse sm:flex-row">
+      <div className="sm:w-[412px] w-[343px] sm:h-[388px] h-[373px] relative">
+        <WebProductContent />
+        <WebProductCard />
+      </div>
+      <div className="flex flex-col gap-6 xl:max-w-[600px] sm:max-w-[400px] lg:max-w-[464px]">
+        <h2 className="text-[#271454] sm:text-5xl text-4xl font-bold font-helvetica">
           Our Website Products
-        </div>
-        <div className="self-stretch text-[#4f2a82] text-sm font-normal font-['Helvetica'] leading-tight">
+        </h2>
+        <p className=" text-[#4f2a82] text-sm sm:text-lg font-normal font-helvetica leading-tight sm:leading-[25.20px]">
           We create websites that are secure, fast, and tailored to meet your
           business needs. From e-commerce platforms to content-rich sites, we
           deliver experiences that make lasting impressions.
-        </div>
-      </div>
-      <div className="relative">
-        <WebProductContent />
-        <WebProductCard />
+        </p>
       </div>
     </div>
   )

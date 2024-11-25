@@ -4,7 +4,7 @@ import SolutionCard from '@/components/molecules/solutions/SolutionCard'
 
 const Solution = () => {
   return (
-    <div className="w-full h-auto px-4 py-10 xl:h-200 1920:px-90 xl:px-50 sm:px-15 sm:py-25 xl:py-148 bg-secondary-dark mt-79 sm:mt-39 xl:mt-38 justify-start xl:justify-center xl:items-center inline-flex lg:px-24">
+    <div className="w-full h-auto px-4 py-10 xl:h-200 1920:px-90 xl:px-50 sm:px-15 sm:py-25 xl:py-148 bg-secondary-dark mt-79 sm:mt-39 xl:mt-38 justify-start xl:justify-center xl:items-center inline-flex lg:px-28">
       <div className="flex-col xl:flex-row xl:justify-between sm:items-start items-start inline-flex xl:gap-0 gap-10">
         <div className="flex-col justify-start items-start xl:gap-5 gap-4 inline-flex">
           <div className="text-secondary-dark-2 text-lg sm:text-lg  font-semibold font-['Plus Jakarta Sans'] leading-normal">
@@ -23,7 +23,7 @@ const Solution = () => {
                 <Button
                   title="View More"
                   onClick={() => console.log('View!')}
-                  className="w-full px-6 py-3 sm:py-4 bg-primary-default text-base leading-7"
+                  className="w-full px-6 py-3 lg:py-3 sm:py-4 bg-primary-default text-base leading-7"
                 />
               </div>
             </div>
