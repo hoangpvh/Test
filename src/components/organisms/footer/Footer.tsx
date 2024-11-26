@@ -10,12 +10,12 @@ const Footer = () => {
   const [message, setMessage] = useState('')
 
   return (
-    <footer className="h-[526px] pt-[100px] pb-[200px] bg-[#252a3f]">
-      <div className="max-w-[1200px] mx-auto justify-between flex">
+    <footer className="lg:flex h-auto py-20 sm:pt-20 sm:pb-25 xl:pt-25 xl:pb-50 sm:px-15 px-4 xl:px-0 bg-[#252a3f] lg:justify-center">
+      <div className="xl:max-w-[1200px] lg:max-w-[920px] flex flex-col xl:flex-row gap-20 sm:gap-10">
         {/* Left Section */}
-        <div className="h-[182px] flex justify-between">
+        <div className="sm:h-[182px] h-[312px] flex justify-between sm:flex-row flex-col gap-10">
           {/* Logo and Contact */}
-          <div className="flex flex-col gap-[34px]">
+          <div className="flex flex-col gap-6 sm:gap-[34px]">
             {/* Simplified Logo */}
             <div className="items-center justify-start gap-3 inline-flex">
               <div className="w-10 h-10">
@@ -31,20 +31,20 @@ const Footer = () => {
                 Funcoding
               </div>
             </div>
-            <div className="flex flex-col gap-3">
-              <div className="text-[#7f879e] text-lg font-medium font-plus-jakarta leading-loose">
+            <div className="flex flex-row sm:flex-col gap-5 sm:gap-3">
+              <div className="text-[#7f879e] sm:text-lg text-sm font-normal sm:font-medium font-plus-jakarta sm:leading-loose leading-[25.20px]">
                 funcoding@gmail.com
                 <br />
                 (+00) 001123344546
               </div>
-              <div className="text-[#7f879e] text-lg font-medium font-plus-jakarta leading-loose">
+              <div className="text-[#7f879e] sm:text-lg text-sm font-normal sm:font-medium font-plus-jakarta sm:leading-loose leading-[25.20px]">
                 Tokyo - Japan
               </div>
             </div>
           </div>
 
           {/* Navigation Links */}
-          <div className="flex gap-20 ml-20">
+          <div className="flex gap-20">
             <FooterLink
               title="Company"
               links={['About us', 'Solutions', 'Blog']}
@@ -57,8 +57,8 @@ const Footer = () => {
         </div>
 
         {/* Right Section - Contact Form */}
-        <div className="w-[530px] flex flex-col gap-4">
-          <h2 className="text-white text-2xl font-bold font-helvetica capitalize leading-[31.20px]">
+        <div className="xl:w-[530px] flex flex-col gap-4">
+          <h2 className="text-white sm:text-2xl text-base font-bold font-helvetica capitalize">
             What solution do you need us to provide?
           </h2>
           <div className="flex flex-col gap-4">
@@ -68,18 +68,21 @@ const Footer = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Enter the content you want to send!"
-                className="w-full h-full resize-none bg-transparent outline-none text-xl font-normal font-helvetica text-white/50 leading-7"
+                className="w-full h-full resize-none bg-transparent outline-none sm:text-xl text-sm font-normal font-helvetica text-white/50 leading-7"
               />
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className="flex sm:justify-between sm:flex-row flex-col items-start sm:items-center gap-4">
               <div className="flex items-center gap-2.5">
                 <Icon icon={BsCheckCircleFill} color="#268D61" />
-                <span className="text-[#7f879e] text-lg font-normal font-plus-jakarta leading-[28.80px]">
+                <span className="text-[#7f879e] sm:text-lg text-sm font-normal font-plus-jakarta sm:leading-[28.80px] leading-snug">
                   Available to respond
                 </span>
               </div>
-              <Button title="Send Email" className="bg-[#565add] px-6 py-2" />
+              <Button
+                title="Send Email"
+                className="bg-[#565add] px-6 sm:py-2 py-3 xl:h-[52px] xl:w-[180px] sm:w-[480px] w-full"
+              />
             </div>
           </div>
         </div>

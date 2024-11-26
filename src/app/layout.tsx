@@ -2,6 +2,8 @@ import '@/styles/globals.css'
 
 import type { Metadata } from 'next'
 
+import MainTemplate from '@/components/templates/MainTemplate'
+
 export const metadata: Metadata = {
   title: 'Funcoding',
   description: '',
@@ -14,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <MainTemplate>{children}</MainTemplate>
+      </body>
     </html>
   )
 }

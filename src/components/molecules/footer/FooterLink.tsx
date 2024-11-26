@@ -5,7 +5,7 @@ interface FooterLinkProps {
 
 const FooterLink: React.FC<FooterLinkProps> = ({ title, links }) => {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col sm:gap-8 gap-6">
       <h3 className="text-white text-lg font-bold font-helvetica leading-normal">
         {title}
       </h3>
@@ -14,7 +14,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({ title, links }) => {
           <a
             key={index}
             href="#"
-            className="text-[#7f879e] text-lg font-medium font-plus-jakarta leading-loose"
+            className="text-[#7f879e] sm:text-lg text-base font-normal sm:font-medium font-plus-jakarta sm:leading-loose leading-7  "
           >
             {link}
           </a>
