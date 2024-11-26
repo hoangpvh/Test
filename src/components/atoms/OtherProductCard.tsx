@@ -1,8 +1,8 @@
 export default function OtherProductCard() {
   return (
-    <div className="sm:mt-2 ml-[129px] sm:ml-[177px] sm:w-[250px] xl:w-[292px] w-[214px] h-[350px] sm:h-[355px] lg:h-[420px] bg-white z-10 rounded-2xl flex flex-col">
+    <div className="sm:mt-2 ml-[129px] sm:ml-[177px] sm:w-[250px] xl:w-[292px] w-[214px] h-[350px] sm:h-[355px] xl:h-[420px] bg-white z-10 rounded-2xl flex flex-col">
       {/* Profile Header */}
-      <div className="px-4 sm:px-2 lg:px-[30px] pt-4 sm:pt-3 lg:pt-[30px] flex items-center gap-3.5 ">
+      <div className="px-4 sm:px-2 xl:px-[30px] pt-4 sm:pt-3 xl:pt-[30px] flex items-center gap-3.5 ">
         <div className="relative sm:w-[60px] sm:h-[60px] w-[40px] h-[40px]">
           <div className="absolute inset-0 bg-gradient-to-b from-[#f4f3f5] to-[#fdf2ec] rounded-full" />
           <img
@@ -22,7 +22,7 @@ export default function OtherProductCard() {
       </div>
 
       {/* Details Section */}
-      <div className=" sm:px-2 lg:px-[30px] sm:pt-[24px] px-4 pt-4 flex flex-col lg:gap-3.5 sm:gap-2 gap-3.5">
+      <div className=" sm:px-2 xl:px-[30px] sm:pt-[24px] px-4 pt-4 flex flex-col lg:gap-3.5 sm:gap-2 gap-3.5">
         {/* Company & Job Title */}
         <div className="flex flex-col gap-2">
           <div className="flex sm:flex-row flex-col justify-start sm:gap-[69px] gap-5">

@@ -1,6 +1,6 @@
 const OtherProductContent: React.FC = () => {
   return (
-    <div className="absolute top-[70px] w-[304px] lg:h-[280px] h-[280px] sm:h-[240px] bg-white rounded-2xl flex">
+    <div className="absolute top-[70px] w-[304px] xl:h-[280px] h-[280px] sm:h-[240px] bg-white rounded-2xl flex">
       {/* Left column dots */}
       <div className="flex flex-col gap-3 pl-[21px] pt-[21px]">
         <div className="w-3 h-3 bg-lime-500 rounded-[10px]" />

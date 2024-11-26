@@ -15,7 +15,7 @@ const OtherProducts: React.FC = () => {
           into impactful digital tools.
         </div>
       </div>
-      <div className="relative sm:w-[469px] sm:h-[355px] lg:h-[420px] w-[343px] h-[350px] flex">
+      <div className="relative sm:w-[469px] sm:h-[355px] xl:h-[420px] w-[343px] h-[350px] flex">
         <OtherProductContent />
         <OtherProductCard />
       </div>
