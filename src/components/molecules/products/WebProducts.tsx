@@ -3,12 +3,12 @@ import WebProductContent from '@/components/atoms/WebProductContent'
 
 const WebProducts: React.FC = () => {
   return (
-    <div className="h-auto sm:h-[388px] justify-star items-center gap-10 flex flex-col-reverse sm:flex-row">
+    <div className="h-auto w-full xl:w-[1200px] justify-center xl:justify-between items-center gap-10 flex flex-col-reverse sm:flex-row">
       <div className="sm:w-[412px] w-[343px] sm:h-[388px] h-[373px] relative">
         <WebProductContent />
         <WebProductCard />
       </div>
-      <div className="flex flex-col gap-6 xl:max-w-[600px] sm:max-w-[400px] lg:max-w-[464px]">
+      <div className="flex flex-col gap-6 xl:max-w-[600px] sm:max-w-[332px] lg:max-w-[464px]">
         <h2 className="text-[#271454] sm:text-5xl text-4xl font-bold font-helvetica">
           Our Website Products
         </h2>

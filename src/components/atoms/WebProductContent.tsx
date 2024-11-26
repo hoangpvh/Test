@@ -1,7 +1,7 @@
 import { LuSearch } from 'react-icons/lu'
 const WebProductContent: React.FC = () => {
   return (
-    <div className="sm:w-[300px] w-[280px] sm:h-[388px] h-[373px] bg-white rounded-2xl flex flex-col p-4 gap-4">
+    <div className="sm:w-[291px] lg:w-[300px] w-[280px] h-auto bg-white rounded-2xl flex flex-col px-4 pt-4 sm:pb-8 pb-4 gap-4">
       {/* Search Bar */}
       <div className="w-[248px] sm:w-[261px] pl-[8.85px] pr-[73.79px] py-[4.43px] bg-white rounded shadow border border-[#e0daf3] flex items-center gap-[2.95px]">
         <div className="w-[14.76px] h-[14.76px] flex">

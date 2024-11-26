@@ -32,7 +32,7 @@ const EmailInputGroup = () => {
         title="Send to us"
         onClick={handleSubmit}
         leftIcon={<Icon icon={FaEnvelope} size={20} color="#f0f1ff" />}
-        className="w-full sm:max-w-full xl:max-w-200 lg:px-6 lg:py-3 px-4 py-3 sm:py-4 lg:py-3 bg-primary-default flex justify-center items-center gap-3"
+        className="w-full sm:max-w-full xl:max-w-200 lg:px-6 px-4 py-3 sm:py-4 lg:py-3 bg-primary-default flex justify-center items-center gap-3"
       />
     </div>
   )

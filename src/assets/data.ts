@@ -138,10 +138,3 @@ export const userProfiles = [
     name: 'Annette Black',
   },
 ]
-
-export const menuItems = [
-  { key: 'home', href: '/', label: 'Home' },
-  { key: 'products', href: '/products', label: 'Our Products' },
-  { key: 'blogs', href: '/blogs', label: 'Blogs' },
-  { key: 'contact', href: '/contact', label: 'Contact Us' },
-]

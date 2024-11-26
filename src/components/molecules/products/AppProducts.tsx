@@ -3,7 +3,7 @@ import AppProductContent from '@/components/atoms/AppProductContent'
 
 const AppProducts: React.FC = () => {
   return (
-    <div className="h-auto sm:h-[378px] gap-10 flex sm:flex-row flex-col justify-between items-center">
+    <div className="h-auto w-full xl:w-[1200px] sm:h-[378px] gap-10 flex sm:flex-row flex-col justify-center xl:justify-between items-center">
       <div className="flex flex-col gap-6 xl:max-w-[531px] sm:max-w-[332px] lg:max-w-[432px]">
         <div className="text-[#271454] sm:text-5xl text-4xl font-bold font-['Helvetica']">
           Our Mobile App Products

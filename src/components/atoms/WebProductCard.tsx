@@ -1,6 +1,6 @@
 const WebProductCard: React.FC = () => {
   return (
-    <div className="w-[176.50px] sm:w-[212px] h-56 lg:left-[200px] left-[167px] sm:left-[120px] top-[131px] absolute bg-white rounded-2xl shadow overflow-hidden">
+    <div className="w-[176.50px] sm:w-[212px] h-52 lg:left-[200px] left-[167px] top-[131px] absolute bg-white rounded-2xl shadow overflow-hidden">
       <div className="left-[13.50px] top-[22px] sm:left-[23px] absolute text-[#231645] font-medium text-xs font-inter leading-none">
         DATA POINTS
       </div>
