@@ -35,8 +35,8 @@ module.exports = {
         'secondary-dark-2': '#f59a73',
       },
       fontFamily: {
-        helvetica: ['Helvetica', 'sans-serif'],
-        seravek: ['Seravek', 'sans-serif'],
+        helvetica: ['Helvetica', 'Arial', 'sans-serif'],
+        seravek: ['Seravek', 'Arial', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
         sans: ['Helvetica', 'Arial', 'sans-serif'], 
         'plus-jakarta': ['Plus Jakarta Sans', 'sans-serif'],

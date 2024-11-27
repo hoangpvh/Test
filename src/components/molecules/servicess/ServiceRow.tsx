@@ -18,7 +18,7 @@ const ServiceRow: React.FC<ServiceRowProps> = ({
     gradientTo={gradientTo}
     borderColor={borderColor}
   >
-    <div className="text-center text-black font-bold font-['Helvetica'] whitespace-nowrap">
+    <div className="text-center text-black font-bold font-helvetica whitespace-nowrap">
       {label}
     </div>
   </ServiceCard>

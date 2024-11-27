@@ -26,11 +26,11 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
               <Icon icon={icon} size={28} color={iconColor} />{' '}
             </div>
           </div>
-          <div className="flex-grow text-white text-base sm:text-xl xl:text-lg font-bold leading-7 sm:leading-9 xl:leading-loose font-['Helvetica']">
+          <div className="flex-grow text-white text-base sm:text-xl xl:text-lg font-bold leading-7 sm:leading-9 xl:leading-loose font-helvetica">
             {title}
           </div>
         </div>
-        <div className="text-white text-sm sm:text-xl xl:text-lg font-normal leading-25.20 sm:leading-9 xl:leading-loose font-['Helvetica']">
+        <div className="text-white text-sm sm:text-xl xl:text-lg font-normal leading-25.20 sm:leading-9 xl:leading-loose font-helvetica">
           {description}
         </div>
       </div>

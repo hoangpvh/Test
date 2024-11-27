@@ -85,7 +85,7 @@ const WebProductContent: React.FC = () => {
                   {user.role}
                 </div>
               </div>
-              <div className="text-[#33274b] text-[10px] font-['Sequel Sans'] leading-[14px]">
+              <div className="text-[#33274b] text-[10px] font-inter leading-[14px]">
                 {user.location}
               </div>
             </div>

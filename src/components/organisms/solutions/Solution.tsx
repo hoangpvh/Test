@@ -7,15 +7,15 @@ const Solution = () => {
     <div className="w-full h-auto px-4 py-10 xl:h-200 1920:px-90 xl:px-50 sm:px-15 sm:py-25 xl:py-148 bg-secondary-dark mt-79 sm:mt-39 xl:mt-38 justify-start xl:justify-center xl:items-center inline-flex lg:px-28">
       <div className="flex-col xl:flex-row xl:justify-between sm:items-start items-start inline-flex xl:gap-0 gap-10">
         <div className="flex-col justify-start items-start xl:gap-5 gap-4 inline-flex">
-          <div className="text-secondary-dark-2 text-lg sm:text-lg  font-semibold font-['Plus Jakarta Sans'] leading-normal">
+          <div className="text-secondary-dark-2 text-lg sm:text-lg  font-semibold font-plus-jakarta leading-normal">
             How can we help you?
           </div>
           <div className="flex-col justify-start items-start xl:gap-30 flex gap-5">
-            <div className="xl:w-100 text-white sm:text-20 text-4xl xl:text-16 font-bold font-['Helvetica'] capitalize leading-46.80 xl:leading-83.20 sm:leading-26">
+            <div className="xl:w-100 text-white sm:text-20 text-4xl xl:text-16 font-bold font-helvetica capitalize leading-46.80 xl:leading-83.20 sm:leading-26">
               solutions we provide
             </div>
             <div className="flex flex-col justify-start items-start gap-5 xl:gap-15 sm:gap-8">
-              <div className="xl:w-100 text-neutral-text text-sm sm:text-22 xl:text-lg font-normal font-['Plus Jakarta Sans'] leading-snug xl:leading-28.80">
+              <div className="xl:w-100 text-neutral-text text-sm sm:text-22 xl:text-lg font-normal font-plus-jakarta leading-snug xl:leading-28.80">
                 Transforming Ideas into High-Performance Software – Tailored to
                 Drive Your Success.
               </div>

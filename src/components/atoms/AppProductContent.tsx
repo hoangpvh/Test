@@ -5,6 +5,8 @@ import { userProfiles } from '@/assets/data'
 import Icon from '@/components/atoms/Icon'
 
 const AppProductContent: React.FC<{ className?: string }> = ({ className }) => {
+  const textClasses =
+    'text-[#625e6f] text-[10px] font-normal font-inter leading-[14px]'
   return (
     <div
       className={`w-[342px] sm:w-[364px] h-[330px] bg-white rounded-2xl flex flex-col sm:px-[21px] pl-[21px] pr-0 pt-[27px] gap-[5px] ${className}`}
@@ -36,10 +38,8 @@ const AppProductContent: React.FC<{ className?: string }> = ({ className }) => {
         </div>
         <div className="w-[302px] h-[0px] mt-[8px] border border-[#f2f2f2]" />
         <div className="flex justify-between items-center pt-4 pb-2">
-          <div className="text-[#625e6f] text-[10px] font-normal font-inter leading-[14px]">
-            Leads within
-          </div>
-          <div className="text-[#625e6f] flex flex-row gap-1 text-[10px] font-normal font-inter leading-[14px]">
+          <div className={textClasses}>Leads within</div>
+          <div className={`${textClasses} flex flex-row gap-1`}>
             <Icon icon={PiBuildingThin} size={14} color="#625e6f" />
             Current job title in <span className="text-lime-500">CEO +1</span>
           </div>
@@ -65,9 +65,7 @@ const AppProductContent: React.FC<{ className?: string }> = ({ className }) => {
                 src={profile.profileImage}
                 alt="profile"
               />
-              <div className="text-[#625e6f] text-[10px] font-normal font-inter leading-[14px]">
-                {profile.name}
-              </div>
+              <div className={textClasses}>{profile.name}</div>
             </div>
           </div>
         ))}

@@ -12,10 +12,10 @@ export default function OtherProductCard() {
           />
         </div>
         <div className="flex flex-col gap-1">
-          <div className="text-[#36206b] text-base font-medium font-['Inter'] leading-snug">
+          <div className="text-[#36206b] text-base font-medium font-inter leading-snug">
             Dharmesh Shah
           </div>
-          <div className="text-[#6c6483] text-xs font-normal font-['Inter']">
+          <div className="text-[#6c6483] text-xs font-normal font-inter">
             Product manager
           </div>
         </div>
@@ -27,18 +27,18 @@ export default function OtherProductCard() {
         <div className="flex flex-col gap-2">
           <div className="flex sm:flex-row flex-col justify-start sm:gap-[69px] gap-5">
             <div className="flex flex-col gap-0.5">
-              <div className="text-[#9491a1] text-xs font-normal font-['Inter']">
+              <div className="text-[#9491a1] text-xs font-normal font-inter">
                 Company
               </div>
-              <div className="text-[#271454] text-xs font-medium font-['Inter']">
+              <div className="text-[#271454] text-xs font-medium font-inter">
                 HubSpot
               </div>
             </div>
             <div className="flex flex-col gap-0.5">
-              <div className="text-[#9491a1] text-xs font-normal font-['Inter']">
+              <div className="text-[#9491a1] text-xs font-normal font-inter">
                 Job Title
               </div>
-              <div className="text-[#271454] text-xs font-medium font-['Inter']">
+              <div className="text-[#271454] text-xs font-medium font-inter">
                 CTO
               </div>
             </div>
@@ -50,18 +50,18 @@ export default function OtherProductCard() {
         <div className="sm:flex flex-col gap-2 hidden">
           <div className="flex justify-start gap-[59px]">
             <div className="flex flex-col gap-0.5">
-              <div className="text-[#9491a1] text-xs font-normal font-['Inter']">
+              <div className="text-[#9491a1] text-xs font-normal font-inter">
                 Location
               </div>
-              <div className="text-[#271454] text-xs font-medium font-['Inter']">
+              <div className="text-[#271454] text-xs font-medium font-inter">
                 Cambridge
               </div>
             </div>
             <div className="flex flex-col gap-0.5">
-              <div className="text-[#9491a1] text-xs font-normal font-['Inter']">
+              <div className="text-[#9491a1] text-xs font-normal font-inter">
                 Company Type
               </div>
-              <div className="text-[#271454] text-xs font-medium font-['Inter']">
+              <div className="text-[#271454] text-xs font-medium font-inter">
                 Public
               </div>
             </div>
@@ -73,18 +73,18 @@ export default function OtherProductCard() {
         <div className="hidden sm:flex flex-col gap-2">
           <div className="flex justify-start gap-[67px]">
             <div className="flex flex-col gap-0.5">
-              <div className="text-[#9491a1] text-xs font-normal font-['Inter']">
+              <div className="text-[#9491a1] text-xs font-normal font-inter">
                 Seniority
               </div>
-              <div className="text-[#271454] text-xs font-medium font-['Inter']">
+              <div className="text-[#271454] text-xs font-medium font-inter">
                 Executive
               </div>
             </div>
             <div className="flex flex-col gap-0.5">
-              <div className="text-[#9491a1] text-xs font-normal font-['Inter']">
+              <div className="text-[#9491a1] text-xs font-normal font-inter">
                 Industry
               </div>
-              <div className="text-[#271454] text-xs font-medium font-['Inter']">
+              <div className="text-[#271454] text-xs font-medium font-inter">
                 Internet Software
               </div>
             </div>
