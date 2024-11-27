@@ -8,7 +8,7 @@ const WebProducts: React.FC = () => {
         <WebProductContent />
         <WebProductCard />
       </div>
-      <div className="flex flex-col gap-6 xl:max-w-[600px] sm:max-w-[332px] lg:max-w-[464px]">
+      <div className="flex flex-col gap-6 xl:max-w-[600px] sm:max-w-[332px] lg:max-w-[464px] max-w-[520px]">
         <h2 className="text-[#271454] sm:text-5xl text-4xl font-bold font-helvetica">
           Our Website Products
         </h2>

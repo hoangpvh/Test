@@ -4,7 +4,7 @@ import OtherProductContent from '@/components/atoms/OtherProductContent'
 const OtherProducts: React.FC = () => {
   return (
     <div className="w-full xl:w-[1200px] gap-10 h-auto flex justify-center sm:flex-row flex-col xl:justify-between items-center">
-      <div className="flex flex-col gap-6 xl:max-w-[600px] sm:max-w-[332px] lg:max-w-[464px]">
+      <div className="flex flex-col gap-6 xl:max-w-[600px] sm:max-w-[332px] lg:max-w-[464px] max-w-[520px]">
         <div className="text-[#271454] text-4xl sm:text-5xl font-bold font-helvetica">
           Many other products
         </div>
