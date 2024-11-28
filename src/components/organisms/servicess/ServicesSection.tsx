@@ -3,7 +3,7 @@ import ServiceRow from '@/components/molecules/servicess/ServiceRow'
 
 const ServicesSection: React.FC = () => (
   <div className=" w-full px-4 sm:px-0 py-10 xl:py-50 sm:py-40 flex flex-col justify-start items-center gap-5 sm:gap-15">
-    <div className="hidden justify-start items-center gap-[60px] lg:inline-flex">
+    <div className="hidden justify-start items-center gap-15 lg:inline-flex">
       {services1.map((service, index) => (
         <ServiceRow
           key={index}
