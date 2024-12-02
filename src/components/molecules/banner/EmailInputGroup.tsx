@@ -1,6 +1,9 @@
+import 'react-toastify/dist/ReactToastify.css'
+
 import emailjs from '@emailjs/browser'
 import { useState } from 'react'
 import { FaCheck, FaEnvelope, FaTimes } from 'react-icons/fa'
+import { toast } from 'react-toastify'
 
 import Button from '@/components/atoms/Button'
 import Icon from '@/components/atoms/Icon'
@@ -48,7 +51,7 @@ const EmailInputGroup = () => {
         },
         '3WsPc_1dJjxodHzik'
       )
-      alert('Email sent successfully!')
+      toast.success('Email sent successfully!')
       setEmail('')
     } catch (error) {
       console.error('Error sending email:', error)
@@ -66,6 +69,9 @@ const EmailInputGroup = () => {
       <div className="w-full relative">
         <div className="relative">
           <TextInput
+            id="email"
+            name="email"
+            autoComplete="email"
             className={`w-full ${error ? 'border-primary-focus' : ''}`}
             placeholder="Enter your email address"
             onChange={handleEmailChange}
@@ -77,6 +83,7 @@ const EmailInputGroup = () => {
                 icon={isValidEmail ? FaCheck : FaTimes}
                 size={16}
                 color={isValidEmail ? '#22c55e' : '#ef4444'}
+                data-testid={isValidEmail ? 'icon-check' : 'icon-times'}
               />
             </div>
           )}
