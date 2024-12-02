@@ -6,7 +6,7 @@ const Logo: React.FC = () => {
       <div className="relative">
         <div className="hidden sm:block lg:w-10 lg:h-10 sm:w-8 sm:h-8 relative">
           <Image
-            src="/Logo.svg"
+            src="/images/Logo.svg"
             alt="Desktop Logo"
             width={40}
             height={40}
@@ -16,7 +16,7 @@ const Logo: React.FC = () => {
 
         <div className="block sm:hidden w-7 h-7 relative">
           <Image
-            src="/Mobile Logo.svg"
+            src="/images/Mobile Logo.svg"
             alt="Mobile Logo"
             width={24}
             height={24}

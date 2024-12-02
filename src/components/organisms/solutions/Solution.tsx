@@ -23,7 +23,7 @@ const Solution = () => {
                 <Button
                   title="View More"
                   onClick={() => console.log('View!')}
-                  className="w-full px-6 py-3 lg:py-3 sm:py-4 bg-primary-default text-base leading-7"
+                  className="w-full px-6 py-3 lg:py-3 sm:py-4 bg-primary-default"
                 />
               </div>
             </div>

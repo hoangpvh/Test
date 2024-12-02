@@ -14,7 +14,7 @@ const TechLogo: React.FC<LogoProps> = ({ name, alt = 'Technology Logo' }) => (
   >
     <div className="w-7 h-7 sm:w-10 sm:h-10 xl:w-15 xl:h-15 relative">
       <Image
-        src={`/${name}.svg`}
+        src={`/images/${name}.svg`}
         alt={alt}
         width={60}
         height={60}

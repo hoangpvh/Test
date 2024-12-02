@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="items-center justify-start gap-3 inline-flex">
               <div className="w-10 h-10">
                 <Image
-                  src="/Logo.svg"
+                  src="/images/Logo.svg"
                   alt="Logo"
                   width={40}
                   height={40}
@@ -65,6 +65,8 @@ const Footer = () => {
             {/* Direct input implementation */}
             <div className="h-119 px-6 py-4 bg-primary-dark2 rounded-xl">
               <textarea
+                id="message"
+                name="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Enter the content you want to send!"

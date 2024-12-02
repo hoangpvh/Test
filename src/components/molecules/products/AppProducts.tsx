@@ -1,10 +1,17 @@
-import AppProductCard from '@/components/atoms/AppProductCard'
-import AppProductContent from '@/components/atoms/AppProductContent'
+import Image from 'next/image'
+
+import { useResponsiveImage } from '@/hooks/useResponsiveImage'
 
 const AppProducts: React.FC = () => {
+  const currentImage = useResponsiveImage({
+    mobile: '/images/products/AppProductsMobile.png',
+    tablet: '/images/products/AppProductsTablet.png',
+    desktop: '/images/products/AppProducts.png',
+  })
+
   return (
     <div
-      className="h-auto w-full xl:w-1200 sm:h-378 gap-10 flex sm:flex-row flex-col justify-center xl:justify-between items-center"
+      className="h-auto w-full xl:w-1200 gap-10 flex sm:flex-row flex-col justify-center xl:justify-between items-center"
       data-testid="app-products-container"
     >
       <div
@@ -22,11 +29,25 @@ const AppProducts: React.FC = () => {
         </p>
       </div>
       <div
-        className="w-342 h-330 sm:w-432 xl:w-532 xl:h-378 relative"
+        className="w-342 h-355 sm:h-[335px] xl:h-[378px] sm:w-432 xl:w-532 relative"
         data-testid="image-container"
       >
-        <AppProductContent className="absolute left-0 top-0" />
-        <AppProductCard className="absolute right-0 top-113 sm:left-25 lg:left-147 sm:top-53 xl:top-70" />
+        <Image
+          src={currentImage}
+          alt="App Products"
+          fill
+          quality={100}
+          unoptimized
+          sizes="(max-width: 840px) 342px,
+                 (max-width: 1025px) 432px,
+                 532px"
+          style={{
+            objectFit: 'contain',
+            width: '100%',
+            height: '100%',
+          }}
+          priority
+        />
       </div>
     </div>
   )
