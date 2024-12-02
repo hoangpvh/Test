@@ -28,7 +28,7 @@ const Logo: React.FC = () => {
       <div
         className="
         text-purple-darkest sm:text-white 
-        text-22 sm:text-26 lg:text-32 
+        text-22 sm:text-32
         font-bold font-seravek 
         uppercase
       "

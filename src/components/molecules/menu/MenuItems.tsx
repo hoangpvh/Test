@@ -23,7 +23,7 @@ const MenuItems: React.FC = () => {
         className={`
           sm:px-1 sm:py-1 lg:px-3 lg:py-2 
           flex items-center rounded-full
-          text-lg sm:text-xl lg:text-2xl 
+          text-lg sm:text-lg lg:text-xl 
           text-white font-poppins
           transition duration-200
           ${isActive ? 'bg-primary-light/20 font-semibold' : 'font-medium'}
