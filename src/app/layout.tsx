@@ -8,7 +8,16 @@ import MainTemplate from '@/components/templates/MainTemplate'
 
 export const metadata: Metadata = {
   title: 'Funcoding',
-  description: '',
+  description: 'Funcoding',
+  icons: {
+    icon: '/images/Mobile Logo.svg',
+    shortcut: '/images/Mobile Logo.svg',
+    apple: '/images/Mobile Logo.svg',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/images/Mobile Logo.svg',
+    },
+  },
 }
 
 export default function RootLayout({
@@ -22,7 +31,16 @@ export default function RootLayout({
         <MainTemplate>{children}</MainTemplate>
         <ToastContainer
           position="top-right"
-          style={{ zIndex: 9999, top: '140px' }}
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          style={{ zIndex: 9999, top: '124px' }}
         />
       </body>
     </html>

@@ -8,11 +8,11 @@ interface MainTemplateProps {
 
 const MainTemplate = ({ children }: MainTemplateProps) => {
   return (
-    <>
+    <div data-testid="main-template">
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }
 

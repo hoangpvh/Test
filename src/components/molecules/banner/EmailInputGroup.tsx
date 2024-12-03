@@ -1,5 +1,3 @@
-import 'react-toastify/dist/ReactToastify.css'
-
 import emailjs from '@emailjs/browser'
 import { useState } from 'react'
 import { FaCheck, FaEnvelope, FaTimes } from 'react-icons/fa'

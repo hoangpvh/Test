@@ -43,7 +43,7 @@ describe('ContentSection Component', () => {
     it('should style the heading text correctly', () => {
       const headingContainer = screen.getByTestId('heading-container')
       expect(headingContainer).toHaveClass(
-        "absolute text-center text-purple-dark text-4xl xl:text-23 sm:text-5xl lg:text-63 font-bold font-['Helvetica'] leading-15"
+        "absolute text-center text-purple-dark text-4xl xl:text-23 sm:text-5xl lg:text-62 font-bold font-['Helvetica'] leading-15"
       )
     })
 
@@ -69,7 +69,7 @@ describe('ContentSection Component', () => {
     it('should have responsive heading text sizes', () => {
       const headingContainer = screen.getByTestId('heading-container')
       expect(headingContainer).toHaveClass(
-        'text-4xl sm:text-5xl lg:text-63 xl:text-23'
+        'text-4xl sm:text-5xl lg:text-62 xl:text-23'
       )
     })
   })

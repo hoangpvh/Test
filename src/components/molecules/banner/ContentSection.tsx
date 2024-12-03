@@ -11,7 +11,7 @@ const ContentSection: React.FC = () => {
         />
         <div
           data-testid="heading-container"
-          className="absolute text-center text-purple-dark text-4xl xl:text-23 sm:text-5xl lg:text-63 font-bold font-['Helvetica'] leading-15 w-full flex flex-col justify-center sm:flex-row"
+          className="absolute text-center text-purple-dark text-4xl xl:text-23 sm:text-5xl lg:text-62 font-bold font-['Helvetica'] leading-15 w-full flex flex-col justify-center sm:flex-row"
         >
           <span>Code with Joy.</span>
           <span>&nbsp;Innovate with Fun!</span>

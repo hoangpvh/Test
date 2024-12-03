@@ -6,7 +6,10 @@ import Solutions from '@/components/organisms/solutions/Solution'
 
 const HomeTemplate = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-start overflow-hidden">
+    <div
+      data-testid="home-template"
+      className="w-full flex flex-col items-center justify-start overflow-hidden"
+    >
       <Banner />
       <Solutions />
       <ServicesSection />

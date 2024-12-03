@@ -29,7 +29,7 @@ const Solution = () => {
             </div>
           </div>
         </div>
-        <div className="flex-col justify-start items-start xl:gap-6 gap-5 inline-flex ">
+        <div className="flex-col justify-start items-start xl:gap-6 gap-5 inline-flex xl:w-[880px]">
           <div className="justify-center xl:justify-end items-start xl:gap-6 gap-5 inline-flex flex-wrap">
             {solutions.map((solution, index) => (
               <SolutionCard
