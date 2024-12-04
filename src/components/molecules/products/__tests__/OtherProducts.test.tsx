@@ -2,31 +2,35 @@ import { render, screen } from '@testing-library/react'
 
 import OtherProducts from '@/components/molecules/products/OtherProducts'
 
-// Mock the useResponsiveImage hook
-jest.mock('@/hooks/useResponsiveImage', () => ({
-  useResponsiveImage: () => '/products/OtherProducts.png',
-}))
-
 describe('OtherProducts', () => {
-  beforeEach(() => {
+  it('renders the component correctly', () => {
     render(<OtherProducts />)
-  })
 
-  it('renders the heading correctly', () => {
-    const heading = screen.getByRole('heading', { level: 2 })
-    expect(heading).toHaveTextContent('Many other products')
-  })
+    // Check heading
+    expect(
+      screen.getByRole('heading', {
+        name: /many other products/i,
+      })
+    ).toBeInTheDocument()
 
-  it('renders the description text correctly', () => {
-    const description = screen.getByText(
-      /From mobile apps to web platforms and enterprise software/
-    )
-    expect(description).toBeInTheDocument()
-  })
+    // Check paragraph content
+    expect(
+      screen.getByText(/from mobile apps to web platforms/i)
+    ).toBeInTheDocument()
 
-  it('renders the image with correct attributes', () => {
+    // Check image
     const image = screen.getByAltText('Other Products')
     expect(image).toBeInTheDocument()
-    expect(image).toHaveAttribute('src', '/products/OtherProducts.png')
+
+    // Check picture sources
+    const sources = document.getElementsByTagName('source')
+    expect(sources[0]).toHaveAttribute(
+      'srcSet',
+      '/images/products/OtherProducts.webp'
+    )
+    expect(sources[1]).toHaveAttribute(
+      'srcSet',
+      '/images/products/OtherProductsTablet.webp'
+    )
   })
 })

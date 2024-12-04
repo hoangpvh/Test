@@ -27,7 +27,7 @@ describe('Logo Component', () => {
 
     it('should render company name', () => {
       render(<Logo />)
-      expect(screen.getByText('Funcoding')).toBeInTheDocument()
+      expect(screen.getByText('Funcoding Inc.')).toBeInTheDocument()
     })
 
     it('should render images with correct dimensions', () => {

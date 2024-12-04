@@ -2,7 +2,7 @@ import AppProducts from '@/components/molecules/products/AppProducts'
 import OtherProducts from '@/components/molecules/products/OtherProducts'
 import WebProducts from '@/components/molecules/products/WebProducts'
 
-const Products: React.FC = () => {
+const ProductSection: React.FC = () => {
   return (
     <div
       id="products"
@@ -15,4 +15,4 @@ const Products: React.FC = () => {
   )
 }
 
-export default Products
+export default ProductSection

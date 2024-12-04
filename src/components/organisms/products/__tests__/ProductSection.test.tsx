@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import Products from '@/components/organisms/products/Products'
+import ProductSection from '@/components/organisms/products/ProductSection'
 
 // Mock the child components
 jest.mock('@/components/molecules/products/AppProducts', () => {
@@ -23,7 +23,7 @@ jest.mock('@/components/molecules/products/OtherProducts', () => {
 
 describe('Products', () => {
   it('renders all product sections', () => {
-    render(<Products />)
+    render(<ProductSection />)
 
     // Check if all child components are rendered
     expect(screen.getByTestId('app-products')).toBeInTheDocument()
@@ -32,7 +32,7 @@ describe('Products', () => {
   })
 
   it('has correct container styling', () => {
-    const { container } = render(<Products />)
+    const { container } = render(<ProductSection />)
 
     const mainContainer = container.firstChild as HTMLElement
     expect(mainContainer).toHaveClass(
@@ -41,7 +41,7 @@ describe('Products', () => {
   })
 
   it('renders child components in correct order', () => {
-    render(<Products />)
+    render(<ProductSection />)
 
     const children = screen.getAllByTestId(/.*-products/)
     expect(children).toHaveLength(3)

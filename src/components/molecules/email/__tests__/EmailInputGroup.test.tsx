@@ -6,7 +6,7 @@ jest.mock('@emailjs/browser', () => ({
   send: jest.fn(() => Promise.resolve()),
 }))
 
-import EmailInputGroup from '@/components/molecules/banner/EmailInputGroup'
+import EmailInputGroup from '@/components/molecules/email/EmailInputGroup'
 
 describe('EmailInputGroup Component', () => {
   let mockConsoleError: jest.SpyInstance

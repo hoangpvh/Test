@@ -71,7 +71,8 @@ const MenuItems: React.FC = () => {
         href={item.href}
         onClick={(e) => handleScroll(e, item.href)}
         className={`
-          sm:px-5 sm:py-3 
+          sm:px-4 sm:py-2 
+          lg:px-5 lg:py-3 
           flex items-center rounded-full
           text-lg lg:text-xl 
           text-white font-poppins

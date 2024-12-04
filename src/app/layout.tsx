@@ -7,8 +7,9 @@ import { ToastContainer } from 'react-toastify'
 import MainTemplate from '@/components/templates/MainTemplate'
 
 export const metadata: Metadata = {
-  title: 'Funcoding',
-  description: 'Funcoding',
+  title: 'Funcoding Inc',
+  description:
+    'Frontend, backend, infrastructure, mobile apps, AI, etc. We have a broad skill sets to make various type of services.',
   icons: {
     icon: '/images/Mobile Logo.svg',
     shortcut: '/images/Mobile Logo.svg',

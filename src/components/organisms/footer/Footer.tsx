@@ -31,7 +31,7 @@ const Footer = () => {
                 />
               </div>
               <div className="text-white text-32 font-bold font-seravek uppercase">
-                Funcoding
+                Funcoding Inc
               </div>
             </div>
             <div className="flex flex-row sm:flex-col gap-5 sm:gap-3">
@@ -39,7 +39,7 @@ const Footer = () => {
                 support@funcoding.jp
               </div>
               <div className="text-text-neutral sm:text-lg text-sm font-normal sm:font-medium font-plus-jakarta sm:leading-loose leading-25.20">
-                Itabashi-ku, Tokyo, Japan
+                〒174-0072 Minami-Tokiwadai 1-11-6, Itabashi, Tokyo
               </div>
             </div>
           </div>

@@ -8,7 +8,7 @@ describe('Footer', () => {
   it('renders logo and company name', () => {
     render(<Footer />)
     expect(screen.getByAltText('Logo')).toBeInTheDocument()
-    expect(screen.getByText('Funcoding')).toBeInTheDocument()
+    expect(screen.getByText('Funcoding Inc')).toBeInTheDocument()
   })
 
   it('renders contact information', () => {
@@ -18,7 +18,9 @@ describe('Footer', () => {
       return hasEmail
     })
     expect(contactInfo).toBeInTheDocument()
-    expect(screen.getByText('Itabashi-ku, Tokyo, Japan')).toBeInTheDocument()
+    expect(
+      screen.getByText('〒174-0072 Minami-Tokiwadai 1-11-6, Itabashi, Tokyo')
+    ).toBeInTheDocument()
   })
 
   it('renders navigation sections', () => {

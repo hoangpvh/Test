@@ -6,6 +6,7 @@ import { toast } from 'react-toastify'
 import Button from '@/components/atoms/Button'
 import Icon from '@/components/atoms/Icon'
 import TextInput from '@/components/atoms/TextInput'
+import { EMAIL_CONFIG } from '@/config/email'
 
 const EmailInputGroup = () => {
   const [email, setEmail] = useState('')
@@ -40,14 +41,14 @@ const EmailInputGroup = () => {
     setIsLoading(true)
     try {
       await emailjs.send(
-        'service_r1404pk',
-        'template_ww5aa56',
+        EMAIL_CONFIG.SERVICE_ID,
+        EMAIL_CONFIG.TEMPLATE_ID,
         {
-          to_email: 'hhh28110101@gmail.com',
+          to_email: EMAIL_CONFIG.ADMIN_EMAIL,
           from_email: email,
           message: `User ${email} has subscribed to notifications`,
         },
-        '3WsPc_1dJjxodHzik'
+        EMAIL_CONFIG.PUBLIC_KEY
       )
       toast.success('Email sent successfully!')
       setEmail('')

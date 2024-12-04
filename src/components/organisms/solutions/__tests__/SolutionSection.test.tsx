@@ -3,12 +3,11 @@ import userEvent from '@testing-library/user-event'
 import React from 'react'
 
 import { solutions } from '@/assets/data'
+import SolutionSection from '@/components/organisms/solutions/SolutionSection'
 
-import Solution from '../Solution'
-
-describe('Solution', () => {
+describe('SolutionSection', () => {
   it('renders heading texts correctly', () => {
-    render(<Solution />)
+    render(<SolutionSection />)
     expect(screen.getByText('How can we help you?')).toBeInTheDocument()
     expect(screen.getByText('solutions we provide')).toBeInTheDocument()
     expect(
@@ -19,7 +18,7 @@ describe('Solution', () => {
   })
 
   it('renders all solution cards', () => {
-    render(<Solution />)
+    render(<SolutionSection />)
 
     solutions.forEach((solution) => {
       expect(screen.getByText(solution.title)).toBeInTheDocument()
@@ -29,7 +28,7 @@ describe('Solution', () => {
 
   it('renders view more button', async () => {
     const user = userEvent.setup()
-    render(<Solution />)
+    render(<SolutionSection />)
 
     const button = screen.getByText('View More')
     expect(button).toBeInTheDocument()
@@ -38,7 +37,7 @@ describe('Solution', () => {
   })
 
   it('applies correct styling classes', () => {
-    const { container } = render(<Solution />)
+    const { container } = render(<SolutionSection />)
     const mainDiv = container.firstChild
 
     expect(mainDiv).toHaveClass(
