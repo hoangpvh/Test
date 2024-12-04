@@ -179,6 +179,21 @@ module.exports = {
         '1200': '1200px',
         '1448': '1448px',
       },
+      keyframes: {
+        'fade-in-top': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-100px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
+        }
+      },
+      animation: {
+        'fade-in-top': 'fade-in-top 0.5s ease-out forwards'
+      }
     },
   },
   plugins: [],

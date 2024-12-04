@@ -1,12 +1,16 @@
+import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
 const ContentSection: React.FC = () => {
   const t = useTranslations('banner')
 
   return (
-    <div
+    <motion.div
+      initial={{ y: 0, opacity: 1 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
       data-testid="content-section"
-      className="w-full h-209 lg:h-206 flex flex-col justify-start items-center lg:gap-10 gap-5"
+      className="w-full h-209 lg:h-206 flex flex-col justify-start items-center lg:gap-10 gap-5 lg:animate-fade-in-top"
     >
       <div className="w-full mx-5 h-28 flex justify-center items-center">
         <div
@@ -30,7 +34,7 @@ const ContentSection: React.FC = () => {
       >
         {t('description')}
       </div>
-    </div>
+    </motion.div>
   )
 }
 
