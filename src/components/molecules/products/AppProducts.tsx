@@ -1,14 +1,6 @@
 import Image from 'next/image'
 
-import { useResponsiveImage } from '@/hooks/useResponsiveImage'
-
 const AppProducts: React.FC = () => {
-  const imageSrc = useResponsiveImage({
-    mobile: '/images/products/AppProductsMobile.webp',
-    tablet: '/images/products/AppProductsTablet.webp',
-    desktop: '/images/products/AppProducts.webp',
-  })
-
   return (
     <div className="h-auto w-full xl:w-1200 gap-10 flex sm:flex-row flex-col justify-center xl:justify-between items-center">
       <div className="flex flex-col gap-6 xl:max-w-531 sm:max-w-332 lg:max-w-432 max-w-520">
@@ -23,15 +15,24 @@ const AppProducts: React.FC = () => {
         </p>
       </div>
       <div className="w-342 h-355 sm:h-[335px] xl:h-[378px] sm:w-432 xl:w-532 relative">
-        <Image
-          src={imageSrc}
-          alt="App Products"
-          fill
-          unoptimized
-          quality={100}
-          sizes="(max-width: 840px) 342px, (max-width: 1025px) 432px, 532px"
-          style={{ objectFit: 'contain' }}
-        />
+        <picture className="relative block w-full h-full">
+          <source
+            media="(min-width: 1025px)"
+            srcSet="/images/products/AppProducts.webp"
+          />
+          <source
+            media="(min-width: 840px)"
+            srcSet="/images/products/AppProductsTablet.webp"
+          />
+          <Image
+            src="/images/products/AppProductsMobile.webp"
+            alt="App Products"
+            fill
+            quality={100}
+            sizes="(max-width: 640px) 342px, (max-width: 1024px) 432px, 532px"
+            style={{ objectFit: 'contain' }}
+          />
+        </picture>
       </div>
     </div>
   )

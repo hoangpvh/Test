@@ -10,7 +10,10 @@ const Footer = () => {
   const [message, setMessage] = useState('')
 
   return (
-    <footer className="lg:flex h-auto py-20 sm:pt-20 sm:pb-25 xl:pt-25 xl:pb-50 sm:px-15 px-4 xl:px-0 bg-primary-dark lg:justify-center">
+    <footer
+      id="contact"
+      className="lg:flex h-auto py-20 sm:pt-20 sm:pb-25 xl:pt-25 xl:pb-50 sm:px-15 px-4 xl:px-0 bg-primary-dark lg:justify-center"
+    >
       <div className="xl:max-w-1200 lg:max-w-920 flex flex-col xl:flex-row gap-20 sm:gap-10">
         {/* Left Section */}
         <div className="sm:h-182 h-312 flex justify-between sm:flex-row flex-col gap-10">
@@ -33,12 +36,10 @@ const Footer = () => {
             </div>
             <div className="flex flex-row sm:flex-col gap-5 sm:gap-3">
               <div className="text-text-neutral sm:text-lg text-sm font-normal sm:font-medium font-plus-jakarta sm:leading-loose leading-25.20">
-                funcoding@gmail.com
-                <br />
-                (+00) 001123344546
+                support@funcoding.jp
               </div>
               <div className="text-text-neutral sm:text-lg text-sm font-normal sm:font-medium font-plus-jakarta sm:leading-loose leading-25.20">
-                Tokyo - Japan
+                Itabashi-ku, Tokyo, Japan
               </div>
             </div>
           </div>

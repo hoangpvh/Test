@@ -26,10 +26,20 @@ export const techList = [
 ]
 
 export const menuItems = [
-  { key: 'home', href: '/', label: 'Home' },
-  { key: 'products', href: '/products', label: 'Our Products' },
-  { key: 'blogs', href: '/blogs', label: 'Blogs' },
-  { key: 'contact', href: '/contact', label: 'Contact Us' },
+  { key: 'home', href: '/', label: 'Home', scrollTo: 'top' },
+  {
+    key: 'products',
+    href: '/products',
+    label: 'Our Products',
+    scrollTo: 'products',
+  },
+  { key: 'blogs', href: '/blogs', label: 'Blogs', scrollTo: 'blogs' },
+  {
+    key: 'contact',
+    href: '/contact',
+    label: 'Contact Us',
+    scrollTo: 'contact',
+  },
 ]
 
 import {

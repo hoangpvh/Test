@@ -14,12 +14,11 @@ describe('Footer', () => {
   it('renders contact information', () => {
     render(<Footer />)
     const contactInfo = screen.getByText((content, element) => {
-      const hasEmail = content.includes('funcoding@gmail.com')
-      const hasPhone = content.includes('(+00) 001123344546')
-      return hasEmail || hasPhone
+      const hasEmail = content.includes('support@funcoding.jp')
+      return hasEmail
     })
     expect(contactInfo).toBeInTheDocument()
-    expect(screen.getByText('Tokyo - Japan')).toBeInTheDocument()
+    expect(screen.getByText('Itabashi-ku, Tokyo, Japan')).toBeInTheDocument()
   })
 
   it('renders navigation sections', () => {
