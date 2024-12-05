@@ -14,7 +14,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({ title, links }) => {
           <a
             key={index}
             href="#"
-            className="text-text-neutral sm:text-lg text-base font-normal sm:font-medium font-plus-jakarta sm:leading-loose leading-7  "
+            className="text-text-neutral sm:text-lg text-base font-normal sm:font-medium sm:font-helvetica font-helvetica sm:leading-loose leading-7  "
           >
             {link}
           </a>

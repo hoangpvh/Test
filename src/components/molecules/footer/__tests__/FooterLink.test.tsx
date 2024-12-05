@@ -46,7 +46,7 @@ describe('FooterLink', () => {
         'text-base',
         'font-normal',
         'sm:font-medium',
-        'font-plus-jakarta',
+        'font-helvetica',
         'sm:leading-loose',
         'leading-7'
       )

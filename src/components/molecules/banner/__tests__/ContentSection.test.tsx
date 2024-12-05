@@ -43,14 +43,14 @@ describe('ContentSection Component', () => {
     it('should style the heading text correctly', () => {
       const headingContainer = screen.getByTestId('heading-container')
       expect(headingContainer).toHaveClass(
-        "absolute text-center text-purple-dark text-4xl xl:text-23 sm:text-5xl lg:text-62 font-bold font-['Helvetica'] leading-15"
+        "absolute text-center text-purple-dark text-4xl xl:text-23 sm:text-5xl lg:text-62 font-bold font-helvetica leading-15"
       )
     })
 
     it('should style the description text correctly', () => {
       const description = screen.getByTestId('description-container')
       expect(description).toHaveClass(
-        "max-w-500 sm:max-w-824 lg:max-w-1236 xl:max-w-1536 text-purple-medium text-sm lg:text-28 sm:text-lg font-normal font-['Helvetica']"
+        "max-w-500 sm:max-w-824 lg:max-w-1236 xl:max-w-1536 text-purple-medium text-sm lg:text-28 sm:text-lg font-normal font-helvetica"
       )
     })
   })

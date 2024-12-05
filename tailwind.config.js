@@ -56,7 +56,6 @@ module.exports = {
       },
       fontFamily: {
         helvetica: ['Helvetica', 'Arial', 'sans-serif'],
-        'plus-jakarta': ['Plus Jakarta Sans', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
         seravek: ['Seravek', 'Arial', 'sans-serif'],
       },
@@ -69,7 +68,7 @@ module.exports = {
         '62': '62px',
         '16': '64px',
         '20': '80px',
-        '23': '92px',
+        '90': '90px',
       },
       height: {
         '13': '52px',

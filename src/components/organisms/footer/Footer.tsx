@@ -35,10 +35,10 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-3">
-              <div className="text-text-neutral sm:text-lg text-sm font-normal sm:font-medium font-plus-jakarta sm:leading-loose leading-25.20">
+              <div className="text-text-neutral sm:text-lg text-sm font-normal sm:font-medium font-helvetica sm:leading-loose leading-25.20">
                 support@funcoding.jp
               </div>
-              <div className="text-text-neutral sm:text-lg text-sm font-normal sm:font-medium font-plus-jakarta sm:leading-loose leading-25.20">
+              <div className="text-text-neutral sm:text-lg text-sm font-normal sm:font-medium font-helvetica sm:leading-loose leading-25.20">
                 〒174-0072 Minami-Tokiwadai 1-11-6, Itabashi, Tokyo
               </div>
             </div>
@@ -78,7 +78,7 @@ const Footer = () => {
             <div className="flex sm:justify-between sm:flex-row flex-col items-start sm:items-center gap-4">
               <div className="flex items-center gap-2.5">
                 <Icon icon={BsCheckCircleFill} color="#268D61" />
-                <span className="text-text-neutral sm:text-lg text-sm font-normal font-plus-jakarta sm:leading-28.80 leading-snug">
+                <span className="text-text-neutral sm:text-lg text-sm font-normal font-helvetica sm:leading-28.80 leading-snug">
                   Available to respond
                 </span>
               </div>

@@ -13,7 +13,7 @@ describe('Email Config', () => {
   it('should use TEST_EMAIL_CONFIG in test environment', () => {
     const originalEnv = process.env.NODE_ENV
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'test' })
-    const { EMAIL_CONFIG } = require('@/')
+    const { EMAIL_CONFIG } = require('../email')
 
     expect(EMAIL_CONFIG).toEqual({
       SERVICE_ID: 'service_r1404pk',
@@ -33,7 +33,7 @@ describe('Email Config', () => {
     process.env.NEXT_PUBLIC_ADMIN_EMAIL = 'prod@example.com'
     process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY = 'prod_public_key'
 
-    const { EMAIL_CONFIG } = require('@/config/email')
+    const { EMAIL_CONFIG } = require('../email')
 
     expect(EMAIL_CONFIG).toEqual({
       SERVICE_ID: 'prod_service_id',
@@ -53,7 +53,7 @@ describe('Email Config', () => {
     process.env.NEXT_PUBLIC_ADMIN_EMAIL = undefined
     process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY = undefined
 
-    const { EMAIL_CONFIG } = require('@/config/email')
+    const { EMAIL_CONFIG } = require('../email')
 
     expect(EMAIL_CONFIG).toEqual({
       SERVICE_ID: '',
