@@ -18,7 +18,7 @@ const Footer = () => {
         {/* Left Section */}
         <div className="sm:h-182 h-312 flex justify-between sm:flex-row flex-col gap-10">
           {/* Logo and Contact */}
-          <div className="flex flex-col gap-6 sm:gap-34">
+          <div className="flex flex-col gap-6 sm:gap-34 xl:w-306">
             {/* Simplified Logo */}
             <div className="items-center justify-start gap-3 inline-flex">
               <div className="w-10 h-10">
@@ -34,7 +34,7 @@ const Footer = () => {
                 Funcoding Inc
               </div>
             </div>
-            <div className="flex flex-row sm:flex-col gap-5 sm:gap-3">
+            <div className="flex flex-col gap-3">
               <div className="text-text-neutral sm:text-lg text-sm font-normal sm:font-medium font-plus-jakarta sm:leading-loose leading-25.20">
                 support@funcoding.jp
               </div>
