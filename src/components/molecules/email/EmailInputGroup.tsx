@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import { send } from '@emailjs/browser'
 import { useState } from 'react'
 import { FaCheck, FaEnvelope, FaTimes } from 'react-icons/fa'
@@ -9,6 +10,7 @@ import TextInput from '@/components/atoms/TextInput'
 import { EMAIL_CONFIG } from '@/config/email'
 
 const EmailInputGroup = () => {
+  const t = useTranslations('email')
   const [email, setEmail] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
@@ -29,12 +31,12 @@ const EmailInputGroup = () => {
   const handleSubmit = async () => {
     // Validate email
     if (!email) {
-      setError('Please enter your email')
+      setError(t('error.required'))
       return
     }
 
     if (!validateEmail(email)) {
-      setError('Invalid email format')
+      setError(t('error.invalid'))
       return
     }
 
@@ -54,7 +56,7 @@ const EmailInputGroup = () => {
       setEmail('')
     } catch (error) {
       console.error('Error sending email:', error)
-      setError('An error occurred while sending email. Please try again later.')
+      setError(t('error.failed'))
     } finally {
       setIsLoading(false)
     }
@@ -72,7 +74,7 @@ const EmailInputGroup = () => {
             name="email"
             autoComplete="email"
             className={`w-full ${error ? 'border-primary-focus' : ''}`}
-            placeholder="Enter your email address"
+            placeholder={t('placeholder')}
             onChange={handleEmailChange}
             value={email}
           />
@@ -94,7 +96,7 @@ const EmailInputGroup = () => {
         )}
       </div>
       <Button
-        title={isLoading ? 'Sending...' : 'Send to us'}
+        title={isLoading ? 'Sending...' : t('button')}
         onClick={handleSubmit}
         leftIcon={<Icon icon={FaEnvelope} size={20} color="#f0f1ff" />}
         className="w-full sm:max-w-full xl:max-w-200 lg:px-6 px-4 py-3 sm:py-4 lg:py-3 bg-primary-default flex justify-center items-center gap-3"

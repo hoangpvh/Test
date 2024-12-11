@@ -1,4 +1,8 @@
+import { useTranslations } from 'next-intl'
+
 const ContentSection: React.FC = () => {
+  const t = useTranslations('banner')
+
   return (
     <div
       data-testid="content-section"
@@ -13,16 +17,15 @@ const ContentSection: React.FC = () => {
           data-testid="heading-container"
           className="absolute text-center text-purple-dark text-4xl xl:text-90 sm:text-5xl lg:text-62 font-bold font-helvetica leading-15 w-full flex flex-col justify-center sm:flex-row"
         >
-          <span>Code with Joy.</span>
-          <span>&nbsp;Innovate with Fun!</span>
+          <span>{t('title')}</span>
+          <span>&nbsp;{t('title2')}</span>
         </div>
       </div>
       <div
         data-testid="description-container"
         className="max-w-500 sm:max-w-824 lg:px-10 lg:max-w-1236 xl:max-w-1536 px-4 py-2.5 grow shrink basis-0 text-center text-purple-medium sm:leading-10 leading-18 text-sm lg:text-28 sm:text-22 font-normal font-helvetica lg:leading-42.67"
       >
-        With a commitment to quality and collaboration, we transform ideas into
-        powerful, scalable solutions designed to propel your business forward.
+        {t('description')}
       </div>
     </div>
   )

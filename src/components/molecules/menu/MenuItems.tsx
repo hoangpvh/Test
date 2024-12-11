@@ -1,15 +1,34 @@
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import React, { useEffect, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
+import { MdLanguage } from 'react-icons/md'
 
-import { menuItems } from '@/assets/data'
 import Icon from '@/components/atoms/Icon'
 
 const MenuItems: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('/')
+  const t = useTranslations('menu')
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const menuItems = [
+    { key: 'home', href: '/', label: t('home') },
+    { key: 'products', href: '/products', label: t('products') },
+    { key: 'blogs', href: '/blogs', label: t('blogs') },
+    { key: 'contact', href: '/contact', label: t('contact') },
+  ]
 
   const handleMenuToggle = () => setIsMenuOpen((prev) => !prev)
+
+  const handleLanguageChange = () => {
+    const currentLocale = pathname?.split('/')[1]
+    const newLocale = currentLocale === 'en' ? 'ja' : 'en'
+    const newPath = pathname?.replace(`/${currentLocale}`, `/${newLocale}`)
+    router.push(newPath ?? '/')
+  }
 
   const handleScroll = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -82,6 +101,30 @@ const MenuItems: React.FC = () => {
     )
   }
 
+  const renderLanguageButton = () => {
+    const currentLocale = pathname?.split('/')[1]
+    const languageLabel = currentLocale === 'en' ? t('english') : t('japanese')
+
+    return (
+      <button
+        onClick={handleLanguageChange}
+        className="
+          flex items-center gap-2
+          sm:px-4 sm:py-2 
+          lg:px-5 lg:py-3 
+          rounded-full
+          text-lg lg:text-xl 
+          text-white font-poppins
+          transition-all duration-200
+          hover:bg-primary-light/20
+        "
+      >
+        <Icon icon={MdLanguage} size={24} color="white" />
+        <span>{languageLabel}</span>
+      </button>
+    )
+  }
+
   return (
     <div className="flex items-center">
       {/* Mobile Menu Button */}
@@ -108,6 +151,7 @@ const MenuItems: React.FC = () => {
       {/* Desktop Navigation */}
       <nav className="hidden sm:flex justify-end items-center h-7 sm:h-7 gap-4">
         {menuItems.map(renderMenuItem)}
+        {renderLanguageButton()}
       </nav>
 
       {/* Mobile Menu Dropdown */}
@@ -125,6 +169,7 @@ const MenuItems: React.FC = () => {
           "
         >
           {menuItems.map(renderMenuItem)}
+          {renderLanguageButton()}
         </div>
       )}
     </div>
