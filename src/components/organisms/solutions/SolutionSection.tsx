@@ -22,7 +22,7 @@ const SolutionSection = () => {
               <div className="xl:w-100 text-neutral-text text-sm sm:text-22 xl:text-lg font-normal font-helvetica leading-snug xl:leading-28.80">
                 {t('solutions.subtitle')}
               </div>
-              <div className="justify-center items-center inline-flex xl:w-162 w-full">
+              <div className="justify-center items-center inline-flex w-full [html[lang='en']_&]:xl:w-162 [html[lang='ja']_&]:xl:w-[168px]">
                 <Button
                   title={t('solutions.viewMore')}
                   onClick={() => console.log('View!')}

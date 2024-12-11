@@ -3,7 +3,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import React, { useEffect, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
-import { MdLanguage } from 'react-icons/md'
+import { IoIosArrowDown } from 'react-icons/io'
 
 import Icon from '@/components/atoms/Icon'
 
@@ -13,6 +13,7 @@ const MenuItems: React.FC = () => {
   const t = useTranslations('menu')
   const router = useRouter()
   const pathname = usePathname()
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
 
   const menuItems = [
     { key: 'home', href: '/', label: t('home') },
@@ -23,11 +24,15 @@ const MenuItems: React.FC = () => {
 
   const handleMenuToggle = () => setIsMenuOpen((prev) => !prev)
 
-  const handleLanguageChange = () => {
+  const handleLanguageButtonClick = () => {
+    setIsLanguageDropdownOpen((prev) => !prev)
+  }
+
+  const handleLanguageSelect = (locale: string) => {
     const currentLocale = pathname?.split('/')[1]
-    const newLocale = currentLocale === 'en' ? 'ja' : 'en'
-    const newPath = pathname?.replace(`/${currentLocale}`, `/${newLocale}`)
+    const newPath = pathname?.replace(`/${currentLocale}`, `/${locale}`)
     router.push(newPath ?? '/')
+    setIsLanguageDropdownOpen(false)
   }
 
   const handleScroll = (
@@ -88,9 +93,10 @@ const MenuItems: React.FC = () => {
         href={item.href}
         onClick={(e) => handleScroll(e, item.href)}
         className={`
-          px-4 py-3
+          px-2 py-3
+          lg:px-4 lg:py-3
           flex items-center rounded-full
-          text-lg lg:text-xl 
+          text-base lg:text-lg
           text-white font-poppins
           transition-all duration-200
           ${isActive ? 'bg-primary-light/20 font-semibold' : 'font-medium'}
@@ -104,24 +110,69 @@ const MenuItems: React.FC = () => {
   const renderLanguageButton = () => {
     const currentLocale = pathname?.split('/')[1]
     const languageLabel = currentLocale === 'en' ? t('english') : t('japanese')
+    const flagSrc =
+      currentLocale === 'en'
+        ? '/images/united kingdom.svg'
+        : '/images/japan.svg'
 
     return (
-      <button
-        onClick={handleLanguageChange}
-        className="
-          flex items-center gap-2
-          sm:px-4 sm:py-2 
-          lg:px-5 lg:py-3 
-          rounded-full
-          text-lg lg:text-xl 
-          text-white font-poppins
-          transition-all duration-200
-          hover:bg-primary-light/20
-        "
-      >
-        <Icon icon={MdLanguage} size={24} color="white" />
-        <span>{languageLabel}</span>
-      </button>
+      <div className="relative">
+        <button
+          onClick={handleLanguageButtonClick}
+          className="h-10 px-3 py-1 bg-[#f0f1ff]/10 rounded-full border border-[#f0f1ff]/50 justify-start items-center gap-2 inline-flex"
+        >
+          <div className="justify-center items-center gap-2 flex">
+            <img
+              src={flagSrc}
+              alt={`${currentLocale} flag`}
+              className="w-6 h-6 object-cover rounded-full"
+            />
+            <div className="hidden xl:block text-xl font-normal font-poppins leading-relaxed text-white">
+              {languageLabel}
+            </div>
+            <div className="w-6 h-6 relative justify-center items-center flex">
+              <Icon icon={IoIosArrowDown} size={20} color="white" />
+            </div>
+          </div>
+        </button>
+
+        {isLanguageDropdownOpen && (
+          <div className="absolute right-0 px-2 py-3 flex flex-col gap-2 w-40 bg-white rounded-2xl shadow-lg overflow-hidden z-50">
+            <button
+              onClick={() => handleLanguageSelect('en')}
+              className={`w-full px-4 py-2 text-left flex items-center gap-2 rounded-lg
+                ${
+                  currentLocale === 'en'
+                    ? 'bg-[#F7F8FA] text-[#18203c]'
+                    : 'bg-white text-[#666f8d]'
+                }`}
+            >
+              <img
+                src="/images/united kingdom.svg"
+                alt="English flag"
+                className="w-6 h-6 object-cover rounded-full"
+              />
+              <span>English</span>
+            </button>
+            <button
+              onClick={() => handleLanguageSelect('ja')}
+              className={`w-full px-4 py-2 text-left flex items-center gap-2 rounded-lg
+                ${
+                  currentLocale === 'ja'
+                    ? 'bg-[#F7F8FA] text-[#18203c]'
+                    : 'bg-white text-[#666f8d]'
+                }`}
+            >
+              <img
+                src="/images/japan.svg"
+                alt="Japanese flag"
+                className="w-6 h-6 object-cover rounded-full"
+              />
+              <span>日本語</span>
+            </button>
+          </div>
+        )}
+      </div>
     )
   }
 

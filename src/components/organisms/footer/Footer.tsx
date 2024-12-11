@@ -55,14 +55,13 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation Links */}
           <div className="flex gap-16">
             <FooterLink section="about" links={aboutLinks} />
             <FooterLink section="support" links={supportLinks} />
           </div>
         </div>
 
-        <div className="xl:w-530 flex flex-col gap-4">
+        <div className="[html[lang='en']_&]:xl:w-530 [html[lang='ja']_&]:xl:w-480 flex flex-col gap-4">
           <h2 className="text-white sm:text-2xl text-base font-bold font-helvetica capitalize">
             {t('contactTitle')}
           </h2>
