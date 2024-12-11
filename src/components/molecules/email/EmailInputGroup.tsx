@@ -1,4 +1,4 @@
-import emailjs from '@emailjs/browser'
+import { send } from '@emailjs/browser'
 import { useState } from 'react'
 import { FaCheck, FaEnvelope, FaTimes } from 'react-icons/fa'
 import { toast } from 'react-toastify'
@@ -40,7 +40,7 @@ const EmailInputGroup = () => {
 
     setIsLoading(true)
     try {
-      await emailjs.send(
+      await send(
         EMAIL_CONFIG.SERVICE_ID,
         EMAIL_CONFIG.TEMPLATE_ID,
         {

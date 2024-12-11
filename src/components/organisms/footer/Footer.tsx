@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex gap-20">
+          <div className="flex gap-16">
             <FooterLink
               title="Company"
               links={['About us', 'Solutions', 'Blog']}

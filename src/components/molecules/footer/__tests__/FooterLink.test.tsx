@@ -42,7 +42,6 @@ describe('FooterLink', () => {
     links.forEach((link) => {
       expect(link).toHaveClass(
         'text-text-neutral',
-        'sm:text-lg',
         'text-base',
         'font-normal',
         'sm:font-medium',

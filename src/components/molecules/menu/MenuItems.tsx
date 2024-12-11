@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 
@@ -9,7 +8,6 @@ import Icon from '@/components/atoms/Icon'
 const MenuItems: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('/')
-  const pathname = usePathname()
 
   const handleMenuToggle = () => setIsMenuOpen((prev) => !prev)
 
@@ -17,7 +15,7 @@ const MenuItems: React.FC = () => {
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) => {
-    e.preventDefault() // Prevent default link behavior
+    e.preventDefault()
     setIsMenuOpen(false)
     setActiveSection(href)
 
@@ -71,8 +69,7 @@ const MenuItems: React.FC = () => {
         href={item.href}
         onClick={(e) => handleScroll(e, item.href)}
         className={`
-          sm:px-4 sm:py-2 
-          lg:px-5 lg:py-3 
+          px-4 py-3
           flex items-center rounded-full
           text-lg lg:text-xl 
           text-white font-poppins

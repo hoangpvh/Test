@@ -13,4 +13,4 @@ const PROD_EMAIL_CONFIG = {
 }
 
 export const EMAIL_CONFIG =
-  process.env.NODE_ENV === 'test' ? TEST_EMAIL_CONFIG : PROD_EMAIL_CONFIG
+  process.env.NODE_ENV !== 'production' ? TEST_EMAIL_CONFIG : PROD_EMAIL_CONFIG
