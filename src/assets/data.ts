@@ -25,23 +25,6 @@ export const techList = [
   },
 ]
 
-export const menuItems = [
-  { key: 'home', href: '/', label: 'Home', scrollTo: 'top' },
-  {
-    key: 'products',
-    href: '/products',
-    label: 'Our Products',
-    scrollTo: 'products',
-  },
-  { key: 'blogs', href: '/blogs', label: 'Blogs', scrollTo: 'blogs' },
-  {
-    key: 'contact',
-    href: '/contact',
-    label: 'Contact Us',
-    scrollTo: 'contact',
-  },
-]
-
 import {
   LuCode2,
   LuMonitorSmartphone,
@@ -51,52 +34,44 @@ import {
 
 export const solutions = [
   {
-    title: 'Custom Software Development',
-    description:
-      'Tailored software solutions designed to meet specific business needs and objectives.',
+    key: 'customSoftware',
     icon: LuCode2,
   },
   {
-    title: 'Web & Mobile Application Development',
-    description:
-      'Development of responsive web apps and native or cross-platform mobile apps.',
+    key: 'webMobile',
     icon: LuMonitorSmartphone,
   },
   {
-    title: 'Product Design and Prototyping',
-    description:
-      'Designing and prototyping digital products to refine ideas and validate concepts before full development.',
+    key: 'productDesign',
     icon: LuPencilRuler,
   },
   {
-    title: 'Product Maintenance and Support',
-    description:
-      'Ongoing technical support and maintenance to keep software updated, secure.',
+    key: 'maintenance',
     icon: LuShieldCheck,
   },
 ]
 
 export const services1 = [
   {
-    label: 'Web & Mobile Application',
+    key: 'webMobile',
     gradientFrom: '#f2dbff',
     gradientTo: '#f0f1ff',
     borderColor: '#bc77e4',
   },
   {
-    label: 'Cloud Solutions',
+    key: 'cloudSolutions',
     gradientFrom: '#caffce',
     gradientTo: '#f0f1ff',
     borderColor: '#6ace73',
   },
   {
-    label: 'Software Development',
+    key: 'customSoftware',
     gradientFrom: '#ccf7ff',
     gradientTo: '#f0f1ff',
     borderColor: '#34c2dd',
   },
   {
-    label: 'Product Design',
+    key: 'productDesign',
     gradientFrom: '#d2d5ff',
     gradientTo: '#f0f1ff',
     borderColor: '#565add',
@@ -105,25 +80,25 @@ export const services1 = [
 
 export const services2 = [
   {
-    label: 'Artificial Intelligence',
+    key: 'artificialIntelligence',
     gradientFrom: '#caffce',
     gradientTo: '#f0f1ff',
     borderColor: '#6ace73',
   },
   {
-    label: 'Product Design',
+    key: 'productDesign',
     gradientFrom: '#d2d5ff',
     gradientTo: '#f0f1ff',
     borderColor: '#565add',
   },
   {
-    label: 'Big Data & Analytics',
+    key: 'bigData',
     gradientFrom: '#f2dbff',
     gradientTo: '#f0f1ff',
     borderColor: '#bc77e4',
   },
   {
-    label: 'Maintenance and Support',
+    key: 'maintenance',
     gradientFrom: '#ccf7ff',
     gradientTo: '#f0f1ff',
     borderColor: '#34c2dd',
