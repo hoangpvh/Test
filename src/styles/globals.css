@@ -2,9 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: system-ui, Helvetica, Arial, sans-serif;
+/* Local font declarations */
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/helvetica/Helvetica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/helvetica/Helvetica-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Seravek';
+  src: url('/fonts/seravek/Seravek.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Seravek';
+  src: url('/fonts/seravek/Seravek-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: 'Helvetica', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color-scheme: light dark;
   background-color: #fff;
 
@@ -16,8 +48,8 @@
 }
 
 body {
-  body {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
 }
+
+

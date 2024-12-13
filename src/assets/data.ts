@@ -26,8 +26,106 @@ export const techList = [
 ]
 
 export const menuItems = [
-  { key: 'home', href: '/', label: 'Home' },
-  { key: 'products', href: '/products', label: 'Our Products' },
-  { key: 'blogs', href: '/blogs', label: 'Blogs' },
-  { key: 'contact', href: '/contact', label: 'Contact Us' },
+  { key: 'home', href: '/', label: 'Home', scrollTo: 'top' },
+  {
+    key: 'products',
+    href: '/products',
+    label: 'Our Products',
+    scrollTo: 'products',
+  },
+  { key: 'blogs', href: '/blogs', label: 'Blogs', scrollTo: 'blogs' },
+  {
+    key: 'contact',
+    href: '/contact',
+    label: 'Contact Us',
+    scrollTo: 'contact',
+  },
+]
+
+import {
+  LuCode2,
+  LuMonitorSmartphone,
+  LuPencilRuler,
+  LuShieldCheck,
+} from 'react-icons/lu'
+
+export const solutions = [
+  {
+    title: 'Custom Software Development',
+    description:
+      'Tailored software solutions designed to meet specific business needs and objectives.',
+    icon: LuCode2,
+  },
+  {
+    title: 'Web & Mobile Application Development',
+    description:
+      'Development of responsive web apps and native or cross-platform mobile apps.',
+    icon: LuMonitorSmartphone,
+  },
+  {
+    title: 'Product Design and Prototyping',
+    description:
+      'Designing and prototyping digital products to refine ideas and validate concepts before full development.',
+    icon: LuPencilRuler,
+  },
+  {
+    title: 'Product Maintenance and Support',
+    description:
+      'Ongoing technical support and maintenance to keep software updated, secure.',
+    icon: LuShieldCheck,
+  },
+]
+
+export const services1 = [
+  {
+    label: 'Web & Mobile Application',
+    gradientFrom: '#f2dbff',
+    gradientTo: '#f0f1ff',
+    borderColor: '#bc77e4',
+  },
+  {
+    label: 'Cloud Solutions',
+    gradientFrom: '#caffce',
+    gradientTo: '#f0f1ff',
+    borderColor: '#6ace73',
+  },
+  {
+    label: 'Software Development',
+    gradientFrom: '#ccf7ff',
+    gradientTo: '#f0f1ff',
+    borderColor: '#34c2dd',
+  },
+  {
+    label: 'Product Design',
+    gradientFrom: '#d2d5ff',
+    gradientTo: '#f0f1ff',
+    borderColor: '#565add',
+  },
+]
+
+export const services2 = [
+  {
+    label: 'Artificial Intelligence',
+    gradientFrom: '#caffce',
+    gradientTo: '#f0f1ff',
+    borderColor: '#6ace73',
+  },
+  {
+    label: 'Product Design',
+    gradientFrom: '#d2d5ff',
+    gradientTo: '#f0f1ff',
+    borderColor: '#565add',
+  },
+  {
+    label: 'Big Data & Analytics',
+    gradientFrom: '#f2dbff',
+    gradientTo: '#f0f1ff',
+    borderColor: '#bc77e4',
+  },
+  {
+    label: 'Maintenance and Support',
+    gradientFrom: '#ccf7ff',
+    gradientTo: '#f0f1ff',
+    borderColor: '#34c2dd',
+  },
 ]

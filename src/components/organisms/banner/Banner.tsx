@@ -1,7 +1,7 @@
 import { techList } from '@/assets/data'
 import ContentSection from '@/components/molecules/banner/ContentSection'
-import EmailInputGroup from '@/components/molecules/banner/EmailInputGroup'
 import TechRow from '@/components/molecules/banner/TechRow'
+import EmailInputGroup from '@/components/molecules/email/EmailInputGroup'
 
 const Banner: React.FC = () => {
   return (

@@ -137,3 +137,11 @@ Here is the example of the actual structure
 |       `make switch-to-develop`       | Switch the code base to the `develop` branch and run it                                                                                                                                                                                                                                                               |
 |              `make up`              | Run app with the current code                                                                                                                                                                                                                                                                                           |
 |             `make down`             | Stop app                                                                                                                                                                                                                                                                                                                |
+
+
+
+# Rename .env.example to .env.local and set your environment variables.
+Create email template on EmailJS:
+- Log in to your account at https://dashboard.emailjs.com/
+- Create a New Email Template
+- Get service_id, template_id, public_key then fill in the file .env.local and add admin_email

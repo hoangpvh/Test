@@ -5,6 +5,9 @@ interface TextInputProps {
   className?: string
   value: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  id?: string
+  name?: string
+  autoComplete?: string
 }
 
 const TextInput: React.FC<TextInputProps> = ({
@@ -12,6 +15,9 @@ const TextInput: React.FC<TextInputProps> = ({
   className = '',
   onChange,
   value,
+  id,
+  name,
+  autoComplete,
 }) => {
   const inputRef = useRef<HTMLInputElement>(null)
   const [isFocused, setIsFocused] = useState(false)
@@ -37,6 +43,9 @@ const TextInput: React.FC<TextInputProps> = ({
         ref={inputRef}
         type="text"
         value={value}
+        id={id}
+        name={name}
+        autoComplete={autoComplete}
         placeholder={placeholder}
         className={`bg-transparent outline-none w-full ${
           isFocused ? 'text-primary-focus' : 'text-purple-light/50'
