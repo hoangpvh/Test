@@ -33,6 +33,7 @@ const MenuItems: React.FC = () => {
     const newPath = pathname?.replace(`/${currentLocale}`, `/${locale}`)
     router.push(newPath ?? '/')
     setIsLanguageDropdownOpen(false)
+    localStorage.setItem('preferredLanguage', locale)
   }
 
   const handleScroll = (
@@ -83,6 +84,27 @@ const MenuItems: React.FC = () => {
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [isMenuOpen])
+
+  useEffect(() => {
+    const savedLocale = localStorage.getItem('preferredLanguage')
+    if (savedLocale) {
+      const currentLocale = pathname?.split('/')[1]
+      if (savedLocale !== currentLocale) {
+        const newPath = pathname?.replace(
+          `/${currentLocale}`,
+          `/${savedLocale}`
+        )
+        router.push(newPath ?? '/')
+      }
+    } else {
+      const currentLocale = pathname?.split('/')[1]
+      if (currentLocale !== 'ja') {
+        const newPath = pathname?.replace(`/${currentLocale}`, '/ja')
+        router.push(newPath ?? '/')
+      }
+      localStorage.setItem('preferredLanguage', 'ja')
+    }
+  }, [])
 
   const renderMenuItem = (item: { href: string; label: string }) => {
     const isActive = activeSection === item.href
