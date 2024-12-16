@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { IoIosArrowDown } from 'react-icons/io'
 
 import Icon from '@/components/atoms/Icon'
+
+const HEADER_OFFSET = 80
 
 const MenuItems: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -16,11 +18,64 @@ const MenuItems: React.FC = () => {
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
 
   const menuItems = [
-    { key: 'home', href: '/', label: t('home') },
-    { key: 'products', href: '/products', label: t('products') },
-    { key: 'contact', href: '/contact', label: t('contact') },
+    { key: 'home', href: '/', label: t('home'), scrollTo: 'top' },
+    {
+      key: 'products',
+      href: '#products',
+      label: t('products'),
+      scrollTo: 'products',
+    },
+    {
+      key: 'contact',
+      href: '#contact',
+      label: t('contact'),
+      scrollTo: 'contact',
+    },
   ]
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '-50% 0px',
+      threshold: 0,
+    }
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const matchingItem = menuItems.find(
+            (item) => item.scrollTo === entry.target.id
+          )
+          if (matchingItem) {
+            setActiveSection(matchingItem.href)
+          }
+        }
+      })
+    }, options)
+
+    menuItems.forEach((item) => {
+      const element = document.getElementById(item.scrollTo)
+      if (element) {
+        observer.observe(element)
+      }
+    })
+
+    const handleScroll = () => {
+      if (window.scrollY < 100) {
+        setActiveSection('/')
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      menuItems.forEach((item) => {
+        const element = document.getElementById(item.scrollTo)
+        if (element) {
+          observer.unobserve(element)
+        }
+      })
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   const handleMenuToggle = () => setIsMenuOpen((prev) => !prev)
 
   const handleLanguageButtonClick = () => {
@@ -43,6 +98,11 @@ const MenuItems: React.FC = () => {
     setIsMenuOpen(false)
     setActiveSection(href)
 
+    if (!href.startsWith('#')) {
+      window.location.href = href
+      return
+    }
+
     if (href === '/') {
       window.scrollTo({
         top: 0,
@@ -51,11 +111,11 @@ const MenuItems: React.FC = () => {
       return
     }
 
-    const element = document.getElementById(href.replace('/', ''))
+    const element = document.getElementById(href.replace('#', ''))
     if (element) {
-      const headerOffset = 80
       const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+      const offsetPosition =
+        elementPosition + window.pageYOffset - HEADER_OFFSET
 
       window.scrollTo({
         top: offsetPosition,
@@ -104,29 +164,6 @@ const MenuItems: React.FC = () => {
       localStorage.setItem('preferredLanguage', 'ja')
     }
   }, [])
-
-  const renderMenuItem = (item: { href: string; label: string }) => {
-    const isActive = activeSection === item.href
-
-    return (
-      <Link
-        key={item.href}
-        href={item.href}
-        onClick={(e) => handleScroll(e, item.href)}
-        className={`
-          px-2 py-3
-          lg:px-4 lg:py-3
-          flex items-center rounded-full
-          text-base lg:text-lg
-          text-white font-poppins
-          transition-all duration-200
-          ${isActive ? 'bg-primary-light/20 font-semibold' : 'font-medium'}
-        `}
-      >
-        {item.label}
-      </Link>
-    )
-  }
 
   const renderLanguageButton = () => {
     const currentLocale = pathname?.split('/')[1]
@@ -196,7 +233,28 @@ const MenuItems: React.FC = () => {
       </div>
     )
   }
+  const renderMenuItem = (item: { href: string; label: string }) => {
+    const isActive = activeSection === item.href
 
+    return (
+      <Link
+        key={item.href}
+        href={item.href}
+        onClick={(e) => handleScroll(e, item.href)}
+        className={`
+          px-2 py-3
+          lg:px-4 lg:py-3
+          flex items-center rounded-full
+          text-base lg:text-lg
+          text-white font-poppins
+          transition-all duration-200
+          ${isActive ? 'bg-primary-light/20 font-semibold' : 'font-medium'}
+        `}
+      >
+        {item.label}
+      </Link>
+    )
+  }
   return (
     <div className="flex items-center">
       {/* Mobile Menu Button */}
