@@ -192,7 +192,7 @@ module.exports = {
         }
       },
       animation: {
-        'fade-in-top': 'fade-in-top 0.5s ease-out forwards'
+        'fade-in-top': 'fade-in-top 1s ease-out forwards'
       }
     },
   },

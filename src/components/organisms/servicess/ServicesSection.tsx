@@ -57,16 +57,16 @@ const ServicesSection: React.FC = () => {
           ref={carousel1}
           className="flex justify-start items-center gap-15"
           animate={{
-            x: [-width, 0],
+            x: [0, -width],
           }}
           transition={{
             x: {
               repeat: Infinity,
-              duration: 50,
+              duration: 70,
               ease: 'linear',
             },
           }}
-          initial={{ x: -width }}
+          initial={{ x: 0 }}
         >
           {repeatedServices1.map((service, index) => (
             <ServiceRow
@@ -90,7 +90,7 @@ const ServicesSection: React.FC = () => {
           transition={{
             x: {
               repeat: Infinity,
-              duration: 48,
+              duration: 68,
               ease: 'linear',
             },
           }}

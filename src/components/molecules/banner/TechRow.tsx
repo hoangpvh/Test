@@ -36,14 +36,12 @@ const TechRow: React.FC<TechRowProps> = ({ logos, className = '' }) => {
       data-testid="tech-row"
       className={`flex justify-between items-center -z-10 ${className}`}
     >
-      {/* Static display for screens < lg */}
       <div className="w-full flex justify-between items-center lg:hidden">
         {logos.map((logo, index) => (
           <Logo key={index} name={logo.name} alt={logo.alt} />
         ))}
       </div>
 
-      {/* Animated display for screens >= lg */}
       <div className="hidden w-full lg:flex justify-between items-center">
         {logos.map((logo, index) => (
           <motion.div
