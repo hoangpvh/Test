@@ -43,24 +43,49 @@ const TechRow: React.FC<TechRowProps> = ({ logos, className = '' }) => {
       </div>
 
       <div className="hidden w-full lg:flex justify-between items-center">
-        {logos.map((logo, index) => (
-          <motion.div
-            key={index}
-            initial={{
-              x: index < logos.length / 2 ? '-100vw' : '100vw',
-              y: '100vh',
-              opacity: 0,
-            }}
-            animate={{
-              x: 0,
-              y: 0,
-              opacity: 1,
-            }}
-            transition={{ type: 'spring', stiffness: 50, damping: 10 }}
-          >
-            <Logo name={logo.name} alt={logo.alt} />
-          </motion.div>
-        ))}
+        {logos.map((logo, index) => {
+          let initialX = '0'
+          let initialY = '0'
+
+          if (logo.name === 'Visual Studio Code') {
+            initialX = index === 0 ? '-100vw' : '100vw'
+            initialY = '-100vh'
+          } else if (logo.name === 'Figma Logomark') {
+            initialX = index === 0 ? '-100vw' : '100vw'
+            initialY = '-100vh'
+          } else if (logo.name === 'Shopify Logomark') {
+            initialX = index === 0 ? '-110vw' : '110vw'
+            initialY = '-30vh'
+          } else if (logo.name === 'Wordpress Logomark') {
+            initialX = index === 0 ? '-110vw' : '110vw'
+            initialY = '-30vh'
+          } else if (logo.name === 'Notion Logomark') {
+            initialX = index === 0 ? '-100vw' : '100vw'
+            initialY = '100vh'
+          } else if (logo.name === 'Webflow Logomark') {
+            initialX = index === 0 ? '-100vw' : '100vw'
+            initialY = '100vh'
+          }
+
+          return (
+            <motion.div
+              key={index}
+              initial={{
+                x: initialX,
+                y: initialY,
+                opacity: 0,
+              }}
+              animate={{
+                x: 0,
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{ type: 'spring', stiffness: 10, damping: 5 }}
+            >
+              <Logo name={logo.name} alt={logo.alt} />
+            </motion.div>
+          )
+        })}
       </div>
     </div>
   )
