@@ -27,7 +27,7 @@ module.exports = {
         },
         primary: {
           active: '#292DB8',
-          default: '#565add',
+          default: '#3C41D7',
           focus: '#6569ff',
           hover: '#6469FF',
           light: '#F0F1FF',
@@ -46,7 +46,6 @@ module.exports = {
           background: '#fcfcfc',
           border: '#ebeff6',
           overlay: '#e0daf3',
-          text: '#7f879e',
         },
         secondary: '#2e334b',
         'secondary-dark': '#252a3f',

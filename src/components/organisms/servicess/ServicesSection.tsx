@@ -62,7 +62,7 @@ const ServicesSection: React.FC = () => {
           transition={{
             x: {
               repeat: Infinity,
-              duration: 70,
+              duration: 100,
               ease: 'linear',
             },
           }}
@@ -90,7 +90,7 @@ const ServicesSection: React.FC = () => {
           transition={{
             x: {
               repeat: Infinity,
-              duration: 68,
+              duration: 100,
               ease: 'linear',
             },
           }}
