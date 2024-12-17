@@ -50,6 +50,34 @@ export default function RootLayout({
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
           />
         </noscript>
+        <link
+          rel="preload"
+          href="/fonts/helvetica/Helvetica.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/helvetica/Helvetica-Bold.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/seravek/Seravek.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/seravek/Seravek-Bold.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
         <MainTemplate>{children}</MainTemplate>
