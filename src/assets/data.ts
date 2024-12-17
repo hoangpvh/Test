@@ -26,17 +26,17 @@ export const techList = [
 ]
 
 export const menuItems = [
-  { key: 'home', href: '/', label: 'Home', scrollTo: 'top' },
+  { key: 'home', href: '/#top', label: 'Home', scrollTo: 'top' },
   {
     key: 'products',
-    href: '/products',
+    href: '/#products',
     label: 'Our Products',
     scrollTo: 'products',
   },
-  { key: 'blogs', href: '/blogs', label: 'Blogs', scrollTo: 'blogs' },
+  { key: 'blogs', href: '/#solutions', label: 'Blogs', scrollTo: 'solutions' },
   {
     key: 'contact',
-    href: '/contact',
+    href: '/#contact',
     label: 'Contact Us',
     scrollTo: 'contact',
   },
