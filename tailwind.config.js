@@ -27,7 +27,7 @@ module.exports = {
         },
         primary: {
           active: '#292DB8',
-          default: '#565add',
+          default: '#3C41D7',
           focus: '#6569ff',
           hover: '#6469FF',
           light: '#F0F1FF',
