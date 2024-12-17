@@ -36,9 +36,20 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+          as="style"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
           rel="stylesheet"
         />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+          />
+        </noscript>
       </head>
       <body>
         <MainTemplate>{children}</MainTemplate>

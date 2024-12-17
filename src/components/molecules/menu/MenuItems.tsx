@@ -103,6 +103,7 @@ const MenuItems: React.FC = () => {
         "
       >
         <Icon icon={AiOutlineMenu} size={24} color="white" />
+        <span className="sr-only">Open Menu</span>
       </button>
 
       {/* Desktop Navigation */}
