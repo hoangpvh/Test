@@ -136,7 +136,7 @@ const SolutionSection = () => {
           >
             <motion.div
               variants={itemVariants}
-              className="xl:w-100 text-neutral-text text-sm sm:text-22 xl:text-lg 
+              className="xl:w-100 text-text-neutral text-sm sm:text-22 xl:text-lg 
                        font-normal font-helvetica leading-snug xl:leading-28.80"
             >
                               {t('solutions.subtitle')}

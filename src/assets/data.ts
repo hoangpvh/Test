@@ -1,7 +1,7 @@
 export const techList = [
   {
     className:
-      'xl:w-1448 sm:w-5/6 w-343 h-10 lg:h-30 mt-5 sm:mt-152 lg:mt-30 xl:-mt-12 flex justify-between items-center',
+      'xl:w-1448 sm:w-5/6 w-343 h-10 lg:h-30 mt-5 sm:mt-152 lg:mt-30 xl:-mt-4 flex justify-between items-center',
     logos: [
       { name: 'Notion Logomark', alt: 'Notion Logo' },
       { name: 'Webflow Logomark', alt: 'Webflow Logo' },
