@@ -32,50 +32,7 @@ const MenuItems: React.FC = () => {
       scrollTo: 'contact',
     },
   ]
-  useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: '-50% 0px',
-      threshold: 0,
-    }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const matchingItem = menuItems.find(
-            (item) => item.scrollTo === entry.target.id
-          )
-          if (matchingItem) {
-            setActiveSection(matchingItem.href)
-          }
-        }
-      })
-    }, options)
-
-    menuItems.forEach((item) => {
-      const element = document.getElementById(item.scrollTo)
-      if (element) {
-        observer.observe(element)
-      }
-    })
-
-    const handleScroll = () => {
-      if (window.scrollY < 100) {
-        setActiveSection('/')
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      menuItems.forEach((item) => {
-        const element = document.getElementById(item.scrollTo)
-        if (element) {
-          observer.unobserve(element)
-        }
-      })
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
   const handleMenuToggle = () => setIsMenuOpen((prev) => !prev)
 
   const handleLanguageButtonClick = () => {
@@ -113,9 +70,9 @@ const MenuItems: React.FC = () => {
 
     const element = document.getElementById(href.replace('#', ''))
     if (element) {
+      const headerOffset = 80
       const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition =
-        elementPosition + window.pageYOffset - HEADER_OFFSET
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
       window.scrollTo({
         top: offsetPosition,
