@@ -1,7 +1,6 @@
 import { techList } from '@/assets/data'
 import ContentSection from '@/components/molecules/banner/ContentSection'
 import TechRow from '@/components/molecules/banner/TechRow'
-import EmailInputGroup from '@/components/molecules/email/EmailInputGroup'
 
 const Banner: React.FC = () => {
   return (
@@ -13,7 +12,6 @@ const Banner: React.FC = () => {
       {techList.map((tech, index) => (
         <TechRow key={index} className={tech.className} logos={tech.logos} />
       ))}
-      <EmailInputGroup />
     </div>
   )
 }
