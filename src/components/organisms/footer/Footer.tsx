@@ -62,6 +62,7 @@ const Footer = () => {
             {t('contactTitle')}
           </h2>
           <div className="flex flex-col gap-4">
+            {/* Direct input implementation */}
             <div className="h-119 px-6 py-4 bg-primary-dark2 rounded-xl">
               <textarea
                 id="message"
@@ -69,7 +70,7 @@ const Footer = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder={t('messagePlaceholder')}
-                className="w-full h-full resize-none bg-transparent outline-none sm:text-xl text-sm font-normal font-helvetica text-white/50 leading-7"
+                className="w-full h-full resize-none bg-transparent outline-none sm:text-xl text-sm font-normal font-helvetica text-[#B8C5C6] leading-7 placeholder:text-[#B8C5C6]"
               />
             </div>
           </div>

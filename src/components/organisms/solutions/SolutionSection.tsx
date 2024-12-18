@@ -61,7 +61,7 @@ const SolutionSection = () => {
 
           <div className="flex flex-col justify-start items-start gap-5 xl:gap-15 sm:gap-8">
             <div
-              className="xl:w-100 text-neutral-text text-sm sm:text-22 xl:text-lg 
+              className="xl:w-100 text-text-neutral text-sm sm:text-22 xl:text-lg 
                            font-normal font-helvetica leading-snug xl:leading-28.80"
             >
                               {t('solutions.subtitle')}
@@ -185,7 +185,7 @@ const SolutionSection = () => {
     <section
       id="solutions"
       className="w-full h-auto px-4 py-10 xl:h-200 1920:px-90 xl:px-50 sm:px-15 
-                 sm:py-25 xl:py-148 bg-secondary-dark mt-79 sm:mt-39 xl:mt-38 
+                 sm:py-25 xl:py-148 bg-primary-dark mt-79 sm:mt-39 xl:mt-38 
                  justify-start lg:justify-center lg:items-center inline-flex lg:px-15"
     >
       <BaseContent />

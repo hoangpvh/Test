@@ -32,7 +32,6 @@ module.exports = {
           hover: '#6469FF',
           light: '#F0F1FF',
           dark: '#252a3f',
-          dark2: '#2e334b',
         },
         purple: {
           dark: '#2b1c50',
@@ -48,10 +47,9 @@ module.exports = {
           overlay: '#e0daf3',
         },
         secondary: '#2e334b',
-        'secondary-dark': '#252a3f',
         'secondary-dark-2': '#f59a73',
         'secondary-light': '#3d425a',
-        'text-neutral': '#7f879e',
+        'text-neutral': '#B2BAC2',
       },
       fontFamily: {
         helvetica: ['Helvetica', 'Arial', 'sans-serif'],

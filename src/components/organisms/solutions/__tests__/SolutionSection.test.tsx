@@ -41,7 +41,7 @@ describe('SolutionSection', () => {
     const mainDiv = container.firstChild
 
     expect(mainDiv).toHaveClass(
-      'w-full h-auto px-4 py-10 bg-secondary-dark justify-start'
+      'w-full h-auto px-4 py-10 bg-primary-dark justify-start'
     )
   })
 })
