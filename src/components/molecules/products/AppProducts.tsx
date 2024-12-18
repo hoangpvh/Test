@@ -18,16 +18,17 @@ const AppProducts: React.FC = () => {
         <picture className="relative block w-full h-full">
           <source
             media="(min-width: 1025px)"
-            srcSet="/images/products/AppProducts.webp"
+            srcSet="/api/resizeImage?imageName=AppProducts&width=532&height=378"
           />
           <source
             media="(min-width: 840px)"
-            srcSet="/images/products/AppProductsTablet.webp"
+            srcSet="/api/resizeImage?imageName=AppProductsTablet&width=432&height=335"
           />
           <Image
-            src="/images/products/AppProductsMobile.webp"
+            src="/api/resizeImage?imageName=AppProductsMobile&width=342&height=355"
             alt="App Products"
             fill
+            quality={100}
             sizes="(max-width: 840px) 342px, (max-width: 1024px) 432px, 532px"
             style={{ objectFit: 'contain' }}
           />
