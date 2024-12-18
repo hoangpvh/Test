@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && critical build --base out --src index.html --inline --minify --target styles.css",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint . --fix",
     "test": "jest --coverage",
