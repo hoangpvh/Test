@@ -1,10 +1,8 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
-import { BsCheckCircleFill } from 'react-icons/bs'
 
-import Button from '@/components/atoms/Button'
-import Icon from '@/components/atoms/Icon'
+import EmailInputGroup from '@/components/molecules/email/EmailInputGroup'
 import FooterLink from '@/components/molecules/footer/FooterLink'
 
 const Footer = () => {
@@ -14,11 +12,9 @@ const Footer = () => {
   const aboutLinks = [
     { key: 'aboutUs', href: '#' },
     { key: 'solutions', href: '#' },
-    { key: 'blog', href: '#' },
   ]
 
   const supportLinks = [
-    { key: 'careerCenter', href: '#' },
     { key: 'faq', href: '#' },
     { key: 'employers', href: '#' },
   ]
@@ -61,7 +57,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="[html[lang='en']_&]:xl:w-530 [html[lang='ja']_&]:xl:w-480 flex flex-col gap-4">
+        <div className="[html[lang='en']_&]:xl:w-530 [html[lang='ja']_&]:xl:w-480 flex flex-col gap-6">
           <h2 className="text-white sm:text-2xl text-base font-bold font-helvetica capitalize">
             {t('contactTitle')}
           </h2>
@@ -76,20 +72,8 @@ const Footer = () => {
                 className="w-full h-full resize-none bg-transparent outline-none sm:text-xl text-sm font-normal font-helvetica text-white/50 leading-7"
               />
             </div>
-
-            <div className="flex sm:justify-between sm:flex-row flex-col items-start sm:items-center gap-4">
-              <div className="flex items-center gap-2.5">
-                <Icon icon={BsCheckCircleFill} color="#268D61" />
-                <span className="text-text-neutral sm:text-lg text-sm font-normal font-helvetica sm:leading-28.80 leading-snug">
-                  {t('availableToRespond')}
-                </span>
-              </div>
-              <Button
-                title={t('sendButton')}
-                className="bg-primary-default px-6 sm:py-2 py-3 xl:h-13 xl:w-180 sm:w-480 w-full"
-              />
-            </div>
           </div>
+          <EmailInputGroup message={message} setMessage={setMessage} />
         </div>
       </div>
     </footer>
