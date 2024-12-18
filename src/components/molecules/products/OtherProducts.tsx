@@ -18,14 +18,14 @@ const OtherProducts: React.FC = () => {
         <picture className="relative block w-full h-full">
           <source
             media="(min-width: 1025px)"
-            srcSet="/images/products/OtherProducts.webp"
+            srcSet="/api/resizeImage?imageName=OtherProducts&width=469&height=420"
           />
           <source
             media="(min-width: 840px)"
-            srcSet="/images/products/OtherProductsTablet.webp"
+            srcSet="/api/resizeImage?imageName=OtherProductsTablet&width=469&height=355"
           />
           <Image
-            src="/images/products/OtherProductsMobile.webp"
+            src="/api/resizeImage?imageName=OtherProductsMobile&width=343&height=350"
             alt="Other Products"
             fill
             unoptimized

@@ -7,14 +7,14 @@ const WebProducts: React.FC = () => {
         <picture className="relative block w-full h-full">
           <source
             media="(min-width: 1025px)"
-            srcSet="/images/products/WebProducts.webp"
+            srcSet="/api/resizeImage?imageName=WebProducts&width=412&height=388"
           />
           <source
             media="(min-width: 840px)"
-            srcSet="/images/products/WebProductsTablet.webp"
+            srcSet="/api/resizeImage?imageName=WebProductsTablet&width=412&height=388"
           />
           <Image
-            src="/images/products/WebProductsMobile.webp"
+            src="/api/resizeImage?imageName=WebProductsMobile&width=343&height=373"
             alt="Web Products"
             fill
             unoptimized
