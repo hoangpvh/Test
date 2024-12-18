@@ -27,7 +27,7 @@ const Button: React.FC<ButtonProps> = ({
         </div>
       )}
       <span
-        className={`text-center text-primary-light text-base sm:text-2xl font-bold sm:font-normal font-helvetica leading-7 ${titleClassName}`}
+        className={`text-center text-primary-light text-base sm:text-[24px] font-bold sm:font-normal font-helvetica leading-7 ${titleClassName}`}
       >
         {title}
       </span>
