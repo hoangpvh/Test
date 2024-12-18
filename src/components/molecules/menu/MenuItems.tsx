@@ -1,67 +1,13 @@
 import Link from 'next/link'
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 
 import { menuItems } from '@/assets/data'
 import Icon from '@/components/atoms/Icon'
 
-interface MenuItem {
-  key: string
-  href: string
-  label: string
-  scrollTo: string
-}
-
-const HEADER_OFFSET = 80
-
 const MenuItems: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState('/#top')
-
-  useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: '-50% 0px',
-      threshold: 0,
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const matchingItem = menuItems.find(
-            (item) => item.scrollTo === entry.target.id
-          )
-          if (matchingItem) {
-            setActiveSection(matchingItem.href)
-          }
-        }
-      })
-    }, options)
-
-    menuItems.forEach((item) => {
-      const element = document.getElementById(item.scrollTo)
-      if (element) {
-        observer.observe(element)
-      }
-    })
-
-    const handleScroll = () => {
-      if (window.scrollY < 100) {
-        setActiveSection('/#top')
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      menuItems.forEach((item) => {
-        const element = document.getElementById(item.scrollTo)
-        if (element) {
-          observer.unobserve(element)
-        }
-      })
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+  const [activeSection, setActiveSection] = useState('/')
 
   const handleMenuToggle = () => setIsMenuOpen((prev) => !prev)
 
@@ -73,12 +19,7 @@ const MenuItems: React.FC = () => {
     setIsMenuOpen(false)
     setActiveSection(href)
 
-    if (!href.startsWith('#')) {
-      window.location.href = href
-      return
-    }
-
-    if (href === '/#top') {
+    if (href === '/') {
       window.scrollTo({
         top: 0,
         behavior: 'smooth',
@@ -88,9 +29,9 @@ const MenuItems: React.FC = () => {
 
     const element = document.getElementById(href.replace('#', ''))
     if (element) {
+      const headerOffset = 80
       const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition =
-        elementPosition + window.pageYOffset - HEADER_OFFSET
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
       window.scrollTo({
         top: offsetPosition,
@@ -119,16 +60,15 @@ const MenuItems: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [isMenuOpen])
 
-  const renderMenuItem = useCallback(
-    (item: MenuItem) => {
-      const isActive = activeSection === item.href
+  const renderMenuItem = (item: { href: string; label: string }) => {
+    const isActive = activeSection === item.href
 
-      return (
-        <Link
-          key={item.key}
-          href={item.href}
-          onClick={(e) => handleScroll(e, item.href)}
-          className={`
+    return (
+      <Link
+        key={item.href}
+        href={item.href}
+        onClick={(e) => handleScroll(e, item.href)}
+        className={`
           px-4 py-3
           flex items-center rounded-full
           text-lg lg:text-xl 
@@ -136,13 +76,11 @@ const MenuItems: React.FC = () => {
           transition-all duration-200
           ${isActive ? 'bg-primary-light/20 font-semibold' : 'font-medium'}
         `}
-        >
-          {item.label}
-        </Link>
-      )
-    },
-    [activeSection]
-  )
+      >
+        {item.label}
+      </Link>
+    )
+  }
 
   return (
     <div className="flex items-center">
@@ -165,7 +103,6 @@ const MenuItems: React.FC = () => {
         "
       >
         <Icon icon={AiOutlineMenu} size={24} color="white" />
-        <span className="sr-only">Open Menu</span>
       </button>
 
       {/* Desktop Navigation */}

@@ -19,7 +19,7 @@ const ContentSection: React.FC = () => {
       </div>
       <div
         data-testid="description-container"
-        className="max-w-500 sm:max-w-824 lg:px-10 lg:max-w-1236 xl:max-w-1536 px-4 py-2.5 grow shrink basis-0 text-center text-purple-medium sm:leading-10 leading-18 text-sm lg:text-28 sm:text-22 font-normal font-helvetica lg:leading-42.67"
+        className="px-4 py-2.5 text-center text-purple-medium sm:leading-10 leading-18 text-sm lg:text-28 sm:text-22 font-normal font-helvetica lg:leading-42.67"
       >
         With a commitment to quality and collaboration, we transform ideas into
         powerful, scalable solutions designed to propel your business forward.

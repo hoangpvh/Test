@@ -15,7 +15,7 @@ const SolutionSection = () => {
               solutions we provide
             </div>
             <div className="flex flex-col justify-start items-start gap-5 xl:gap-15 sm:gap-8">
-              <div className="xl:w-100 text-neutral-text text-sm sm:text-22 xl:text-lg font-normal font-helvetica leading-snug xl:leading-28.80">
+              <div className="xl:w-100 text-text-neutral text-sm sm:text-22 xl:text-lg font-normal font-helvetica leading-snug xl:leading-28.80">
                 Transforming Ideas into High-Performance Software – Tailored to
                 Drive Your Success.
               </div>
