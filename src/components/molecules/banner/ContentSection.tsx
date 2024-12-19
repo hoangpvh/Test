@@ -18,11 +18,7 @@ const ContentSection: React.FC = () => {
         </div>
       </div>
       <div data-testid="description-container" className="">
-        <p className="">
-          With a commitment to quality and collaboration, we transform ideas
-          into powerful, scalable solutions designed to propel your business
-          forward.
-        </p>
+        <p className="">Hello</p>
       </div>
     </div>
   )
