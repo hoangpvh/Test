@@ -17,10 +17,7 @@ const ContentSection: React.FC = () => {
           <span>&nbsp;Innovate with Fun!</span>
         </div>
       </div>
-      <div
-        data-testid="description-container"
-        className="max-w-500 sm:max-w-824 lg:px-10 lg:max-w-1236 xl:max-w-1536 px-4 py-2.5 "
-      >
+      <div data-testid="description-container" className="">
         <p className="">
           With a commitment to quality and collaboration, we transform ideas
           into powerful, scalable solutions designed to propel your business
