@@ -1,11 +1,10 @@
-import React from 'react'
-const ContentSection: React.FC = React.memo(() => {
+const ContentSection: React.FC = () => {
   return (
     <div
       data-testid="content-section"
       className="w-full h-209 lg:h-206 flex flex-col justify-start items-center lg:gap-10 gap-5"
     >
-      {/* <div className="w-full mx-5 h-28 flex justify-center items-center">
+      <div className="w-full mx-5 h-28 flex justify-center items-center">
         <div
           data-testid="banner-line"
           className="absolute w-54 lg:w-435 h-12 lg:h-24 xl:h-28 sm:h-16 border-l-4 border-primary-default lg:ml-75 xl:ml-65 sm:ml-28 sm:mb-4 self-end -ml-30 xl:-mb-6 lg:-mb-4 mb-1 -z-100 bg-gradient-banner"
@@ -17,7 +16,7 @@ const ContentSection: React.FC = React.memo(() => {
           <span>Code with Joy.</span>
           <span>&nbsp;Innovate with Fun!</span>
         </div>
-      </div> */}
+      </div>
       <div
         data-testid="description-container"
         className="max-w-500 sm:max-w-824 lg:px-10 lg:max-w-1236 xl:max-w-1536 px-4 py-2.5 text-center text-purple-medium sm:leading-10 leading-18 text-sm lg:text-28 sm:text-22 font-normal font-helvetica lg:leading-42.67"
@@ -30,6 +29,6 @@ const ContentSection: React.FC = React.memo(() => {
       </div>
     </div>
   )
-})
+}
 
 export default ContentSection
