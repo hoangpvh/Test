@@ -7,7 +7,7 @@ import Solutions from '@/components/organisms/solutions/SolutionSection'
 function HomePage() {
   return (
     <div className="w-full flex flex-col items-center justify-start overflow-hidden">
-      {/* <Banner /> */}
+      <Banner />
       <Solutions />
       <ServicesSection />
       <Products />

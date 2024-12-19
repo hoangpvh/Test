@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import 'react-toastify/dist/ReactToastify.css'
 
+import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
 import { ToastContainer } from 'react-toastify'
 
@@ -74,7 +75,10 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <MainTemplate>{children}</MainTemplate>
+        <MainTemplate>
+          {children}
+          <Analytics />
+        </MainTemplate>
         <ToastContainer
           position="top-right"
           autoClose={3000}
