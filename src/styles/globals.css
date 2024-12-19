@@ -34,18 +34,6 @@
   font-display: swap;
 }
 
-:root {
-  font-family: 'Helvetica', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color-scheme: light dark;
-  background-color: #fff;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   padding: 0;

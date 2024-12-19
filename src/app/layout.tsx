@@ -37,19 +37,13 @@ export default function RootLayout({
         />
         <link
           rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap&subset=latin"
           as="style"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap&subset=latin"
           rel="stylesheet"
         />
-        <noscript>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
-          />
-        </noscript>
         <link
           rel="preload"
           href="/fonts/helvetica/Helvetica.ttf"
