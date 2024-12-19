@@ -4,7 +4,6 @@ import React from 'react'
 import { techList } from '@/assets/data'
 import Banner from '@/components/organisms/banner/Banner'
 
-// Mock child components
 jest.mock('@/components/molecules/banner/ContentSection', () => {
   return function MockContentSection() {
     return <div data-testid="mock-content-section">Content Section</div>
@@ -37,18 +36,14 @@ describe('Banner', () => {
   it('renders the component correctly', () => {
     render(<Banner />)
 
-    // Check if the banner container exists
     const bannerContainer = screen.getByTestId('banner-container')
     expect(bannerContainer).toBeInTheDocument()
 
-    // Check if ContentSection is rendered
     expect(screen.getByTestId('mock-content-section')).toBeInTheDocument()
 
-    // Check if all TechRows are rendered
     const techRows = screen.getAllByTestId('mock-tech-row')
     expect(techRows).toHaveLength(techList.length)
 
-    // Check if EmailInputGroup is rendered
     expect(screen.getByTestId('mock-email-input-group')).toBeInTheDocument()
   })
 

@@ -12,7 +12,7 @@ describe('TextInput Component', () => {
 
   beforeEach(() => {
     jest.clearAllMocks()
-    // Suppress React controlled component warning
+    
     jest.spyOn(console, 'error').mockImplementation((message: any) => {
       if (message?.includes?.('onChange handler')) return
       console.error(message)
@@ -82,14 +82,14 @@ describe('TextInput Component', () => {
       const container = screen.getByRole('textbox').parentElement as HTMLElement
       const input = screen.getByRole('textbox')
 
-      // Mock the focus method
+      
       const originalFocus = input.focus
       input.focus = jest.fn()
 
       await fireEvent.click(container)
       expect(input.focus).toHaveBeenCalled()
 
-      // Restore original focus
+      
       input.focus = originalFocus
     })
 
@@ -110,7 +110,7 @@ describe('TextInput Component', () => {
       const container = screen.getByRole('textbox').parentElement as HTMLElement
       const input = screen.getByRole('textbox')
 
-      // Mock the ref to be null
+      
       const originalRef = input.focus
       Object.defineProperty(input, 'focus', {
         get: () => null,
@@ -121,7 +121,7 @@ describe('TextInput Component', () => {
         fireEvent.click(container)
       })
 
-      // Restore original focus method
+      
       Object.defineProperty(input, 'focus', {
         value: originalRef,
         configurable: true,
@@ -133,7 +133,7 @@ describe('TextInput Component', () => {
       const container = screen.getByRole('textbox').parentElement as HTMLElement
       const input = screen.getByRole('textbox')
 
-      // Mock the ref to be undefined
+      
       const originalRef = input.focus
       Object.defineProperty(input, 'focus', {
         value: undefined,
@@ -144,7 +144,7 @@ describe('TextInput Component', () => {
         fireEvent.click(container)
       })
 
-      // Restore original focus method
+      
       Object.defineProperty(input, 'focus', {
         value: originalRef,
         configurable: true,
@@ -156,7 +156,7 @@ describe('TextInput Component', () => {
       const container = screen.getByRole('textbox').parentElement as HTMLElement
       const input = screen.getByRole('textbox')
 
-      // Delete the focus property
+      
       const originalRef = input.focus
       delete (input as any).focus
 
@@ -164,7 +164,7 @@ describe('TextInput Component', () => {
         fireEvent.click(container)
       })
 
-      // Restore original focus method
+      
       Object.defineProperty(input, 'focus', {
         value: originalRef,
         configurable: true,

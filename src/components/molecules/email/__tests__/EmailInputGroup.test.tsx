@@ -93,11 +93,9 @@ describe('EmailInputGroup Component', () => {
     it('should show validation icon when email is entered', () => {
       const input = screen.getByPlaceholderText('Enter your email address')
 
-      // Invalid email
       fireEvent.change(input, { target: { value: 'invalid-email' } })
       expect(screen.getByTestId('icon-times')).toBeInTheDocument()
 
-      // Valid email
       fireEvent.change(input, { target: { value: 'test@example.com' } })
       expect(screen.getByTestId('icon-check')).toBeInTheDocument()
     })
@@ -175,11 +173,9 @@ describe('EmailInputGroup Component', () => {
       const input = screen.getByPlaceholderText('Enter your email address')
       const button = screen.getByRole('button')
 
-      // Trigger error first
       fireEvent.click(button)
       expect(screen.getByText('Please enter your email')).toBeInTheDocument()
 
-      // Error should clear when typing
       fireEvent.change(input, { target: { value: 't' } })
       expect(
         screen.queryByText('Please enter your email')
@@ -213,11 +209,9 @@ describe('EmailInputGroup Component', () => {
       const input = screen.getByPlaceholderText('Enter your email address')
       const button = screen.getByRole('button')
 
-      // Trigger error
       fireEvent.click(button)
       expect(screen.getByText('Please enter your email')).toBeInTheDocument()
 
-      // Start typing
       await act(async () => {
         fireEvent.change(input, { target: { value: 't' } })
       })

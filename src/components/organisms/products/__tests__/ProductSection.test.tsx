@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react'
 
 import ProductSection from '@/components/organisms/products/ProductSection'
 
-// Mock the child components
 jest.mock('@/components/molecules/products/AppProducts', () => {
   return function MockAppProducts() {
     return <div data-testid="app-products">AppProducts</div>
@@ -25,7 +24,6 @@ describe('Products', () => {
   it('renders all product sections', () => {
     render(<ProductSection />)
 
-    // Check if all child components are rendered
     expect(screen.getByTestId('app-products')).toBeInTheDocument()
     expect(screen.getByTestId('web-products')).toBeInTheDocument()
     expect(screen.getByTestId('other-products')).toBeInTheDocument()

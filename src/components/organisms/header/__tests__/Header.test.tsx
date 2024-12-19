@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react'
 
 import Header from '@/components/organisms/header/Header'
 
-// Mock child components
 jest.mock('@/components/molecules/logo/Logo', () => {
   return function MockLogo() {
     return <div data-testid="mock-logo">Logo Component</div>
@@ -19,22 +18,17 @@ describe('Header', () => {
   it('renders the component correctly', () => {
     render(<Header />)
 
-    // Check if the header banner exists
     const banner = screen.getByRole('banner')
     expect(banner).toBeInTheDocument()
 
-    // Check if the decorative circle exists
     const decorativeCircle = screen.getByTestId('decorative-circle')
     expect(decorativeCircle).toBeInTheDocument()
 
-    // Check if navigation exists
     const navigation = screen.getByRole('navigation')
     expect(navigation).toBeInTheDocument()
 
-    // Check if Logo component is rendered
     expect(screen.getByTestId('mock-logo')).toBeInTheDocument()
 
-    // Check if MenuItems component is rendered
     expect(screen.getByTestId('mock-menu-items')).toBeInTheDocument()
   })
 

@@ -22,12 +22,12 @@ const EmailInputGroup = () => {
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newEmail = e.target.value
     setEmail(newEmail)
-    setError('') // Clear error when user types
+    setError('') 
     setIsValidEmail(validateEmail(newEmail))
   }
 
   const handleSubmit = async () => {
-    // Validate email
+    
     if (!email) {
       setError('Please enter your email')
       return

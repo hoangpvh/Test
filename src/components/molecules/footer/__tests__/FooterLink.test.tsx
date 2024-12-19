@@ -27,7 +27,6 @@ describe('FooterLink', () => {
   it('renders with correct styling classes', () => {
     render(<FooterLink {...mockProps} />)
 
-    // Test title styling
     const title = screen.getByText('Quick Links')
     expect(title).toHaveClass(
       'text-white',
@@ -37,7 +36,6 @@ describe('FooterLink', () => {
       'leading-normal'
     )
 
-    // Test links styling
     const links = screen.getAllByRole('link')
     links.forEach((link) => {
       expect(link).toHaveClass(

@@ -84,7 +84,7 @@ const MenuItems: React.FC = () => {
 
   return (
     <div className="flex items-center">
-      {/* Mobile Menu Button */}
+      {}
       <button
         data-testid="menu-button"
         onClick={handleMenuToggle}
@@ -105,12 +105,12 @@ const MenuItems: React.FC = () => {
         <Icon icon={AiOutlineMenu} size={24} color="white" />
       </button>
 
-      {/* Desktop Navigation */}
+      {}
       <nav className="hidden sm:flex justify-end items-center h-7 sm:h-7 gap-4">
         {menuItems.map(renderMenuItem)}
       </nav>
 
-      {/* Mobile Menu Dropdown */}
+      {}
       {isMenuOpen && (
         <div
           data-testid="mobile-menu"
