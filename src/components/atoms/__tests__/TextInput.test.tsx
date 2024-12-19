@@ -12,7 +12,7 @@ describe('TextInput Component', () => {
 
   beforeEach(() => {
     jest.clearAllMocks()
-    
+
     jest.spyOn(console, 'error').mockImplementation((message: any) => {
       if (message?.includes?.('onChange handler')) return
       console.error(message)
@@ -82,14 +82,12 @@ describe('TextInput Component', () => {
       const container = screen.getByRole('textbox').parentElement as HTMLElement
       const input = screen.getByRole('textbox')
 
-      
       const originalFocus = input.focus
       input.focus = jest.fn()
 
       await fireEvent.click(container)
       expect(input.focus).toHaveBeenCalled()
 
-      
       input.focus = originalFocus
     })
 
@@ -110,7 +108,6 @@ describe('TextInput Component', () => {
       const container = screen.getByRole('textbox').parentElement as HTMLElement
       const input = screen.getByRole('textbox')
 
-      
       const originalRef = input.focus
       Object.defineProperty(input, 'focus', {
         get: () => null,
@@ -121,7 +118,6 @@ describe('TextInput Component', () => {
         fireEvent.click(container)
       })
 
-      
       Object.defineProperty(input, 'focus', {
         value: originalRef,
         configurable: true,
@@ -133,7 +129,6 @@ describe('TextInput Component', () => {
       const container = screen.getByRole('textbox').parentElement as HTMLElement
       const input = screen.getByRole('textbox')
 
-      
       const originalRef = input.focus
       Object.defineProperty(input, 'focus', {
         value: undefined,
@@ -144,7 +139,6 @@ describe('TextInput Component', () => {
         fireEvent.click(container)
       })
 
-      
       Object.defineProperty(input, 'focus', {
         value: originalRef,
         configurable: true,
@@ -156,7 +150,6 @@ describe('TextInput Component', () => {
       const container = screen.getByRole('textbox').parentElement as HTMLElement
       const input = screen.getByRole('textbox')
 
-      
       const originalRef = input.focus
       delete (input as any).focus
 
@@ -164,7 +157,6 @@ describe('TextInput Component', () => {
         fireEvent.click(container)
       })
 
-      
       Object.defineProperty(input, 'focus', {
         value: originalRef,
         configurable: true,
