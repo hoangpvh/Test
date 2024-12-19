@@ -72,7 +72,7 @@ const MenuItems: React.FC = () => {
     if (element) {
       const headerOffset = 80
       const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+      const offsetPosition = elementPosition + window.scrollY - headerOffset
 
       window.scrollTo({
         top: offsetPosition,
@@ -214,7 +214,6 @@ const MenuItems: React.FC = () => {
   }
   return (
     <div className="flex items-center">
-      {/* Mobile Menu Button */}
       <button
         data-testid="menu-button"
         onClick={handleMenuToggle}
@@ -236,13 +235,11 @@ const MenuItems: React.FC = () => {
         <span className="sr-only">Open Menu</span>
       </button>
 
-      {/* Desktop Navigation */}
       <nav className="hidden sm:flex justify-end items-center h-7 sm:h-7 gap-4">
         {menuItems.map(renderMenuItem)}
         {renderLanguageButton()}
       </nav>
 
-      {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
         <div
           data-testid="mobile-menu"

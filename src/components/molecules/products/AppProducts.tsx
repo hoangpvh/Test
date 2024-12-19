@@ -26,7 +26,7 @@ const AppProducts: React.FC = () => {
           />
           <Image
             src="/images/products/AppProductsMobile.webp"
-            alt={t('app.imageAlt')}
+            alt="App Products by Funcoding"
             fill
             quality={100}
             sizes="(max-width: 840px) 342px, (max-width: 1024px) 432px, 532px"

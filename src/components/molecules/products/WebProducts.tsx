@@ -18,7 +18,7 @@ const WebProducts: React.FC = () => {
           />
           <Image
             src="/images/products/WebProductsMobile.webp"
-            alt={t('web.imageAlt')}
+            alt="Web Products by Funcoding"
             fill
             unoptimized
             quality={100}
