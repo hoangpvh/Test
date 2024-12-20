@@ -12,6 +12,7 @@ const HEADER_OFFSET = 80
 const MenuItems: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('/')
+  const [isScrolling, setIsScrolling] = useState(false)
   const t = useTranslations('menu')
   const router = useRouter()
   const pathname = usePathname()
@@ -54,6 +55,7 @@ const MenuItems: React.FC = () => {
     e.preventDefault()
     setIsMenuOpen(false)
     setActiveSection(href)
+    setIsScrolling(true)
 
     if (!href.startsWith('#')) {
       window.location.href = href
@@ -65,6 +67,7 @@ const MenuItems: React.FC = () => {
         top: 0,
         behavior: 'smooth',
       })
+      setTimeout(() => setIsScrolling(false), 1000)
       return
     }
 
@@ -78,6 +81,7 @@ const MenuItems: React.FC = () => {
         top: offsetPosition,
         behavior: 'smooth',
       })
+      setTimeout(() => setIsScrolling(false), 1000)
     }
   }
 
@@ -100,6 +104,47 @@ const MenuItems: React.FC = () => {
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [isMenuOpen])
+  useEffect(() => {
+    const handleScrollEvent = () => {
+      if (isScrolling) return
+
+      const sections = menuItems
+        .map((item) => ({
+          id: item.href.replace('#', ''),
+          href: item.href,
+          element:
+            item.href === '/'
+              ? null
+              : document.getElementById(item.href.replace('#', '')),
+        }))
+        .filter((item) => item.element !== null)
+
+      if (window.scrollY < 100) {
+        setActiveSection('/')
+        return
+      }
+
+      for (const section of sections) {
+        if (section.element) {
+          const rect = section.element.getBoundingClientRect()
+          const sectionTop = rect.top + window.scrollY
+          const sectionHeight = rect.height
+          const viewportMiddle = window.scrollY + window.innerHeight / 2
+
+          if (
+            viewportMiddle >= sectionTop &&
+            viewportMiddle <= sectionTop + sectionHeight
+          ) {
+            setActiveSection(section.href)
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScrollEvent)
+    return () => window.removeEventListener('scroll', handleScrollEvent)
+  }, [isScrolling])
 
   useEffect(() => {
     const savedLocale = localStorage.getItem('preferredLanguage')

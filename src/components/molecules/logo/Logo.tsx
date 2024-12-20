@@ -4,10 +4,7 @@ import Link from 'next/link'
 const Logo: React.FC = () => {
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault()
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
+    window.location.reload()
   }
 
   return (
