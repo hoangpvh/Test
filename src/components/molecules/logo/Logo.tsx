@@ -2,17 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Logo: React.FC = () => {
-  const handleClick = (e: React.MouseEvent) => {
-    e.preventDefault()
-    window.location.reload()
-  }
-
   return (
-    <Link
-      href="/"
-      className="items-center justify-start gap-3 inline-flex"
-      onClick={handleClick}
-    >
+    <Link href="/" className="items-center justify-start gap-3 inline-flex">
       <div className="relative">
         <div className="hidden sm:block lg:w-10 lg:h-10 sm:w-8 sm:h-8 relative">
           <Image

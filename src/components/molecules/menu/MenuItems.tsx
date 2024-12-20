@@ -1,13 +1,11 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { IoIosArrowDown } from 'react-icons/io'
 
 import Icon from '@/components/atoms/Icon'
-
-const HEADER_OFFSET = 80
 
 const MenuItems: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -56,12 +54,7 @@ const MenuItems: React.FC = () => {
     setIsMenuOpen(false)
     setActiveSection(href)
     setIsScrolling(true)
-
-    if (!href.startsWith('#')) {
-      window.location.href = href
-      return
-    }
-
+    localStorage.setItem('activeSection', href)
     if (href === '/') {
       window.scrollTo({
         top: 0,
@@ -104,6 +97,12 @@ const MenuItems: React.FC = () => {
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [isMenuOpen])
+  useEffect(() => {
+    const storedActiveSection = localStorage.getItem('activeSection')
+    if (storedActiveSection) {
+      setActiveSection(storedActiveSection)
+    }
+  }, [])
   useEffect(() => {
     const handleScrollEvent = () => {
       if (isScrolling) return
@@ -244,10 +243,9 @@ const MenuItems: React.FC = () => {
         href={item.href}
         onClick={(e) => handleScroll(e, item.href)}
         className={`
-          px-2 py-3
-          lg:px-4 lg:py-3
+          px-4 py-3
           flex items-center rounded-full
-          text-base lg:text-lg
+          text-lg lg:text-xl 
           text-white font-poppins
           transition-all duration-200
           ${isActive ? 'bg-primary-light/20 font-semibold' : 'font-medium'}
@@ -262,19 +260,7 @@ const MenuItems: React.FC = () => {
       <button
         data-testid="menu-button"
         onClick={handleMenuToggle}
-        className="
-          sm:hidden 
-          cursor-pointer 
-          bg-primary-default 
-          rounded-lg 
-          border border-neutral-overlay 
-          shadow-menu
-          justify-center items-center 
-          gap-1 
-          inline-flex 
-          w-10 h-10
-          transition duration-300
-        "
+        className="sm:hidden cursor-pointer bg-primary-default rounded-lg border border-neutral-overlay shadow-menu justify-center items-center gap-1 inline-flex w-10 h-10 transition duration-300"
       >
         <Icon icon={AiOutlineMenu} size={24} color="white" />
         <span className="sr-only">Open Menu</span>
@@ -288,15 +274,7 @@ const MenuItems: React.FC = () => {
       {isMenuOpen && (
         <div
           data-testid="mobile-menu"
-          className="
-            lg:hidden 
-            flex flex-col items-start 
-            absolute top-[100px] right-4 
-            bg-primary-default p-4 
-            rounded-lg shadow-lg
-            z-50
-            gap-2
-          "
+          className="lg:hidden flex flex-col items-start absolute top-[100px] right-4 bg-primary-default p-4 rounded-lg shadow-lg z-50 gap-2"
         >
           {menuItems.map(renderMenuItem)}
           {renderLanguageButton()}
