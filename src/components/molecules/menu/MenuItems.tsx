@@ -18,7 +18,6 @@ const MenuItems: React.FC = () => {
   const menuItems = [
     { key: 'home', href: '/', label: t('home') },
     { key: 'products', href: '/products', label: t('products') },
-    { key: 'blogs', href: '/blogs', label: t('blogs') },
     { key: 'contact', href: '/contact', label: t('contact') },
   ]
 
@@ -138,7 +137,7 @@ const MenuItems: React.FC = () => {
         : '/images/japan.svg'
 
     return (
-      <div className="relative">
+      <div className="relative hidden">
         <button
           onClick={handleLanguageButtonClick}
           className="h-10 px-3 py-1 bg-[#f0f1ff]/10 rounded-full border border-[#f0f1ff]/50 justify-start items-center gap-2 inline-flex"
