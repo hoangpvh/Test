@@ -10,15 +10,26 @@ import Icon from '@/components/atoms/Icon'
 const MenuItems: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('/')
+  const [isScrolling, setIsScrolling] = useState(false)
   const t = useTranslations('menu')
   const router = useRouter()
   const pathname = usePathname()
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false)
 
   const menuItems = [
-    { key: 'home', href: '/', label: t('home') },
-    { key: 'products', href: '/products', label: t('products') },
-    { key: 'contact', href: '/contact', label: t('contact') },
+    { key: 'home', href: '/', label: t('home'), scrollTo: 'top' },
+    {
+      key: 'products',
+      href: '#products',
+      label: t('products'),
+      scrollTo: 'products',
+    },
+    {
+      key: 'contact',
+      href: '#contact',
+      label: t('contact'),
+      scrollTo: 'contact',
+    },
   ]
 
   const handleMenuToggle = () => setIsMenuOpen((prev) => !prev)
@@ -42,25 +53,28 @@ const MenuItems: React.FC = () => {
     e.preventDefault()
     setIsMenuOpen(false)
     setActiveSection(href)
-
+    setIsScrolling(true)
+    localStorage.setItem('activeSection', href)
     if (href === '/') {
       window.scrollTo({
         top: 0,
         behavior: 'smooth',
       })
+      setTimeout(() => setIsScrolling(false), 1000)
       return
     }
 
-    const element = document.getElementById(href.replace('/', ''))
+    const element = document.getElementById(href.replace('#', ''))
     if (element) {
       const headerOffset = 80
       const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+      const offsetPosition = elementPosition + window.scrollY - headerOffset
 
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth',
       })
+      setTimeout(() => setIsScrolling(false), 1000)
     }
   }
 
@@ -83,6 +97,53 @@ const MenuItems: React.FC = () => {
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [isMenuOpen])
+  useEffect(() => {
+    const storedActiveSection = localStorage.getItem('activeSection')
+    if (storedActiveSection) {
+      setActiveSection(storedActiveSection)
+    }
+  }, [])
+  useEffect(() => {
+    const handleScrollEvent = () => {
+      if (isScrolling) return
+
+      const sections = menuItems
+        .map((item) => ({
+          id: item.href.replace('#', ''),
+          href: item.href,
+          element:
+            item.href === '/'
+              ? null
+              : document.getElementById(item.href.replace('#', '')),
+        }))
+        .filter((item) => item.element !== null)
+
+      if (window.scrollY < 100) {
+        setActiveSection('/')
+        return
+      }
+
+      for (const section of sections) {
+        if (section.element) {
+          const rect = section.element.getBoundingClientRect()
+          const sectionTop = rect.top + window.scrollY
+          const sectionHeight = rect.height
+          const viewportMiddle = window.scrollY + window.innerHeight / 2
+
+          if (
+            viewportMiddle >= sectionTop &&
+            viewportMiddle <= sectionTop + sectionHeight
+          ) {
+            setActiveSection(section.href)
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScrollEvent)
+    return () => window.removeEventListener('scroll', handleScrollEvent)
+  }, [isScrolling])
 
   useEffect(() => {
     const savedLocale = localStorage.getItem('preferredLanguage')
@@ -104,29 +165,6 @@ const MenuItems: React.FC = () => {
       localStorage.setItem('preferredLanguage', 'ja')
     }
   }, [])
-
-  const renderMenuItem = (item: { href: string; label: string }) => {
-    const isActive = activeSection === item.href
-
-    return (
-      <Link
-        key={item.href}
-        href={item.href}
-        onClick={(e) => handleScroll(e, item.href)}
-        className={`
-          px-2 py-3
-          lg:px-4 lg:py-3
-          flex items-center rounded-full
-          text-base lg:text-lg
-          text-white font-poppins
-          transition-all duration-200
-          ${isActive ? 'bg-primary-light/20 font-semibold' : 'font-medium'}
-        `}
-      >
-        {item.label}
-      </Link>
-    )
-  }
 
   const renderLanguageButton = () => {
     const currentLocale = pathname?.split('/')[1]
@@ -196,49 +234,47 @@ const MenuItems: React.FC = () => {
       </div>
     )
   }
+  const renderMenuItem = (item: { href: string; label: string }) => {
+    const isActive = activeSection === item.href
 
+    return (
+      <Link
+        key={item.href}
+        href={item.href}
+        onClick={(e) => handleScroll(e, item.href)}
+        className={`
+          px-4 py-3
+          flex items-center rounded-full
+          text-lg lg:text-xl 
+          text-white font-poppins
+          transition-all duration-200
+          ${isActive ? 'bg-primary-light/20 font-semibold' : 'font-medium'}
+        `}
+      >
+        {item.label}
+      </Link>
+    )
+  }
   return (
     <div className="flex items-center">
-      {/* Mobile Menu Button */}
       <button
         data-testid="menu-button"
         onClick={handleMenuToggle}
-        className="
-          sm:hidden 
-          cursor-pointer 
-          bg-primary-default 
-          rounded-lg 
-          border border-neutral-overlay 
-          shadow-menu
-          justify-center items-center 
-          gap-1 
-          inline-flex 
-          w-10 h-10
-          transition duration-300
-        "
+        className="sm:hidden cursor-pointer bg-primary-default rounded-lg border border-neutral-overlay shadow-menu justify-center items-center gap-1 inline-flex w-10 h-10 transition duration-300"
       >
         <Icon icon={AiOutlineMenu} size={24} color="white" />
+        <span className="sr-only">Open Menu</span>
       </button>
 
-      {/* Desktop Navigation */}
       <nav className="hidden sm:flex justify-end items-center h-7 sm:h-7 gap-4">
         {menuItems.map(renderMenuItem)}
         {renderLanguageButton()}
       </nav>
 
-      {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
         <div
           data-testid="mobile-menu"
-          className="
-            lg:hidden 
-            flex flex-col items-start 
-            absolute top-[100px] right-4 
-            bg-primary-default p-4 
-            rounded-lg shadow-lg
-            z-50
-            gap-2
-          "
+          className="lg:hidden flex flex-col items-start absolute top-[100px] right-4 bg-primary-default p-4 rounded-lg shadow-lg z-50 gap-2"
         >
           {menuItems.map(renderMenuItem)}
           {renderLanguageButton()}

@@ -1,13 +1,14 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Logo: React.FC = () => {
   return (
-    <div className="items-center justify-start gap-3 inline-flex">
+    <Link href="/" className="items-center justify-start gap-3 inline-flex">
       <div className="relative">
         <div className="hidden sm:block lg:w-10 lg:h-10 sm:w-8 sm:h-8 relative">
           <Image
             src="/images/Logo.svg"
-            alt="Desktop Logo"
+            alt="Funcoding Logo"
             width={40}
             height={40}
             className="object-contain"
@@ -17,7 +18,7 @@ const Logo: React.FC = () => {
         <div className="block sm:hidden w-7 h-7 relative">
           <Image
             src="/images/Mobile Logo.svg"
-            alt="Mobile Logo"
+            alt="Funcoding Logo"
             width={24}
             height={24}
             className="object-contain"
@@ -35,7 +36,7 @@ const Logo: React.FC = () => {
       >
         Funcoding Inc.
       </div>
-    </div>
+    </Link>
   )
 }
 

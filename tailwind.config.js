@@ -27,12 +27,11 @@ module.exports = {
         },
         primary: {
           active: '#292DB8',
-          default: '#565add',
+          default: '#3C41D7',
           focus: '#6569ff',
           hover: '#6469FF',
           light: '#F0F1FF',
           dark: '#252a3f',
-          dark2: '#2e334b',
         },
         purple: {
           dark: '#2b1c50',
@@ -46,13 +45,11 @@ module.exports = {
           background: '#fcfcfc',
           border: '#ebeff6',
           overlay: '#e0daf3',
-          text: '#7f879e',
         },
         secondary: '#2e334b',
-        'secondary-dark': '#252a3f',
         'secondary-dark-2': '#f59a73',
         'secondary-light': '#3d425a',
-        'text-neutral': '#7f879e',
+        'text-neutral': '#B2BAC2',
       },
       fontFamily: {
         helvetica: ['Helvetica', 'Arial', 'sans-serif'],
@@ -179,6 +176,21 @@ module.exports = {
         '1200': '1200px',
         '1448': '1448px',
       },
+      keyframes: {
+        'fade-in-top': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-100px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
+        }
+      },
+      animation: {
+        'fade-in-top': 'fade-in-top 1s ease-out forwards'
+      }
     },
   },
   plugins: [],

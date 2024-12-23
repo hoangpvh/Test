@@ -16,7 +16,6 @@ const ServiceRow: React.FC<ServiceRowProps> = ({
   borderColor,
 }) => {
   const t = useTranslations('services')
-
   return (
     <ServiceCard
       gradientFrom={gradientFrom}

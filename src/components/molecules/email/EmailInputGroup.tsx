@@ -31,7 +31,7 @@ const EmailInputGroup: React.FC<EmailInputGroupProps> = ({
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newEmail = e.target.value
     setEmail(newEmail)
-    setError('') // Clear error when user types
+    setError('')
     setIsValidEmail(validateEmail(newEmail))
   }
 
