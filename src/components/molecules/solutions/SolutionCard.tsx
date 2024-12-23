@@ -72,7 +72,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
           <div className="relative w-14 h-14">
             <div className="absolute top-0 left-0 w-14 h-14 bg-secondary-light rounded-full" />
             <div className="absolute top-3.5 left-3.5 flex justify-center items-center">
-            <Icon
+              <Icon
                 data-testid="icon"
                 icon={icon}
                 size={28}
@@ -91,8 +91,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
           className="text-white text-sm sm:text-xl xl:text-lg 
                      font-normal leading-25.20 sm:leading-9 xl:leading-loose font-helvetica"
         >
-                    {t(`${solutionKey}.description`)}
-
+          {t(`${solutionKey}.description`)}
         </div>
       </div>
     </div>
@@ -128,7 +127,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
             className="flex-grow text-white text-base sm:text-22 xl:text-lg 
                      font-bold leading-7 sm:leading-10 xl:leading-loose font-helvetica"
           >
-            {title}
+            {t(`${solutionKey}.title`)}
           </motion.div>
         </div>
 
@@ -137,7 +136,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
           className="text-white text-sm sm:text-xl xl:text-lg 
                    font-normal leading-25.20 sm:leading-9 xl:leading-loose font-helvetica"
         >
-          {description}
+          {t(`${solutionKey}.description`)}
         </motion.div>
       </div>
     </motion.div>

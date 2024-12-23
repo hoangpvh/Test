@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 import { solutions } from '@/assets/data'
-import { useTranslations } from 'next-intl'
 import Button from '@/components/atoms/Button'
 import SolutionCard from '@/components/molecules/solutions/SolutionCard'
 
@@ -64,12 +64,12 @@ const SolutionSection = () => {
               className="xl:w-100 text-text-neutral text-sm sm:text-22 xl:text-lg 
                            font-normal font-helvetica leading-snug xl:leading-28.80"
             >
-                              {t('solutions.subtitle')}
+              {t('solutions.subtitle')}
             </div>
 
             <div className="justify-center items-center inline-flex w-full [html[lang='en']_&]:xl:w-162 [html[lang='ja']_&]:xl:w-[168px]">
               <Button
-                                  title={t('solutions.viewMore')}
+                title={t('solutions.viewMore')}
                 onClick={() => console.log('View!')}
                 className="w-full px-6 py-3 lg:py-3 sm:py-4 bg-primary-default"
               />
@@ -126,8 +126,7 @@ const SolutionSection = () => {
                      font-bold font-helvetica capitalize leading-46.80 
                      xl:leading-83.20 sm:leading-26"
           >
-                            {t('solutions.title')}
-
+            {t('solutions.title')}
           </motion.div>
 
           <motion.div
@@ -139,8 +138,7 @@ const SolutionSection = () => {
               className="xl:w-100 text-text-neutral text-sm sm:text-22 xl:text-lg 
                        font-normal font-helvetica leading-snug xl:leading-28.80"
             >
-                              {t('solutions.subtitle')}
-
+              {t('solutions.subtitle')}
             </motion.div>
 
             <motion.div
@@ -150,8 +148,7 @@ const SolutionSection = () => {
               className="justify-center items-center inline-flex xl:w-162 w-full"
             >
               <Button
-                                  title={t('solutions.viewMore')}
-
+                title={t('solutions.viewMore')}
                 onClick={() => console.log('View!')}
                 className="w-full px-6 py-3 lg:py-3 sm:py-4 bg-primary-default"
               />
@@ -171,9 +168,9 @@ const SolutionSection = () => {
         >
           {solutions.map((solution, index) => (
             <SolutionCard
-            key={index}
-            solutionKey={solution.key}
-            icon={solution.icon}
+              key={index}
+              solutionKey={solution.key}
+              icon={solution.icon}
             />
           ))}
         </div>

@@ -1,5 +1,5 @@
-import { send } from '@emailjs/browser'
 import { useTranslations } from 'next-intl'
+import { send } from '@emailjs/browser'
 import { useState } from 'react'
 import { FaCheck, FaTimes } from 'react-icons/fa'
 import { toast } from 'react-toastify'

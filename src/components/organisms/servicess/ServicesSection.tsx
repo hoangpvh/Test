@@ -28,7 +28,7 @@ const ServicesSection: React.FC = () => {
         {services2.map((service, index) => (
           <ServiceRow
             key={`mobile-service2-${index}`}
-            label={service.label}
+            serviceKey={service.key}
             gradientFrom={service.gradientFrom}
             gradientTo={service.gradientTo}
             borderColor={service.borderColor}
@@ -40,7 +40,7 @@ const ServicesSection: React.FC = () => {
         {services1.map((service, index) => (
           <ServiceRow
             key={`mobile-service1-${index}`}
-            label={service.label}
+            serviceKey={service.key}
             gradientFrom={service.gradientFrom}
             gradientTo={service.gradientTo}
             borderColor={service.borderColor}
@@ -71,7 +71,7 @@ const ServicesSection: React.FC = () => {
           {repeatedServices1.map((service, index) => (
             <ServiceRow
               key={`service1-${index}`}
-              label={service.label}
+              serviceKey={service.key}
               gradientFrom={service.gradientFrom}
               gradientTo={service.gradientTo}
               borderColor={service.borderColor}
@@ -99,7 +99,7 @@ const ServicesSection: React.FC = () => {
           {repeatedServices2.map((service, index) => (
             <ServiceRow
               key={`service2-${index}`}
-              label={service.label}
+              serviceKey={service.key}
               gradientFrom={service.gradientFrom}
               gradientTo={service.gradientTo}
               borderColor={service.borderColor}
