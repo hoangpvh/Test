@@ -1,7 +1,7 @@
-import { useTranslations } from 'next-intl'
 import { send } from '@emailjs/browser'
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
-import { FaCheck, FaEnvelope, FaTimes } from 'react-icons/fa'
+import { FaCheck, FaTimes } from 'react-icons/fa'
 import { toast } from 'react-toastify'
 
 import Button from '@/components/atoms/Button'
@@ -9,17 +9,24 @@ import Icon from '@/components/atoms/Icon'
 import TextInput from '@/components/atoms/TextInput'
 import { EMAIL_CONFIG } from '@/config/email'
 
-const EmailInputGroup = () => {
+interface EmailInputGroupProps {
+  message: string
+  setMessage: React.Dispatch<React.SetStateAction<string>>
+}
+
+const EmailInputGroup: React.FC<EmailInputGroupProps> = ({
+  message,
+  setMessage,
+}) => {
   const t = useTranslations('email')
   const [email, setEmail] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
   const [isValidEmail, setIsValidEmail] = useState(false)
 
-  const validateEmail = (email: string) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    return emailRegex.test(email)
-  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+  const validateEmail = (email: string) => emailRegex.test(email)
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newEmail = e.target.value
@@ -29,7 +36,6 @@ const EmailInputGroup = () => {
   }
 
   const handleSubmit = async () => {
-    // Validate email
     if (!email) {
       setError(t('error.required'))
       return
@@ -48,12 +54,14 @@ const EmailInputGroup = () => {
         {
           to_email: EMAIL_CONFIG.ADMIN_EMAIL,
           from_email: email,
-          message: `User ${email} has subscribed to notifications`,
+          message: `User ${email} has subscribed to notifications.
+          Message: ${message}`,
         },
         EMAIL_CONFIG.PUBLIC_KEY
       )
       toast.success('Email sent successfully!')
       setEmail('')
+      setMessage('')
     } catch (error) {
       console.error('Error sending email:', error)
       setError(t('error.failed'))
@@ -65,7 +73,7 @@ const EmailInputGroup = () => {
   return (
     <div
       data-testid="email-input-group"
-      className="absolute w-343 xl:w-586 sm:w-560 h-32 lg:h-15 flex-col xl:flex-row justify-center left-1/2 transform -translate-x-1/2 mt-98 sm:mt-55 lg:mt-70 xl:mt-55 items-start lg:gap-5 gap-6 inline-flex"
+      className="w-full flex-col sm:flex-row justify-between items-center gap-8 sm:gap-6 inline-flex"
     >
       <div className="w-full relative">
         <div className="relative">
@@ -73,7 +81,7 @@ const EmailInputGroup = () => {
             id="email"
             name="email"
             autoComplete="email"
-            className={`w-full ${error ? 'border-primary-focus' : ''}`}
+            className={`w-full text-sm sm:text-xl ${error ? 'border-primary-focus' : ''}`}
             placeholder={t('placeholder')}
             onChange={handleEmailChange}
             value={email}
@@ -90,7 +98,7 @@ const EmailInputGroup = () => {
           )}
         </div>
         {error && (
-          <span className="absolute -bottom-4 left-0 text-red-500 text-sm">
+          <span className="absolute -bottom-6 left-0 text-red-500 text-sm">
             {error}
           </span>
         )}
@@ -98,8 +106,8 @@ const EmailInputGroup = () => {
       <Button
         title={isLoading ? 'Sending...' : t('button')}
         onClick={handleSubmit}
-        leftIcon={<Icon icon={FaEnvelope} size={20} color="#f0f1ff" />}
-        className="w-full sm:max-w-full xl:max-w-200 lg:px-6 px-4 py-3 sm:py-4 lg:py-3 bg-primary-default flex justify-center items-center gap-3"
+        className="w-full sm:w-1/2 h-11 px-6 py-2 bg-primary-default flex justify-center items-center"
+        titleClassName="sm:text-[20px] font-normal"
         disabled={isLoading}
       />
     </div>

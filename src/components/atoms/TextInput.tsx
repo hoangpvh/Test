@@ -32,11 +32,7 @@ const TextInput: React.FC<TextInputProps> = ({
 
   return (
     <div
-      className={`lg:h-15 h-13 pl-4 pr-25 py-3 lg:pl-5 lg:pr-30 lg:py-4 rounded-full flex items-center border-2 bg-primary-light ${className} ${
-        isFocused
-          ? 'border-primary-focus text-primary-focus'
-          : 'border-white text-purple-light/50'
-      }`}
+      className={`h-12 pl-5 lg:pr-30 py-2 rounded-full flex items-center bg-primary-dark2 ${className}`}
       onClick={handleContainerClick}
     >
       <input
@@ -48,7 +44,7 @@ const TextInput: React.FC<TextInputProps> = ({
         autoComplete={autoComplete}
         placeholder={placeholder}
         className={`bg-transparent outline-none w-full ${
-          isFocused ? 'text-primary-focus' : 'text-purple-light/50'
+          isFocused ? 'text-white/80' : 'text-white/80'
         }`}
         onChange={onChange}
         onFocus={handleFocus}
