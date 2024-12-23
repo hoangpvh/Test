@@ -13,7 +13,7 @@
     "description": "With a commitment to quality and collaboration, we transform ideas into powerful, scalable solutions designed to propel your business forward."
   },
   "email": {
-    "placeholder": "Enter your email address",
+    "placeholder": "Your email address",
     "button": "Send to us",
     "error": {
       "required": "Please enter your email",
