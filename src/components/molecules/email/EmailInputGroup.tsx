@@ -1,5 +1,5 @@
-import { useTranslations } from 'next-intl'
 import { send } from '@emailjs/browser'
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { FaCheck, FaTimes } from 'react-icons/fa'
 import { toast } from 'react-toastify'
@@ -31,7 +31,7 @@ const EmailInputGroup: React.FC<EmailInputGroupProps> = ({
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newEmail = e.target.value
     setEmail(newEmail)
-    setError('') 
+    setError('')
     setIsValidEmail(validateEmail(newEmail))
   }
 
