@@ -1,17 +1,17 @@
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 const OtherProducts: React.FC = () => {
+  const t = useTranslations('products')
+
   return (
     <div className="w-full xl:w-1200 gap-10 h-auto flex justify-center sm:flex-row flex-col xl:justify-between items-center">
       <div className="flex flex-col gap-6 xl:max-w-600 sm:max-w-332 lg:max-w-464 max-w-520">
         <h2 className="text-purple-darkest2 text-4xl sm:text-5xl font-bold font-helvetica">
-          Many other products
+          {t('other.title')}
         </h2>
         <p className="text-purple-darkest2Light text-sm sm:text-lg font-normal font-helvetica leading-25.20">
-          From mobile apps to web platforms and enterprise software, we deliver
-          high-performance solutions that adapt to your unique needs. With a
-          focus on quality and user experience, our products transform ideas
-          into impactful digital tools.
+          {t('other.description')}
         </p>
       </div>
       <div className="relative sm:w-469 sm:h-355 xl:h-420 w-343 h-350 flex">
@@ -26,7 +26,7 @@ const OtherProducts: React.FC = () => {
           />
           <Image
             src="/images/products/OtherProductsMobile.webp"
-            alt="Other Products"
+            alt={t('other.imageAlt')}
             fill
             unoptimized
             quality={100}

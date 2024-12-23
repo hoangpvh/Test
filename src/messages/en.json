@@ -1,0 +1,92 @@
+{
+  "menu": {
+    "home": "Home",
+    "products": "Our Products",
+    "blogs": "Blogs",
+    "contact": "Contact Us",
+    "english": "English",
+    "japanese": "日本語"
+  },
+  "banner": {
+    "title": "Code with Joy.",
+    "title2": "Innovate with Fun!",
+    "description": "With a commitment to quality and collaboration, we transform ideas into powerful, scalable solutions designed to propel your business forward."
+  },
+  "email": {
+    "placeholder": "Enter your email address",
+    "button": "Send to us",
+    "error": {
+      "required": "Please enter your email",
+      "invalid": "Invalid email format",
+      "failed": "An error occurred while sending email. Please try again later."
+    }
+  },
+  "solutions": {
+    "customSoftware": {
+      "title": "Custom Software Development",
+      "description": "Tailored software solutions designed to meet specific business needs and objectives."
+    },
+    "webMobile": {
+      "title": "Web & Mobile Application Development",
+      "description": "Development of responsive web apps and native or cross-platform mobile apps."
+    },
+    "productDesign": {
+      "title": "Product Design and Prototyping",
+      "description": "Designing and prototyping digital products to refine ideas and validate concepts before full development."
+    },
+    "maintenance": {
+      "title": "Product Maintenance and Support",
+      "description": "Ongoing technical support and maintenance to keep software updated, secure."
+    },
+    "viewMore": "View More",
+    "howCanWeHelp": "How can we help you?",
+    "title": "Solutions we provide",
+    "subtitle": "Transform ideas into high-performance software – tailored to drive your success."
+  },
+  "services": {
+    "webMobile": "Web & Mobile Application",
+    "cloudSolutions": "Cloud Solutions",
+    "customSoftware": "Software Development",
+    "productDesign": "Product Design",
+    "artificialIntelligence": "Artificial Intelligence",
+    "bigData": "Big Data & Analytics",
+    "maintenance": "Maintenance and Support"
+  },
+  "products": {
+    "app": {
+      "title": "Our Mobile App Products",
+      "description": "Our mobile app solutions combine sleek design with reliable performance to engage users and support business growth. We develop customized apps across all platforms, ensuring security, scalability, and a seamless user experience.",
+      "imageAlt": "App Products"
+    },
+    "web": {
+      "title": "Our Website Products",
+      "description": "We create websites that are secure, fast, and tailored to meet your business needs. From e-commerce platforms to content-rich sites, we deliver experiences that make lasting impressions.",
+      "imageAlt": "Web Products"
+    },
+    "other": {
+      "title": "Many other products",
+      "description": "From mobile apps to web platforms and enterprise software, we deliver high-performance solutions that adapt to your unique needs. With a focus on quality and user experience, our products transform ideas into impactful digital tools.",
+      "imageAlt": "Other Products"
+    }
+  },
+  "footer": {
+    "about": "Company",
+    "support": "Support",
+    "logoAlt": "Funcoding Logo",
+    "companyName": "Funcoding Inc",
+    "email": "support@funcoding.jp",
+    "address": "〒174-0072 Minami-Tokiwadai 1-11-6, Itabashi, Tokyo",
+    "contactTitle": "What solution do you need us to provide?",
+    "messagePlaceholder": "Enter the content you want to send!",
+    "availableToRespond": "Available to respond",
+    "sendButton": "Send Email",
+    "links": {
+      "aboutUs": "About us",
+      "solutions": "Solutions",
+      "blog": "Blog",
+      "careerCenter": "Career Center",
+      "faq": "FAQ",
+      "employers": "Employers"
+    }
+  }
+}

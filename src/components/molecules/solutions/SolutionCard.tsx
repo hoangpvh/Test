@@ -1,20 +1,21 @@
+import { useTranslations } from 'next-intl'
 import { IconType } from 'react-icons'
 
 import Icon from '@/components/atoms/Icon'
 
 interface SolutionCardProps {
-  title: string
-  description: string
+  solutionKey: string
   icon: IconType
   iconColor?: string
 }
 
 const SolutionCard: React.FC<SolutionCardProps> = ({
-  title,
-  description,
+  solutionKey,
   icon,
   iconColor = '#FFFFFF',
 }) => {
+  const t = useTranslations('solutions')
+
   return (
     <div
       data-testid="solution-card"
@@ -34,11 +35,11 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
             </div>
           </div>
           <div className="flex-grow text-white text-base sm:text-22 xl:text-lg font-bold leading-7 sm:leading-10 xl:leading-loose font-helvetica">
-            {title}
+            {t(`${solutionKey}.title`)}
           </div>
         </div>
         <div className="text-white text-sm sm:text-xl xl:text-lg font-normal leading-25.20 sm:leading-9 xl:leading-loose font-helvetica">
-          {description}
+          {t(`${solutionKey}.description`)}
         </div>
       </div>
     </div>
