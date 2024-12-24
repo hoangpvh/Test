@@ -1,9 +1,19 @@
 'use client'
 
-import Banner from '@/components/organisms/banner/Banner'
-import Products from '@/components/organisms/products/ProductSection'
-import ServicesSection from '@/components/organisms/servicess/ServicesSection'
-import Solutions from '@/components/organisms/solutions/SolutionSection'
+import dynamic from 'next/dynamic'
+
+const Banner = dynamic(() => import('@/components/organisms/banner/Banner'), {
+  loading: () => <div>Loading...</div>,
+})
+const Products = dynamic(
+  () => import('@/components/organisms/products/ProductSection')
+)
+const ServicesSection = dynamic(
+  () => import('@/components/organisms/servicess/ServicesSection')
+)
+const Solutions = dynamic(
+  () => import('@/components/organisms/solutions/SolutionSection')
+)
 
 function HomePage() {
   return (

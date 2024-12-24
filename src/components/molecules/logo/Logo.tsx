@@ -12,6 +12,7 @@ const Logo: React.FC = () => {
             width={40}
             height={40}
             className="object-contain"
+            priority
           />
         </div>
 
@@ -22,6 +23,7 @@ const Logo: React.FC = () => {
             width={24}
             height={24}
             className="object-contain"
+            priority
           />
         </div>
       </div>
