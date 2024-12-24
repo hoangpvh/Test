@@ -145,7 +145,7 @@ const SolutionSection = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="justify-center items-center inline-flex xl:w-162 w-full"
+              className="justify-center items-center inline-flex w-full [html[lang='en']_&]:xl:w-162 [html[lang='ja']_&]:xl:w-[168px]"
             >
               <Button
                 title={t('solutions.viewMore')}

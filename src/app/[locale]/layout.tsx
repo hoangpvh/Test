@@ -28,10 +28,10 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
   params,
-}: Readonly<{
+}: {
   children: React.ReactNode
-  params: { locale: Locale }
-}>) {
+  params: Promise<{ locale: Locale }>
+}) {
   const { locale } = await params
   if (!routing.locales.includes(locale as Locale)) {
     notFound()
@@ -41,6 +41,29 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+          as="style"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+          rel="stylesheet"
+        />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+          />
+        </noscript>
+      </head>
       <body>
         <NextIntlClientProvider messages={messages}>
           <MainTemplate>{children}</MainTemplate>

@@ -104,7 +104,7 @@ const EmailInputGroup: React.FC<EmailInputGroupProps> = ({
         )}
       </div>
       <Button
-        title={isLoading ? 'Sending...' : t('button')}
+        title={t('button')}
         onClick={handleSubmit}
         className="w-full sm:w-1/2 h-11 px-6 py-2 bg-primary-default flex justify-center items-center"
         titleClassName="sm:text-[20px] font-normal"

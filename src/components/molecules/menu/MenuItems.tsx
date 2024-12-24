@@ -38,13 +38,13 @@ const MenuItems: React.FC = () => {
     setIsLanguageDropdownOpen((prev) => !prev)
   }
 
-  const handleLanguageSelect = (locale: string) => {
-    const currentLocale = pathname?.split('/')[1]
-    const newPath = pathname?.replace(`/${currentLocale}`, `/${locale}`)
-    router.push(newPath ?? '/')
-    setIsLanguageDropdownOpen(false)
-    localStorage.setItem('preferredLanguage', locale)
-  }
+  // const handleLanguageSelect = (locale: string) => {
+  //   const currentLocale = pathname?.split('/')[1]
+  //   const newPath = pathname?.replace(`/${currentLocale}`, `/${locale}`)
+  //   router.push(newPath ?? '/')
+  //   setIsLanguageDropdownOpen(false)
+  //   localStorage.setItem('preferredLanguage', locale)
+  // }
 
   const handleScroll = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -145,95 +145,95 @@ const MenuItems: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScrollEvent)
   }, [isScrolling])
 
-  useEffect(() => {
-    const savedLocale = localStorage.getItem('preferredLanguage')
-    if (savedLocale) {
-      const currentLocale = pathname?.split('/')[1]
-      if (savedLocale !== currentLocale) {
-        const newPath = pathname?.replace(
-          `/${currentLocale}`,
-          `/${savedLocale}`
-        )
-        router.push(newPath ?? '/')
-      }
-    } else {
-      const currentLocale = pathname?.split('/')[1]
-      if (currentLocale !== 'ja') {
-        const newPath = pathname?.replace(`/${currentLocale}`, '/ja')
-        router.push(newPath ?? '/')
-      }
-      localStorage.setItem('preferredLanguage', 'ja')
-    }
-  }, [])
+  // useEffect(() => {
+  //   const savedLocale = localStorage.getItem('preferredLanguage')
+  //   if (savedLocale) {
+  //     const currentLocale = pathname?.split('/')[1]
+  //     if (savedLocale !== currentLocale) {
+  //       const newPath = pathname?.replace(
+  //         `/${currentLocale}`,
+  //         `/${savedLocale}`
+  //       )
+  //       router.push(newPath ?? '/')
+  //     }
+  //   } else {
+  //     const currentLocale = pathname?.split('/')[1]
+  //     if (currentLocale !== 'ja') {
+  //       const newPath = pathname?.replace(`/${currentLocale}`, '/ja')
+  //       router.push(newPath ?? '/')
+  //     }
+  //     localStorage.setItem('preferredLanguage', 'ja')
+  //   }
+  // }, [])
 
-  const renderLanguageButton = () => {
-    const currentLocale = pathname?.split('/')[1]
-    const languageLabel = currentLocale === 'en' ? t('english') : t('japanese')
-    const flagSrc =
-      currentLocale === 'en'
-        ? '/images/united kingdom.svg'
-        : '/images/japan.svg'
+  // const renderLanguageButton = () => {
+  //   const currentLocale = pathname?.split('/')[1]
+  //   const languageLabel = currentLocale === 'en' ? t('english') : t('japanese')
+  //   const flagSrc =
+  //     currentLocale === 'en'
+  //       ? '/images/united kingdom.svg'
+  //       : '/images/japan.svg'
 
-    return (
-      <div className="relative hidden">
-        <button
-          onClick={handleLanguageButtonClick}
-          className="h-10 px-3 py-1 bg-[#f0f1ff]/10 rounded-full border border-[#f0f1ff]/50 justify-start items-center gap-2 inline-flex"
-        >
-          <div className="justify-center items-center gap-2 flex">
-            <img
-              src={flagSrc}
-              alt={`${currentLocale} flag`}
-              className="w-6 h-6 object-cover rounded-full"
-            />
-            <div className="hidden xl:block text-xl font-normal font-poppins leading-relaxed text-white">
-              {languageLabel}
-            </div>
-            <div className="w-6 h-6 relative justify-center items-center flex">
-              <Icon icon={IoIosArrowDown} size={20} color="white" />
-            </div>
-          </div>
-        </button>
+  //   return (
+  //     <div className="relative hidden">
+  //       <button
+  //         onClick={handleLanguageButtonClick}
+  //         className="h-10 px-3 py-1 bg-[#f0f1ff]/10 rounded-full border border-[#f0f1ff]/50 justify-start items-center gap-2 inline-flex"
+  //       >
+  //         <div className="justify-center items-center gap-2 flex">
+  //           <img
+  //             src={flagSrc}
+  //             alt={`${currentLocale} flag`}
+  //             className="w-6 h-6 object-cover rounded-full"
+  //           />
+  //           <div className="hidden xl:block text-xl font-normal font-poppins leading-relaxed text-white">
+  //             {languageLabel}
+  //           </div>
+  //           <div className="w-6 h-6 relative justify-center items-center flex">
+  //             <Icon icon={IoIosArrowDown} size={20} color="white" />
+  //           </div>
+  //         </div>
+  //       </button>
 
-        {isLanguageDropdownOpen && (
-          <div className="absolute right-0 px-2 py-3 flex flex-col gap-2 w-40 bg-white rounded-2xl shadow-lg overflow-hidden z-50">
-            <button
-              onClick={() => handleLanguageSelect('en')}
-              className={`w-full px-4 py-2 text-left flex items-center gap-2 rounded-lg
-                ${
-                  currentLocale === 'en'
-                    ? 'bg-[#F7F8FA] text-[#18203c]'
-                    : 'bg-white text-[#666f8d]'
-                }`}
-            >
-              <img
-                src="/images/united kingdom.svg"
-                alt="English flag"
-                className="w-6 h-6 object-cover rounded-full"
-              />
-              <span>English</span>
-            </button>
-            <button
-              onClick={() => handleLanguageSelect('ja')}
-              className={`w-full px-4 py-2 text-left flex items-center gap-2 rounded-lg
-                ${
-                  currentLocale === 'ja'
-                    ? 'bg-[#F7F8FA] text-[#18203c]'
-                    : 'bg-white text-[#666f8d]'
-                }`}
-            >
-              <img
-                src="/images/japan.svg"
-                alt="Japanese flag"
-                className="w-6 h-6 object-cover rounded-full"
-              />
-              <span>日本語</span>
-            </button>
-          </div>
-        )}
-      </div>
-    )
-  }
+  //       {isLanguageDropdownOpen && (
+  //         <div className="absolute right-0 px-2 py-3 flex flex-col gap-2 w-40 bg-white rounded-2xl shadow-lg overflow-hidden z-50">
+  //           <button
+  //             onClick={() => handleLanguageSelect('en')}
+  //             className={`w-full px-4 py-2 text-left flex items-center gap-2 rounded-lg
+  //               ${
+  //                 currentLocale === 'en'
+  //                   ? 'bg-[#F7F8FA] text-[#18203c]'
+  //                   : 'bg-white text-[#666f8d]'
+  //               }`}
+  //           >
+  //             <img
+  //               src="/images/united kingdom.svg"
+  //               alt="English flag"
+  //               className="w-6 h-6 object-cover rounded-full"
+  //             />
+  //             <span>English</span>
+  //           </button>
+  //           <button
+  //             onClick={() => handleLanguageSelect('ja')}
+  //             className={`w-full px-4 py-2 text-left flex items-center gap-2 rounded-lg
+  //               ${
+  //                 currentLocale === 'ja'
+  //                   ? 'bg-[#F7F8FA] text-[#18203c]'
+  //                   : 'bg-white text-[#666f8d]'
+  //               }`}
+  //           >
+  //             <img
+  //               src="/images/japan.svg"
+  //               alt="Japanese flag"
+  //               className="w-6 h-6 object-cover rounded-full"
+  //             />
+  //             <span>日本語</span>
+  //           </button>
+  //         </div>
+  //       )}
+  //     </div>
+  //   )
+  // }
   const renderMenuItem = (item: { href: string; label: string }) => {
     const isActive = activeSection === item.href
 
@@ -268,7 +268,7 @@ const MenuItems: React.FC = () => {
 
       <nav className="hidden sm:flex justify-end items-center h-7 sm:h-7 gap-4">
         {menuItems.map(renderMenuItem)}
-        {renderLanguageButton()}
+        {/* {renderLanguageButton()} */}
       </nav>
 
       {isMenuOpen && (
@@ -277,7 +277,7 @@ const MenuItems: React.FC = () => {
           className="lg:hidden flex flex-col items-start absolute top-[100px] right-4 bg-primary-default p-4 rounded-lg shadow-lg z-50 gap-2"
         >
           {menuItems.map(renderMenuItem)}
-          {renderLanguageButton()}
+          {/* {renderLanguageButton()} */}
         </div>
       )}
     </div>

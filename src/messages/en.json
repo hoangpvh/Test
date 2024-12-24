@@ -2,7 +2,6 @@
   "menu": {
     "home": "Home",
     "products": "Our Products",
-    "blogs": "Blogs",
     "contact": "Contact Us",
     "english": "English",
     "japanese": "日本語"
@@ -14,7 +13,7 @@
   },
   "email": {
     "placeholder": "Your email address",
-    "button": "Send to us",
+    "button": "Send Email",
     "error": {
       "required": "Please enter your email",
       "invalid": "Invalid email format",
@@ -56,17 +55,17 @@
     "app": {
       "title": "Our Mobile App Products",
       "description": "Our mobile app solutions combine sleek design with reliable performance to engage users and support business growth. We develop customized apps across all platforms, ensuring security, scalability, and a seamless user experience.",
-      "imageAlt": "App Products"
+      "imageAlt": "App Products by Funcoding"
     },
     "web": {
       "title": "Our Website Products",
       "description": "We create websites that are secure, fast, and tailored to meet your business needs. From e-commerce platforms to content-rich sites, we deliver experiences that make lasting impressions.",
-      "imageAlt": "Web Products"
+      "imageAlt": "Web Products by Funcoding"
     },
     "other": {
       "title": "Many other products",
       "description": "From mobile apps to web platforms and enterprise software, we deliver high-performance solutions that adapt to your unique needs. With a focus on quality and user experience, our products transform ideas into impactful digital tools.",
-      "imageAlt": "Other Products"
+      "imageAlt": "Other Products by Funcoding"
     }
   },
   "footer": {
@@ -78,13 +77,9 @@
     "address": "〒174-0072 Minami-Tokiwadai 1-11-6, Itabashi, Tokyo",
     "contactTitle": "What solution do you need us to provide?",
     "messagePlaceholder": "Enter the content you want to send!",
-    "availableToRespond": "Available to respond",
-    "sendButton": "Send Email",
     "links": {
       "aboutUs": "About us",
       "solutions": "Solutions",
-      "blog": "Blog",
-      "careerCenter": "Career Center",
       "faq": "FAQ",
       "employers": "Employers"
     }
