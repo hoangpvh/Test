@@ -3,16 +3,25 @@
 import dynamic from 'next/dynamic'
 
 const Banner = dynamic(() => import('@/components/organisms/banner/Banner'), {
-  loading: () => <div>Loading...</div>,
+  ssr: false,
 })
 const Products = dynamic(
-  () => import('@/components/organisms/products/ProductSection')
+  () => import('@/components/organisms/products/ProductSection'),
+  {
+    ssr: false,
+  }
 )
 const ServicesSection = dynamic(
-  () => import('@/components/organisms/servicess/ServicesSection')
+  () => import('@/components/organisms/servicess/ServicesSection'),
+  {
+    ssr: false,
+  }
 )
 const Solutions = dynamic(
-  () => import('@/components/organisms/solutions/SolutionSection')
+  () => import('@/components/organisms/solutions/SolutionSection'),
+  {
+    ssr: false,
+  }
 )
 
 function HomePage() {
