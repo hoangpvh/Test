@@ -6,7 +6,7 @@ import MenuItems from '@/components/molecules/menu/MenuItems'
 const Header: React.FC = () => {
   return (
     <div
-      role="header"
+      role="banner"
       className="w-full h-25 sm:h-70 lg:h-22 flex flex-col items-center sm:mt-10"
     >
       <div
