@@ -67,7 +67,7 @@ const SolutionSection = () => {
               {t('solutions.subtitle')}
             </div>
 
-            <div className="justify-center items-center inline-flex w-full [html[lang='en']_&]:xl:w-162 [html[lang='ja']_&]:xl:w-[168px]">
+            <div className="justify-center items-center inline-flex w-full [html[lang='en']_&]:xl:w-162 xl:w-[168px]">
               <Button
                 title={t('solutions.viewMore')}
                 onClick={() => console.log('View!')}
@@ -145,7 +145,7 @@ const SolutionSection = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="justify-center items-center inline-flex w-full [html[lang='en']_&]:xl:w-162 [html[lang='ja']_&]:xl:w-[168px]"
+              className="justify-center items-center inline-flex w-full [html[lang='en']_&]:xl:w-162 xl:w-[168px]"
             >
               <Button
                 title={t('solutions.viewMore')}
@@ -182,7 +182,7 @@ const SolutionSection = () => {
     <section
       id="solutions"
       className="w-full h-auto px-4 py-10 xl:h-200 1920:px-90 xl:px-50 sm:px-15 
-                 sm:py-25 xl:py-148 bg-primary-dark mt-79 sm:mt-39 xl:mt-38 
+                 sm:py-25 xl:py-148 bg-primary-dark
                  justify-start lg:justify-center lg:items-center inline-flex lg:px-15"
     >
       <BaseContent />

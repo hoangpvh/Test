@@ -6,7 +6,7 @@ const Banner: React.FC = () => {
   return (
     <div
       data-testid="banner-container"
-      className="w-full h-auto flex flex-col items-center lg:mt-60 mt-20 sm:mt-31 -z-100"
+      className="flex flex-col items-center lg:mt-60 my-20 sm:my-31 -z-100"
     >
       <ContentSection />
       {techList.map((tech, index) => (

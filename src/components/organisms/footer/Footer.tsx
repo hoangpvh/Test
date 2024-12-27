@@ -22,13 +22,13 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="lg:flex h-auto py-20 sm:pt-20 sm:pb-25 xl:pt-25 xl:pb-50 sm:px-15 px-4 xl:px-0 bg-primary-dark lg:justify-center"
+      className="lg:flex py-20 sm:pt-20 sm:pb-25 xl:pt-25 xl:pb-50 sm:px-15 px-4 bg-primary-dark lg:justify-center"
     >
       <div className="xl:max-w-1200 lg:max-w-920 flex flex-col xl:flex-row gap-20 sm:gap-10">
         <div className="sm:h-182 h-312 flex justify-between sm:flex-row flex-col gap-10">
           <div className="flex flex-col gap-6 sm:gap-34 xl:w-306">
             <div className="items-center justify-start gap-3 inline-flex">
-              <div className="w-10 h-10">
+              <div>
                 <Image
                   src="/images/Logo.svg"
                   alt={t('logoAlt')}
@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="[html[lang='en']_&]:xl:w-530 [html[lang='ja']_&]:xl:w-480 flex flex-col gap-6">
+        <div className="[html[lang='en']_&]:xl:w-530 xl:w-480 flex flex-col gap-6">
           <h2 className="text-white sm:text-2xl text-base font-bold font-helvetica capitalize">
             {t('contactTitle')}
           </h2>
