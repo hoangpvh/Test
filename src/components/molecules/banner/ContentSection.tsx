@@ -10,7 +10,7 @@ const ContentSection: React.FC = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
       data-testid="content-section"
-      className="h-209 lg:h-206 flex flex-col justify-start items-center lg:gap-10 gap-5 lg:animate-fade-in-top"
+      className="w-full h-209 lg:h-206 flex flex-col justify-start items-center lg:gap-10 gap-5 lg:animate-fade-in-top"
     >
       <div className="h-28 flex justify-center items-center">
         <div
@@ -30,7 +30,7 @@ const ContentSection: React.FC = () => {
       </div>
       <div
         data-testid="description-container"
-        className="max-w-full px-4 py-2.5 text-center text-purple-medium sm:leading-10 leading-18 text-sm lg:text-[26px] sm:text-22 font-normal font-helvetica lg:leading-42.67"
+        className="xl:w-1200 sm:px-10 px-4 py-2.5 text-center text-purple-medium sm:leading-10 leading-18 text-sm lg:text-[26px] sm:text-22 font-normal font-helvetica lg:leading-42.67"
       >
         {t('description')}
       </div>

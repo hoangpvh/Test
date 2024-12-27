@@ -24,8 +24,8 @@ const Footer = () => {
       id="contact"
       className="lg:flex py-20 sm:pt-20 sm:pb-25 xl:pt-25 xl:pb-50 sm:px-15 px-4 bg-primary-dark lg:justify-center"
     >
-      <div className="xl:max-w-1200 lg:max-w-920 flex flex-col xl:flex-row gap-20 sm:gap-10">
-        <div className="sm:h-182 h-312 flex justify-between sm:flex-row flex-col gap-10">
+      <div className="xl:w-1200 flex flex-col xl:flex-row gap-20 sm:gap-10">
+        <div className="flex justify-between sm:flex-row flex-col gap-10">
           <div className="flex flex-col gap-6 sm:gap-34 xl:w-306">
             <div className="items-center justify-start gap-3 inline-flex">
               <div>
